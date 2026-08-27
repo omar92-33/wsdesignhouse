@@ -1,0 +1,59 @@
+import { Container, Eyebrow } from "@/components/site/Section";
+import { Reveal } from "@/components/site/Reveal";
+import { Slideshow } from "@/components/site/Slideshow";
+import s1 from "@/assets/milan-5400.jpg.asset.json";
+import s2 from "@/assets/milan-5401.jpg.asset.json";
+import s3 from "@/assets/milan-5402.jpg.asset.json";
+import s4 from "@/assets/milan-5403.jpg.asset.json";
+
+const slides = [
+  { src: s1.url, alt: "Project feedback — Milan Design Loft, Living Studio proposal overview" },
+  { src: s2.url, alt: "Jury feedback quote on the Living Studio loft proposal" },
+  { src: s3.url, alt: "Key strengths of the Living Studio proposal: spatial organization, storage, materiality, visual presentation" },
+  { src: s4.url, alt: "Closing evidence board for the Milan Design Loft, Living Studio proposal" },
+];
+
+export function Recognition() {
+  return (
+    <section
+      className="border-t border-border py-28 lg:py-44"
+      aria-labelledby="recognition-heading"
+    >
+      <Container>
+        <div className="grid gap-16 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:gap-24">
+          <div className="lg:sticky lg:top-32">
+            <Reveal>
+              <Eyebrow>Jury Feedback</Eyebrow>
+              <h2
+                id="recognition-heading"
+                className="display mt-8 text-[clamp(2.25rem,5vw,4rem)]"
+              >
+                Living Studio
+                <span className="block text-champagne">Milan Design Loft</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={140}>
+              <div className="mt-8 max-w-md space-y-5 text-sm leading-relaxed opacity-70 sm:text-base">
+                <p>
+                  A closer look at the jury feedback for our Living Studio | Milan Design Loft
+                  proposal.
+                </p>
+                <p>
+                  Recognized for its clear spatial organization, refined material palette,
+                  integrated storage, and polished visual presentation.
+                </p>
+                <p>
+                  A project shaped around thoughtful living, working, and everyday flexibility.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+
+          <Reveal delay={200}>
+            <Slideshow slides={slides} />
+          </Reveal>
+        </div>
+      </Container>
+    </section>
+  );
+}
