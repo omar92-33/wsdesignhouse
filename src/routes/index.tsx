@@ -155,9 +155,15 @@ function Vision() {
           <Reveal delay={140}>
             <Frame
               aspect="portrait"
+              image={{
+                src: diningAsset.url,
+                alt: "Architectural interior — dining space with sculptural table, pendant lighting and warm cove light",
+                aspect: "portrait",
+              }}
               caption="Architectural interior — studio photography"
               className="lg:mt-16"
             />
+
           </Reveal>
         </div>
       </Container>
