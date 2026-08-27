@@ -69,10 +69,6 @@ function Hero() {
             "radial-gradient(110% 85% at 70% 15%, oklch(0.31 0.016 80) 0%, oklch(0.17 0.006 90) 65%)",
         }}
       />
-      <div
-        aria-hidden
-        className="absolute inset-y-0 left-1/2 hidden w-px bg-ivory/8 lg:block"
-      />
 
       <Container className="relative pb-24 pt-40 lg:pb-32">
         <Reveal>
@@ -482,7 +478,7 @@ function StudioLocation() {
               <iframe
                 title="WS DESIGNHOUSE studio location, New Cairo"
                 loading="lazy"
-                className="h-full w-full grayscale"
+                className="h-full w-full"
                 referrerPolicy="no-referrer-when-downgrade"
                 src={`https://www.google.com/maps?q=${site.coordinates.lat},${site.coordinates.lng}&z=14&output=embed`}
               />

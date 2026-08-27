@@ -103,7 +103,7 @@ function ContactPage() {
                     <iframe
                       title="WS DESIGNHOUSE studio location, New Cairo"
                       loading="lazy"
-                      className="h-full w-full grayscale"
+                      className="h-full w-full"
                       referrerPolicy="no-referrer-when-downgrade"
                       src={`https://www.google.com/maps?q=${site.coordinates.lat},${site.coordinates.lng}&z=14&output=embed`}
                     />
