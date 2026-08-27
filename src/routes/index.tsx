@@ -8,7 +8,9 @@ import { Social } from "@/components/site/Social";
 import { FinalCta } from "@/components/site/FinalCta";
 import { Recognition } from "@/components/site/Recognition";
 import { LivingOasis } from "@/components/site/LivingOasis";
+import diningAsset from "@/assets/dining-interior.jpg.asset.json";
 import { journey, method, pillars, projects, services, site, testimonials } from "@/lib/site";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -155,9 +157,15 @@ function Vision() {
           <Reveal delay={140}>
             <Frame
               aspect="portrait"
+              image={{
+                src: diningAsset.url,
+                alt: "Architectural interior — dining space with sculptural table, pendant lighting and warm cove light",
+                aspect: "portrait",
+              }}
               caption="Architectural interior — studio photography"
               className="lg:mt-16"
             />
+
           </Reveal>
         </div>
       </Container>
