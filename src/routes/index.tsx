@@ -8,7 +8,9 @@ import { Social } from "@/components/site/Social";
 import { FinalCta } from "@/components/site/FinalCta";
 import { Recognition } from "@/components/site/Recognition";
 import { LivingOasis } from "@/components/site/LivingOasis";
+import diningAsset from "@/assets/dining-interior.jpg.asset.json";
 import { journey, method, pillars, projects, services, site, testimonials } from "@/lib/site";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
