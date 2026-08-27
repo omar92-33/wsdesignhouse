@@ -9,7 +9,7 @@ export function Footer() {
       <div className="mx-auto max-w-[1600px] px-5 sm:px-8">
         <div className="grid gap-14 border-b border-ivory/12 pb-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div className="max-w-sm">
-            <img src={wsLogo.url} alt="WS DESIGN HOUSE" width={745} height={541} className="h-20 w-auto" />
+            <img src={wsLogo.url} alt="WS DESIGN HOUSE" width={745} height={541} className="h-24 w-auto sm:h-28" />
             <p className="mt-4 font-display text-xl italic opacity-80">{site.tagline}</p>
             <p className="label mt-6 opacity-60">{site.positioning}</p>
             <p className="mt-4 text-sm leading-relaxed opacity-60">{site.serviceLine}</p>
