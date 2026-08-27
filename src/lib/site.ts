@@ -199,7 +199,7 @@ export const projects: Project[] = [
     category: "Kitchen Design",
     description:
       "A kitchen conceived as the architectural centre of the home, where stone, joinery and light are resolved as a single composition.",
-    hero: { alt: "The Marble Kitchen — hero photograph", aspect: "wide" },
+    hero: { src: kitchenAsset.url, alt: "The Marble Kitchen — hero photograph", aspect: "landscape" },
     concept:
       "The kitchen is treated as a room in its own right rather than a service space. The composition is built around a single continuous surface, with storage and equipment resolved quietly into the joinery so the material can speak without interruption.",
     details:
@@ -209,7 +209,7 @@ export const projects: Project[] = [
     craft:
       "Stone and joinery are coordinated so that the two meet precisely, with edges and junctions drawn and made rather than left to site.",
     gallery: [
-      { alt: "The Marble Kitchen — island and stone surface", aspect: "landscape" },
+      { src: kitchenAsset.url, alt: "The Marble Kitchen — island and stone surface", aspect: "landscape" },
       { alt: "The Marble Kitchen — joinery detail", aspect: "portrait" },
       { alt: "The Marble Kitchen — material junction detail", aspect: "portrait" },
       { alt: "The Marble Kitchen — wider view of the space", aspect: "wide" },
@@ -221,7 +221,7 @@ export const projects: Project[] = [
     category: "Bedroom Architecture",
     description:
       "A master suite designed as a low-lit, enveloping retreat, with soft materials set against precise architectural lines.",
-    hero: { alt: "Velvet Master Suite — hero photograph", aspect: "wide" },
+    hero: { src: bedroomAsset.url, alt: "Velvet Master Suite — hero photograph", aspect: "landscape" },
     concept:
       "The suite is conceived as a single enveloping volume. Rather than a bed placed in a room, the sleeping area, dressing and circulation are drawn together so the space reads as one continuous architectural gesture.",
     details:
@@ -231,7 +231,7 @@ export const projects: Project[] = [
     craft:
       "Upholstery, panelling and metalwork are detailed to meet cleanly, with alignment carried through from the headboard across the wall.",
     gallery: [
-      { alt: "Velvet Master Suite — bed and panelled wall", aspect: "landscape" },
+      { src: bedroomAsset.url, alt: "Velvet Master Suite — bed and panelled wall", aspect: "landscape" },
       { alt: "Velvet Master Suite — upholstery detail", aspect: "portrait" },
       { alt: "Velvet Master Suite — lighting detail", aspect: "portrait" },
       { alt: "Velvet Master Suite — full room view", aspect: "wide" },
@@ -243,7 +243,7 @@ export const projects: Project[] = [
     category: "Living Area",
     description:
       "An arrival sequence and living area planned around height, light and a restrained material palette.",
-    hero: { alt: "Modern Villa Entry — hero photograph", aspect: "wide" },
+    hero: { src: entryAsset.url, alt: "Modern Villa Entry — hero photograph", aspect: "landscape" },
     concept:
       "The entry is designed as a threshold: a compression at the door opening into height and light beyond, so arrival is experienced rather than simply passed through.",
     details:
@@ -253,7 +253,7 @@ export const projects: Project[] = [
     craft:
       "Floor, wall and joinery lines are set out from a shared grid so that junctions align across the whole sequence.",
     gallery: [
-      { alt: "Modern Villa Entry — entrance and stair", aspect: "landscape" },
+      { src: entryAsset.url, alt: "Modern Villa Entry — entrance and stair", aspect: "landscape" },
       { alt: "Modern Villa Entry — architectural detail", aspect: "portrait" },
       { alt: "Modern Villa Entry — living area", aspect: "portrait" },
       { alt: "Modern Villa Entry — wide interior view", aspect: "wide" },
