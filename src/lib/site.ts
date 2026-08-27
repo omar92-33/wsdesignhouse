@@ -4,6 +4,11 @@
  * Only verified, supplied information is stored here — never invent details.
  */
 
+import kitchenAsset from "@/assets/kitchen.png.asset.json";
+import bedroomAsset from "@/assets/bedroom.png.asset.json";
+import entryAsset from "@/assets/entry.png.asset.json";
+
+
 export const site = {
   name: "WS DESIGNHOUSE",
   tagline: "Design Spaces… Creating Dreams",
