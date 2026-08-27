@@ -48,35 +48,42 @@
   --color-stone: var(--stone);
   --color-champagne: var(--champagne);
   --color-forest: var(--forest);
+  --color-sage: var(--sage);
+  --color-greige: var(--greige);
+  --color-walnut: var(--walnut);
 }
 
 :root {
   --radius: 0px;
 
-  --ink: oklch(0.19 0.006 90);
-  --ivory: oklch(0.973 0.008 85);
-  --stone: oklch(0.9 0.011 85);
-  --champagne: oklch(0.68 0.082 62);
-  --forest: oklch(0.32 0.035 165);
+  /* Brand palette */
+  --ink: #26352d;        /* Deep Forest Green — hero & dark sections */
+  --ivory: #f4efe8;      /* Warm cream — text on dark */
+  --greige: #a89f93;     /* Warm Greige — main background */
+  --stone: #bcb4aa;
+  --champagne: #a85d43;  /* Terracotta Clay — buttons / CTA */
+  --forest: #26352d;
+  --sage: #78806c;       /* Soft Sage — secondary sections */
+  --walnut: #5c4438;     /* Rich Walnut — text & details */
 
-  --background: var(--ivory);
-  --foreground: var(--ink);
-  --card: oklch(0.985 0.005 85);
-  --card-foreground: var(--ink);
-  --popover: oklch(0.985 0.005 85);
-  --popover-foreground: var(--ink);
+  --background: var(--greige);
+  --foreground: var(--walnut);
+  --card: #b3aba0;
+  --card-foreground: var(--walnut);
+  --popover: #b3aba0;
+  --popover-foreground: var(--walnut);
   --primary: var(--ink);
   --primary-foreground: var(--ivory);
-  --secondary: var(--stone);
-  --secondary-foreground: var(--ink);
-  --muted: oklch(0.945 0.008 85);
-  --muted-foreground: oklch(0.48 0.012 85);
+  --secondary: var(--sage);
+  --secondary-foreground: var(--ivory);
+  --muted: var(--sage);
+  --muted-foreground: #4a352b;
   --accent: var(--champagne);
-  --accent-foreground: oklch(0.16 0.006 90);
+  --accent-foreground: #f7f2ec;
   --destructive: oklch(0.52 0.18 27);
   --destructive-foreground: var(--ivory);
-  --border: oklch(0.88 0.01 85);
-  --input: oklch(0.86 0.01 85);
+  --border: #8d8378;
+  --input: #8d8378;
   --ring: var(--champagne);
 }
 
