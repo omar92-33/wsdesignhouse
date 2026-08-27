@@ -11,6 +11,10 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { Nav } from "@/components/site/Nav";
+import { Footer } from "@/components/site/Footer";
+import { MobileBar } from "@/components/site/MobileBar";
+import { site } from "@/lib/site";
 
 function NotFoundComponent() {
   return (
@@ -77,21 +81,50 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "WS DESIGNHOUSE | Luxury Interior Architecture in New Cairo" },
+      {
+        name: "description",
+        content:
+          "WS DESIGNHOUSE is a New Cairo interior architecture studio specializing in luxury residential interiors, visualization, bespoke furniture and end-to-end project management.",
+      },
+      { name: "author", content: "WS DESIGNHOUSE" },
+      { property: "og:site_name", content: "WS DESIGNHOUSE" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "theme-color", content: "#211f1c" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: site.name,
+          slogan: site.tagline,
+          description:
+            "Luxury interior architecture and end-to-end interior design studio in New Cairo, Egypt.",
+          email: site.email,
+          telephone: site.phones,
+          areaServed: "Egypt",
+          address: { "@type": "PostalAddress", addressLocality: "New Cairo", addressCountry: "EG" },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: site.coordinates.lat,
+            longitude: site.coordinates.lng,
+          },
+          sameAs: [site.social.instagram, site.social.tiktok, site.social.linkedin],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -119,8 +152,14 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <Nav />
+      <main id="main">
+        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+        <Outlet />
+      </main>
+      <Footer />
+      <MobileBar />
     </QueryClientProvider>
   );
 }
+
