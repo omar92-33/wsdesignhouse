@@ -36,29 +36,23 @@ function PortfolioPage() {
         intro="A curated selection of residential masterpieces in Egypt."
       />
 
-      <section className="space-y-24 py-20 lg:space-y-40 lg:py-28">
-        {projects.map((p) => (
-          <Reveal as="article" key={p.slug}>
-            <Link to="/portfolio/$slug" params={{ slug: p.slug }} className="group block">
-              <Frame image={p.hero} aspect="wide" caption={`${p.title} — hero photograph`} />
-              <Container className="mt-8">
-                <p className="label text-champagne">{p.category}</p>
-                <h2 className="display mt-3 text-[clamp(2rem,6vw,5rem)]">{p.title}</h2>
-                <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground">
-                  {p.description}
-                </p>
-                <span className="label mt-6 inline-flex items-center gap-2">
-                  Explore Project
-                  <ArrowUpRight
-                    className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1"
-                    strokeWidth={1.2}
-                    aria-hidden
-                  />
-                </span>
-              </Container>
-            </Link>
-          </Reveal>
-        ))}
+      <section className="py-20 lg:py-28">
+        <Container>
+          <div className="space-y-24 lg:space-y-32">
+            {projects.map((p) => (
+              <Reveal as="article" key={p.slug}>
+                <div className="mx-auto max-w-4xl">
+                  <Frame image={p.hero} aspect="wide" caption={`${p.title} — hero photograph`} />
+                  <p className="label mt-8 text-champagne">{p.category}</p>
+                  <h2 className="display mt-3 text-[clamp(1.75rem,5vw,3.5rem)]">{p.title}</h2>
+                  <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground">
+                    {p.description}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
       </section>
 
       <FinalCta />

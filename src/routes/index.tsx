@@ -368,38 +368,30 @@ function Portfolio() {
         </Reveal>
       </Container>
 
-      <div className="mt-20 space-y-24 lg:space-y-40">
-        {projects.map((p, i) => (
-          <Reveal as="article" key={p.slug}>
-            <Link to="/portfolio/$slug" params={{ slug: p.slug }} className="group block">
-              <Frame image={p.hero} aspect="wide" caption={`${p.title} — hero photograph`} />
-              <Container className="mt-8">
+      <Container>
+        <div className="mt-20 space-y-24 lg:space-y-32">
+          {projects.map((p, i) => (
+            <Reveal as="article" key={p.slug}>
+              <div className="mx-auto max-w-4xl">
+                <Frame image={p.hero} aspect="wide" caption={`${p.title} — hero photograph`} />
                 <div
-                  className={`grid gap-4 md:grid-cols-[auto_1fr] md:items-end md:gap-12 ${
+                  className={`mt-8 grid gap-4 md:grid-cols-[auto_1fr] md:items-end md:gap-12 ${
                     i % 2 === 1 ? "md:justify-items-end" : ""
                   }`}
                 >
                   <div>
                     <p className="label text-champagne">{p.category}</p>
-                    <h3 className="display mt-3 text-[clamp(2rem,6vw,5rem)]">{p.title}</h3>
+                    <h3 className="display mt-3 text-[clamp(1.75rem,5vw,3.5rem)]">{p.title}</h3>
                   </div>
                   <p className="max-w-md text-sm leading-relaxed text-muted-foreground md:pb-3">
                     {p.description}
-                    <span className="label mt-4 flex items-center gap-2 text-foreground">
-                      Explore Project
-                      <ArrowUpRight
-                        className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1"
-                        strokeWidth={1.2}
-                        aria-hidden
-                      />
-                    </span>
                   </p>
                 </div>
-              </Container>
-            </Link>
-          </Reveal>
-        ))}
-      </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Container>
     </section>
   );
 }
