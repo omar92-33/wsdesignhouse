@@ -90,7 +90,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 pt-8 text-[0.7rem] tracking-[0.12em] uppercase opacity-45 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-3 pt-8 text-[0.8rem] tracking-[0.12em] uppercase opacity-45 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 WS DESIGNHOUSE. Crafting Luxury Interiors.</p>
           <p>Tax ID Number: {site.taxId}</p>
           <p>{site.established}</p>
