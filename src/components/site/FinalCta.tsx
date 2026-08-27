@@ -42,7 +42,7 @@ export function FinalCta({
               WhatsApp Us
             </a>
           </div>
-          <p className="label mt-10 text-[0.6rem] opacity-45">
+          <p className="label mt-10 text-[0.72rem] opacity-45">
             {site.location} — {site.established}
           </p>
         </Reveal>

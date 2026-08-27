@@ -62,7 +62,7 @@ function Home() {
 
 function Hero() {
   return (
-    <section className="relative flex min-h-[100svh] items-end overflow-hidden bg-ink text-ivory">
+    <section className="relative flex min-h-[80svh] items-end overflow-hidden bg-ink text-ivory">
       <div
         aria-hidden
         className="absolute inset-0"
@@ -91,7 +91,7 @@ function Hero() {
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-end">
           <Reveal delay={300}>
-            <p className="label text-[0.62rem] opacity-60">{site.serviceLine}</p>
+            <p className="label text-[0.74rem] opacity-60">{site.serviceLine}</p>
             <p className="mt-6 max-w-xl text-sm leading-relaxed opacity-70 sm:text-base">
               From bespoke Kitchens to artisanal Bedrooms. We design in-house spaces in New Cairo
               that define your lifestyle with luxury and elegance.
@@ -332,7 +332,7 @@ function Journey() {
           {journey.map((step, i) => (
             <Reveal as="li" key={step} delay={i * 70} className="flex items-center">
               <span className="group flex flex-col items-center px-4 py-3">
-                <span className="label text-[0.55rem] text-champagne">
+                <span className="label text-[0.68rem] text-champagne">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span className="mt-2 font-display text-xl uppercase tracking-[0.12em] transition-colors duration-500 group-hover:text-champagne sm:text-2xl">

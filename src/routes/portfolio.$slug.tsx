@@ -52,14 +52,14 @@ function ProjectPage() {
 
   return (
     <>
-      <header className="relative min-h-[85svh] overflow-hidden bg-ink text-ivory">
+      <header className="relative min-h-[62svh] overflow-hidden bg-ink text-ivory">
         <div className="absolute inset-0">
           <Frame
             image={project.hero}
             aspect="wide"
             tone="dark"
             priority
-            className="!aspect-auto h-full min-h-[85svh]"
+            className="!aspect-auto h-full min-h-[62svh]"
             caption={`${project.title} — hero photograph`}
           />
         </div>
@@ -71,7 +71,7 @@ function ProjectPage() {
               "linear-gradient(to top, oklch(0.16 0.006 90 / 0.92) 0%, oklch(0.16 0.006 90 / 0.25) 55%, transparent 100%)",
           }}
         />
-        <Container className="relative flex min-h-[85svh] flex-col justify-end pb-20 pt-40">
+        <Container className="relative flex min-h-[62svh] flex-col justify-end pb-20 pt-40">
           <p className="label text-champagne">{project.category}</p>
           <h1 className="display mt-5 max-w-[14ch] text-[clamp(2.75rem,9vw,7rem)]">
             {project.title}
@@ -177,7 +177,7 @@ function ProjectPage() {
             >
               Or message the studio on WhatsApp
             </a>
-            <p className="label mt-10 text-[0.6rem] opacity-40">{site.location}</p>
+            <p className="label mt-10 text-[0.72rem] opacity-40">{site.location}</p>
           </Reveal>
         </Container>
       </section>
