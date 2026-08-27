@@ -6,6 +6,7 @@ import { Frame } from "@/components/site/Frame";
 import { VirtualTour } from "@/components/site/VirtualTour";
 import { Social } from "@/components/site/Social";
 import { FinalCta } from "@/components/site/FinalCta";
+import { Recognition } from "@/components/site/Recognition";
 import { journey, method, pillars, projects, services, site, testimonials } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
