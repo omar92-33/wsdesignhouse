@@ -1,12 +1,12 @@
-import { useState } from "react";
 import { site } from "@/lib/site";
 import { Container, Eyebrow } from "./Section";
 import { Reveal } from "./Reveal";
 
-/** 360° experience — embed is lazy-loaded only after the visitor opts in. */
+/**
+ * 360° experience — the tour host blocks iframe embedding (X-Frame-Options),
+ * so the experience always opens in a new tab.
+ */
 export function VirtualTour() {
-  const [active, setActive] = useState(false);
-
   return (
     <section className="bg-ink py-28 text-ivory lg:py-40" aria-labelledby="tour-heading">
       <Container>
@@ -18,16 +18,17 @@ export function VirtualTour() {
             </h2>
             <p className="mt-6 max-w-md text-sm leading-relaxed opacity-65">
               Experience the space from a new perspective through our immersive virtual
-              experience.
+              experience. It opens in a new window.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <button
-                type="button"
-                onClick={() => setActive(true)}
-                className="label border border-champagne px-8 py-4 text-champagne transition-colors duration-500 hover:bg-champagne hover:text-accent-foreground"
+              <a
+                href={site.virtualTour}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="label border border-champagne px-8 py-4 text-center text-champagne transition-colors duration-500 hover:bg-champagne hover:text-accent-foreground"
               >
                 Explore in 360°
-              </button>
+              </a>
               <a
                 href={site.virtualTour}
                 target="_blank"
@@ -40,35 +41,27 @@ export function VirtualTour() {
           </Reveal>
 
           <Reveal delay={120}>
-            <div className="relative aspect-[16/10] w-full overflow-hidden border border-ivory/15 bg-ink">
-              {active ? (
-                <iframe
-                  src={site.virtualTour}
-                  title="WS DESIGNHOUSE 360° virtual experience"
-                  loading="lazy"
-                  allowFullScreen
-                  className="absolute inset-0 h-full w-full"
-                />
-              ) : (
-                <button
-                  type="button"
-                  onClick={() => setActive(true)}
-                  className="group absolute inset-0 flex flex-col items-center justify-center gap-5"
-                  style={{
-                    backgroundImage:
-                      "radial-gradient(90% 80% at 50% 40%, oklch(0.3 0.014 85) 0%, oklch(0.16 0.006 90) 75%)",
-                  }}
+            <a
+              href={site.virtualTour}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Launch the 360° virtual experience in a new window"
+              className="group relative flex aspect-[16/10] w-full items-center justify-center overflow-hidden border border-ivory/15 bg-ink"
+              style={{
+                backgroundImage:
+                  "radial-gradient(90% 80% at 50% 40%, oklch(0.3 0.014 85) 0%, oklch(0.16 0.006 90) 75%)",
+              }}
+            >
+              <span className="flex flex-col items-center gap-5">
+                <span
+                  aria-hidden
+                  className="flex h-20 w-20 items-center justify-center rounded-full border border-champagne/60 font-display text-lg text-champagne transition-transform duration-700 group-hover:scale-105"
                 >
-                  <span
-                    aria-hidden
-                    className="flex h-20 w-20 items-center justify-center rounded-full border border-champagne/60 font-display text-lg text-champagne transition-transform duration-700 group-hover:scale-105"
-                  >
-                    360°
-                  </span>
-                  <span className="label opacity-70">Launch the virtual experience</span>
-                </button>
-              )}
-            </div>
+                  360°
+                </span>
+                <span className="label opacity-70">Launch the virtual experience</span>
+              </span>
+            </a>
           </Reveal>
         </div>
       </Container>
