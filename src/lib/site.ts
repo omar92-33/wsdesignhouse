@@ -48,8 +48,6 @@ export function telUrl(phone: string) {
 export const navItems = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
-  { label: "Services", to: "/services" },
-  { label: "Portfolio", to: "/portfolio" },
   { label: "Process", to: "/process" },
   { label: "Contact", to: "/contact" },
 ] as const;
