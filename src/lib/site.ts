@@ -132,7 +132,7 @@ export const services: Service[] = [
       "FF&E is where an interior becomes habitable. Every piece is selected or designed in relation to the architecture around it — scale, material, tone and use.",
       "We schedule, specify and coordinate FF&E as an integral part of the interior rather than a final decorative layer.",
     ],
-    hasPage: false,
+    hasPage: true,
   },
   {
     slug: "bespoke-furniture",
