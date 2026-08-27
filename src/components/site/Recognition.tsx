@@ -21,7 +21,7 @@ export function Recognition() {
     >
       <Container>
         <div className="grid gap-16 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:gap-24">
-          <div className="lg:sticky lg:top-32">
+          <div>
             <Reveal>
               <Eyebrow>Jury Feedback</Eyebrow>
               <h2

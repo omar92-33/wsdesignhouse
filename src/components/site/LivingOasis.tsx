@@ -37,7 +37,7 @@ export function LivingOasis() {
             <Slideshow slides={slides} />
           </Reveal>
 
-          <div className="lg:sticky lg:top-32 lg:order-first">
+          <div className="lg:order-first">
             <Reveal>
               <Eyebrow>Competition Entry</Eyebrow>
               <h2
