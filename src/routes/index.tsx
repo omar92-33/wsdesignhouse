@@ -271,8 +271,8 @@ function ServicesPreview() {
           {services.map((s, i) => (
             <Reveal as="li" key={s.slug} delay={i * 50}>
               <Link
-                to={s.hasPage ? "/services/$slug" : "/services"}
-                params={s.hasPage ? { slug: s.slug } : undefined}
+                to="/services/$slug"
+                params={{ slug: s.slug }}
                 className="group grid gap-3 border-b border-border py-8 transition-colors duration-500 hover:bg-muted/60 md:grid-cols-[1fr_1.1fr_auto] md:items-center md:gap-10"
               >
                 <h3 className="font-display text-3xl sm:text-4xl">{s.title}</h3>

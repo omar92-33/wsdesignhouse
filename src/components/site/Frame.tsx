@@ -21,12 +21,12 @@ export function Frame({
   tone = "light",
   priority = false,
 }: {
-  image?: ProjectImage;
-  aspect?: keyof typeof ratios;
-  className?: string;
-  caption?: string;
-  tone?: "light" | "dark";
-  priority?: boolean;
+  image?: ProjectImage | undefined;
+  aspect?: keyof typeof ratios | undefined;
+  className?: string | undefined;
+  caption?: string | undefined;
+  tone?: "light" | "dark" | undefined;
+  priority?: boolean | undefined;
 }) {
   const ratio = ratios[aspect ?? image?.aspect ?? "landscape"];
   const alt = image?.alt ?? caption ?? "";

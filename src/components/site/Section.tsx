@@ -5,14 +5,14 @@ export function Container({
   className = "",
 }: {
   children: ReactNode;
-  className?: string;
+  className?: string | undefined;
 }) {
   return (
     <div className={`mx-auto w-full max-w-[1600px] px-5 sm:px-8 ${className}`}>{children}</div>
   );
 }
 
-export function Eyebrow({ children, className = "" }: { children: ReactNode; className?: string }) {
+export function Eyebrow({ children, className = "" }: { children: ReactNode; className?: string | undefined }) {
   return (
     <p className={`label flex items-center gap-4 text-champagne ${className}`}>
       <span className="h-px w-8 bg-champagne" aria-hidden />
@@ -28,7 +28,7 @@ export function PageHeader({
 }: {
   eyebrow: string;
   title: string;
-  intro?: string;
+  intro?: string | undefined;
 }) {
   return (
     <header className="bg-ink pb-24 pt-40 text-ivory lg:pb-32 lg:pt-52">

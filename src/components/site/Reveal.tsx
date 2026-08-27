@@ -8,9 +8,9 @@ export function Reveal({
   as: Tag = "div",
 }: {
   children: ReactNode;
-  delay?: number;
-  className?: string;
-  as?: "div" | "section" | "li" | "article" | "figure";
+  delay?: number | undefined;
+  className?: string | undefined;
+  as?: "div" | "section" | "li" | "article" | "figure" | undefined;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [shown, setShown] = useState(false);

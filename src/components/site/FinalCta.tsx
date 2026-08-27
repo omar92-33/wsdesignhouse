@@ -6,8 +6,8 @@ export function FinalCta({
   heading = "Ready to Elevate Your Space?",
   description = "Call us directly for a private consultation.",
 }: {
-  heading?: string;
-  description?: string;
+  heading?: string | undefined;
+  description?: string | undefined;
 }) {
   return (
     <section className="relative overflow-hidden bg-ink text-ivory">
