@@ -95,6 +95,7 @@
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    font-size: 112.5%;
   }
 
   body {
@@ -129,7 +130,7 @@
 /* Small uppercase editorial label */
 @utility label {
   font-family: var(--font-sans);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -174,7 +175,7 @@
 @utility reveal-hidden {
   opacity: 0;
   transform: translate3d(0, 12px, 0);
-  filter: blur(6px);
+  filter: blur(2px);
   will-change: opacity, transform;
 }
 
