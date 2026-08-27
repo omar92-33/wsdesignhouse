@@ -1,4 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
+import wsLogo from "@/assets/ws-logo-light.png.asset.json";
 import { useEffect, useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { navItems, site, whatsappUrl } from "@/lib/site";
@@ -40,12 +41,13 @@ export function Nav() {
       >
         <div className="mx-auto grid max-w-[1600px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 sm:px-8 lg:grid-cols-[1fr_auto_1fr] lg:py-5">
           <Link to="/" className="min-w-0 leading-none" aria-label="WS DESIGNHOUSE — home">
-            <span className="block font-display text-xl tracking-[0.14em] sm:text-2xl">
-              WS DESIGNHOUSE
-            </span>
-            <span className="label mt-1 hidden text-[0.55rem] opacity-60 sm:block">
-              {site.positioning}
-            </span>
+            <img
+              src={wsLogo.url}
+              alt="WS DESIGN HOUSE"
+              width={745}
+              height={541}
+              className="h-11 w-auto sm:h-14"
+            />
           </Link>
 
           <nav className="hidden justify-center lg:flex" aria-label="Primary">
@@ -94,7 +96,7 @@ export function Nav() {
       >
         <div className="flex h-full flex-col px-6 py-5">
           <div className="flex items-center justify-between">
-            <span className="font-display text-xl tracking-[0.14em]">WS DESIGNHOUSE</span>
+            <img src={wsLogo.url} alt="WS DESIGN HOUSE" width={745} height={541} className="h-11 w-auto" />
             <button
               type="button"
               onClick={() => setOpen(false)}
