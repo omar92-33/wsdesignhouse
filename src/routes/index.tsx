@@ -45,6 +45,7 @@ function Home() {
       <ServicesPreview />
       <Journey />
       <Portfolio />
+      <Recognition />
       <VirtualTour />
       <Process />
       {testimonials.length > 0 && <ClientExperiences />}
