@@ -156,7 +156,7 @@ export function Slideshow({
             />
           ))}
         </div>
-        <p className="label text-[0.72rem] opacity-60">
+        <p className="label text-[0.6rem] opacity-60">
           {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
         </p>
       </div>
