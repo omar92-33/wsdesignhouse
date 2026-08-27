@@ -1,11 +1,11 @@
 import type { ProjectImage } from "@/lib/site";
 
 const ratios: Record<string, string> = {
-  portrait: "aspect-[4/5]",
+  portrait: "aspect-[5/6]",
   landscape: "aspect-[3/2]",
   wide: "aspect-[16/9]",
   square: "aspect-square",
-  tall: "aspect-[3/4]",
+  tall: "aspect-[4/5]",
 };
 
 /**
