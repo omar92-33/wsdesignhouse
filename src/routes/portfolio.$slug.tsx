@@ -177,7 +177,7 @@ function ProjectPage() {
             >
               Or message the studio on WhatsApp
             </a>
-            <p className="label mt-10 text-[0.6rem] opacity-40">{site.location}</p>
+            <p className="label mt-10 text-[0.75rem] opacity-40">{site.location}</p>
           </Reveal>
         </Container>
       </section>
