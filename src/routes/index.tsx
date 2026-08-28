@@ -74,16 +74,17 @@ function Hero() {
         alt=""
         aria-hidden
         fetchPriority="high"
-        className="absolute inset-0 h-full w-full object-cover opacity-45"
+        className="absolute inset-0 h-full w-full object-cover opacity-60"
       />
       <div
         aria-hidden
         className="absolute inset-0"
         style={{
           backgroundImage:
-            "linear-gradient(180deg, rgba(59,44,34,0.70) 0%, rgba(59,44,34,0.50) 45%, rgba(59,44,34,0.92) 100%)",
+            "linear-gradient(180deg, rgba(45,33,25,0.78) 0%, rgba(45,33,25,0.62) 45%, rgba(45,33,25,0.95) 100%)",
         }}
       />
+
 
 
       <Container className="relative pb-20 pt-40 lg:pb-28">
