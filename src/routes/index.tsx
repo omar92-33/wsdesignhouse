@@ -81,7 +81,7 @@ function Hero() {
         className="absolute inset-0"
         style={{
           backgroundImage:
-            "linear-gradient(180deg, rgba(20,20,19,0.72) 0%, rgba(20,20,19,0.55) 45%, rgba(20,20,19,0.92) 100%)",
+            "linear-gradient(180deg, rgba(59,44,34,0.70) 0%, rgba(59,44,34,0.50) 45%, rgba(59,44,34,0.92) 100%)",
         }}
       />
 
