@@ -31,6 +31,8 @@ export const site = {
     tiktokHandle: "@ws.designhouse",
     linkedin: "https://www.linkedin.com/in/dr-wessam-abdellatif-9732a596",
     linkedinName: "Dr. Wessam Abdellatif",
+    facebook: "https://www.facebook.com/share/1MpcGPjfVu/?mibextid=wwXIfr",
+    facebookName: "WS DESIGNHOUSE",
   },
   virtualTour: "https://www.keypano.com/v/6gf64ctd4f8995-1763282139.html",
 } as const;

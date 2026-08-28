@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, ArrowUpRight } from "lucide-react";
+import { Instagram, Linkedin, Facebook, ArrowUpRight } from "lucide-react";
 import { site } from "@/lib/site";
 import { Container, Eyebrow } from "./Section";
 import { Reveal } from "./Reveal";
@@ -16,6 +16,12 @@ const channels = [
     handle: site.social.linkedinName,
     href: site.social.linkedin,
     Icon: Linkedin,
+  },
+  {
+    name: "Facebook",
+    handle: site.social.facebookName,
+    href: site.social.facebook,
+    Icon: Facebook,
   },
 ];
 

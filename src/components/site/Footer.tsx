@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Linkedin } from "lucide-react";
+import { Instagram, Linkedin, Facebook } from "lucide-react";
 import wsLogo from "@/assets/ws-logo-light.png.asset.json";
 import { navItems, site, telUrl } from "@/lib/site";
 
@@ -80,6 +80,16 @@ export function Footer() {
                   className="inline-flex items-center gap-2 hover:opacity-100"
                 >
                   <Linkedin className="h-4 w-4" strokeWidth={1.2} aria-hidden /> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href={site.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 hover:opacity-100"
+                >
+                  <Facebook className="h-4 w-4" strokeWidth={1.2} aria-hidden /> Facebook
                 </a>
               </li>
             </ul>
