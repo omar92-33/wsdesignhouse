@@ -183,22 +183,110 @@
   }
 }
 
+/* ---- Motion system -------------------------------------------------- */
+/* Apple-like easing: long, decelerating, never bouncy */
+:root {
+  --ease-lux: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-lux-soft: cubic-bezier(0.22, 0.61, 0.24, 1);
+  --dur-lux: 1s;
+}
+
 @utility reveal-hidden {
   opacity: 0;
-  transform: translate3d(0, 12px, 0);
+  transform: translate3d(0, 18px, 0) scale(0.992);
   filter: blur(2px);
-  will-change: opacity, transform;
+  will-change: opacity, transform, filter;
+  backface-visibility: hidden;
 }
 
 @utility reveal-shown {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0) scale(1);
   filter: blur(0);
+  will-change: auto;
   transition:
-    opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1.1s cubic-bezier(0.16, 1, 0.3, 1),
-    filter 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity var(--dur-lux) var(--ease-lux),
+    transform var(--dur-lux) var(--ease-lux),
+    filter var(--dur-lux) var(--ease-lux);
 }
+
+/* Variant: gentle scale-in for imagery */
+@utility reveal-zoom-hidden {
+  opacity: 0;
+  transform: translate3d(0, 0, 0) scale(1.045);
+  will-change: opacity, transform;
+}
+
+@utility reveal-zoom-shown {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  will-change: auto;
+  transition:
+    opacity 1.25s var(--ease-lux),
+    transform 1.4s var(--ease-lux);
+}
+
+/* Variant: editorial line mask for headings */
+@utility reveal-mask-hidden {
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+  will-change: opacity, transform;
+}
+
+@utility reveal-mask-shown {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
+  transition:
+    opacity 0.9s var(--ease-lux),
+    transform 1.05s var(--ease-lux);
+}
+
+@utility reveal-mask-clip {
+  overflow: hidden;
+  display: block;
+}
+
+/* Premium tactile press/hover for buttons & links */
+@utility lux-press {
+  transition:
+    transform 0.5s var(--ease-lux),
+    background-color 0.5s var(--ease-lux),
+    color 0.5s var(--ease-lux),
+    border-color 0.5s var(--ease-lux),
+    opacity 0.5s var(--ease-lux);
+  &:hover {
+    transform: translate3d(0, -1px, 0);
+  }
+  &:active {
+    transform: translate3d(0, 0, 0) scale(0.985);
+    transition-duration: 0.12s;
+  }
+}
+
+/* Mobile menu item entrance */
+@keyframes menu-item-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 26px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@utility menu-item-in {
+  animation: menu-item-in 0.75s var(--ease-lux) both;
+}
+
+@utility menu-panel {
+  transition:
+    opacity 0.6s var(--ease-lux),
+    transform 0.7s var(--ease-lux),
+    clip-path 0.8s var(--ease-lux);
+}
+
 
 
 @media (prefers-reduced-motion: reduce) {
