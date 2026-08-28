@@ -56,42 +56,46 @@
 :root {
   --radius: 0px;
 
-  /* Brand palette — single primary: Deep Charcoal, with warm neutrals */
-  --ink: #1c1c1a;        /* Deep Charcoal — primary, hero & dark sections */
-  --ivory: #f5f3ee;      /* Warm off-white — text on dark */
-  --greige: #efece6;     /* Main background */
-  --stone: #d8d3ca;
-  --champagne: #1c1c1a;  /* Accent = primary charcoal (light contexts) */
-  --forest: #1c1c1a;
-  --sage: #e5e1d9;       /* Secondary sections */
-  --walnut: #1c1c1a;     /* Text & details */
+  /* Brand palette — Cream (60%) · Soft Blue (25%) · Walnut Brown (15%) */
+  --cream: #f2ebdd;      /* Primary background & light surfaces */
+  --blue: #8fafc2;       /* Primary accent — buttons, links, highlights */
+  --walnut: #6b4a35;     /* Secondary accent — headings, borders, details */
 
-  --background: var(--greige);
-  --foreground: var(--ink);
-  --card: #f6f4ef;
-  --card-foreground: var(--ink);
-  --popover: #f6f4ef;
-  --popover-foreground: var(--ink);
-  --primary: var(--ink);
-  --primary-foreground: var(--ivory);
+  --ink: #3b2c22;        /* Deep walnut — immersive dark sections only */
+  --ivory: var(--cream); /* Text on dark sections */
+  --greige: var(--cream);
+  --stone: #ddd2c0;
+  --champagne: var(--blue);
+  --forest: var(--walnut);
+  --sage: #e6edf1;       /* Soft blue tinted secondary surfaces */
+
+  --background: var(--cream);
+  --foreground: var(--walnut);
+  --card: #f7f2e8;
+  --card-foreground: var(--walnut);
+  --popover: #f7f2e8;
+  --popover-foreground: var(--walnut);
+  --primary: var(--walnut);
+  --primary-foreground: var(--cream);
   --secondary: var(--sage);
-  --secondary-foreground: var(--ink);
+  --secondary-foreground: var(--walnut);
   --muted: var(--sage);
-  --muted-foreground: #56534d;
-  --accent: var(--ink);
-  --accent-foreground: var(--ivory);
+  --muted-foreground: #7a6350;
+  --accent: var(--blue);
+  --accent-foreground: #33261d;
   --destructive: oklch(0.52 0.18 27);
-  --destructive-foreground: var(--ivory);
-  --border: #d6d1c8;
-  --input: #d6d1c8;
-  --ring: var(--ink);
+  --destructive-foreground: var(--cream);
+  --border: #ddd0bd;
+  --input: #ddd0bd;
+  --ring: var(--blue);
 }
 
-/* Inside dark charcoal sections the accent becomes a pale neutral so it stays legible */
+/* Inside deep walnut sections the accent stays soft blue and borders soften */
 [class*="bg-ink"] {
-  --champagne: #cfc9bd;
-  --border: color-mix(in srgb, #f5f3ee 16%, transparent);
+  --champagne: #a6c2d3;
+  --border: color-mix(in srgb, #f2ebdd 18%, transparent);
 }
+
 
 @layer base {
   * {
