@@ -37,7 +37,7 @@ function PortfolioPage() {
 
       <section className="py-20 lg:py-28">
         <Container>
-          <div className="space-y-24 lg:space-y-32">
+          <div className="space-y-16 sm:space-y-24 lg:space-y-32">
             {projects.map((p) => (
               <Reveal as="article" key={p.slug}>
                 <div className="mx-auto max-w-4xl">

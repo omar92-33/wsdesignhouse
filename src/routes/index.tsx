@@ -148,7 +148,7 @@ function SelectedProjects() {
 
         </Reveal>
 
-        <div className="mt-16 space-y-24 lg:space-y-36">
+        <div className="mt-12 space-y-16 sm:mt-16 sm:space-y-24 lg:space-y-36">
           {projects.map((p, i) => (
             <Reveal as="article" key={p.slug} delay={i * 60}>
               <Link to="/portfolio/$slug" params={{ slug: p.slug }} className="group block">
@@ -230,7 +230,7 @@ function Process() {
           </h2>
         </Reveal>
 
-        <ol className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
+        <ol className="mt-12 grid gap-10 sm:mt-16 sm:grid-cols-2 sm:gap-12 lg:grid-cols-4 lg:gap-10">
           {method.map((m, i) => (
             <Reveal as="li" key={m.number} delay={i * 80}>
               <div className="border-t border-ink pt-7">
