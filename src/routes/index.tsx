@@ -160,7 +160,7 @@ function SelectedProjects() {
                     )}
                     <h3 className="display mt-3 text-[clamp(1.7rem,4.5vw,3.1rem)]">{p.title}</h3>
                     <p className="mt-3 text-base text-muted-foreground">
-                      {p.projectLocation ?? site.location}
+                      {p.projectLocation ?? ""}
                       {p.scope ? ` · ${p.scope}` : ""}
                     </p>
                   </div>

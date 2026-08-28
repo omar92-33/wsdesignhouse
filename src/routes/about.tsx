@@ -33,7 +33,7 @@ function About() {
       <PageHeader
         eyebrow="The Studio"
         title="A Studio Built on Experience"
-        intro="WS DESIGNHOUSE is a premium interior studio specializing in artisanal residential spaces. Based in New Cairo, we bring a global luxury perspective to every Egyptian home."
+        intro="WS DESIGNHOUSE is a premium interior studio specializing in artisanal residential spaces. We bring a global luxury perspective to every home."
       />
 
       <section className="py-24 lg:py-36">
