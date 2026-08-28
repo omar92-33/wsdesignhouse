@@ -54,12 +54,14 @@ function Home() {
     <>
       <Hero />
       <SelectedProjects />
-      <WhyStudio />
-      <Process />
-      <Studio />
       <Services />
+      <WhyStudio />
+      <StudioFilm />
+      <Studio />
       <Proof />
+      <Process />
       <BeyondTheFinishedSpace />
+      <VirtualTour />
       <StudioMap />
       <FinalCta />
     </>
