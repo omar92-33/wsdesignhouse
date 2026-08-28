@@ -123,7 +123,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             latitude: site.coordinates.lat,
             longitude: site.coordinates.lng,
           },
-          sameAs: [site.social.instagram, site.social.tiktok, site.social.linkedin],
+          sameAs: [
+            site.social.instagram,
+            site.social.tiktok,
+            site.social.linkedin,
+            site.social.facebook,
+          ],
         }),
       },
     ],
