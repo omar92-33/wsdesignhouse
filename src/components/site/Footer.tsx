@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin, Facebook } from "lucide-react";
+import { TikTokIcon } from "./TikTokIcon";
 import wsLogo from "@/assets/ws-logo-light.png.asset.json";
 import { navItems, site, telUrl } from "@/lib/site";
 
