@@ -127,7 +127,7 @@ export function Slideshow({
           type="button"
           onClick={() => go(-1)}
           aria-label="Previous slide"
-          className="absolute left-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-border/60 bg-background/60 text-foreground opacity-0 backdrop-blur transition duration-300 hover:bg-background focus-visible:opacity-100 group-hover:opacity-100 max-sm:opacity-70 sm:left-3"
+          className="absolute left-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-border/60 bg-background/60 text-foreground opacity-0 backdrop-blur transition duration-300 hover:bg-background focus-visible:opacity-100 group-hover:opacity-100 max-sm:opacity-70 sm:left-3"
         >
           <ChevronLeft className="h-4 w-4" aria-hidden />
         </button>
@@ -135,13 +135,13 @@ export function Slideshow({
           type="button"
           onClick={() => go(1)}
           aria-label="Next slide"
-          className="absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-border/60 bg-background/60 text-foreground opacity-0 backdrop-blur transition duration-300 hover:bg-background focus-visible:opacity-100 group-hover:opacity-100 max-sm:opacity-70 sm:right-3"
+          className="absolute right-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-border/60 bg-background/60 text-foreground opacity-0 backdrop-blur transition duration-300 hover:bg-background focus-visible:opacity-100 group-hover:opacity-100 max-sm:opacity-70 sm:right-3"
         >
           <ChevronRight className="h-4 w-4" aria-hidden />
         </button>
       </div>
 
-      <div className="mt-6 flex items-center justify-between gap-6">
+      <div className="mt-4 flex items-center justify-between gap-6">
         <div className="flex gap-2">
           {slides.map((s, i) => (
             <button
@@ -150,10 +150,15 @@ export function Slideshow({
               onClick={() => setIndex(i)}
               aria-label={`Go to slide ${i + 1}`}
               aria-current={i === index}
-              className={`h-px w-10 transition-all ${
-                i === index ? "bg-champagne" : "bg-border hover:bg-foreground/40"
-              }`}
-            />
+              className="group/dot flex h-11 w-10 items-center justify-center"
+            >
+              <span
+                aria-hidden
+                className={`block h-px w-full transition-all ${
+                  i === index ? "bg-champagne" : "bg-border group-hover/dot:bg-foreground/40"
+                }`}
+              />
+            </button>
           ))}
         </div>
         <p className="label opacity-60">

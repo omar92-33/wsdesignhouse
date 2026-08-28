@@ -74,6 +74,7 @@ function Hero() {
         alt=""
         aria-hidden
         fetchPriority="high"
+        decoding="async"
         className="absolute inset-0 h-full w-full object-cover opacity-60"
       />
       <div

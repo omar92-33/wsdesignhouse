@@ -37,7 +37,7 @@ export function StudioFilm() {
                 src={film.url}
                 controls
                 playsInline
-                preload="metadata"
+                preload="none"
                 aria-label="WS Design House studio walkthrough film"
               />
             </div>
