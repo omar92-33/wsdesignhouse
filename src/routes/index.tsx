@@ -140,6 +140,10 @@ function SelectedProjects() {
           <h2 id="projects-heading" className="display mt-7 text-[clamp(2.1rem,5.5vw,4.25rem)]">
             The Work.
           </h2>
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
+            A selection of spaces shaped through architecture, material, light, and detail.
+          </p>
+
         </Reveal>
 
         <div className="mt-16 space-y-24 lg:space-y-36">
