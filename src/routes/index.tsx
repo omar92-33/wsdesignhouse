@@ -8,6 +8,7 @@ import { Social } from "@/components/site/Social";
 import { FinalCta } from "@/components/site/FinalCta";
 import { Recognition } from "@/components/site/Recognition";
 import { LivingOasis } from "@/components/site/LivingOasis";
+import { StudioFilm } from "@/components/site/StudioFilm";
 import diningAsset from "@/assets/dining-interior.jpg.asset.json";
 import { journey, method, pillars, projects, services, site, testimonials } from "@/lib/site";
 
@@ -50,6 +51,7 @@ function Home() {
       <Portfolio />
       <Recognition />
       <LivingOasis />
+      <StudioFilm />
       <VirtualTour />
       <Process />
       {testimonials.length > 0 && <ClientExperiences />}
