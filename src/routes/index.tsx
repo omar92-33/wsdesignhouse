@@ -181,8 +181,11 @@ function SelectedProjects() {
           ))}
         </div>
 
-        <Reveal>
-          <Link to={secondaryCta.to} className="label link-underline mt-12 inline-block">
+        <Reveal className="mt-10 flex justify-center">
+          <Link
+            to={secondaryCta.to}
+            className="label inline-flex items-center justify-center border border-ink px-9 py-4 transition-colors duration-500 hover:bg-ink hover:text-ivory"
+          >
             {secondaryCta.label} →
           </Link>
         </Reveal>
