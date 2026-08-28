@@ -139,7 +139,7 @@ function Hero() {
 
 function SelectedProjects() {
   return (
-    <section className="py-24 lg:py-36" aria-labelledby="projects-heading">
+    <section className="pb-14 pt-24 lg:pb-20 lg:pt-36" aria-labelledby="projects-heading">
       <Container>
         <Reveal>
           <Eyebrow>Selected Projects</Eyebrow>
@@ -182,7 +182,7 @@ function SelectedProjects() {
         </div>
 
         <Reveal>
-          <Link to={secondaryCta.to} className="label link-underline mt-20 inline-block">
+          <Link to={secondaryCta.to} className="label link-underline mt-12 inline-block">
             {secondaryCta.label} →
           </Link>
         </Reveal>
@@ -292,7 +292,7 @@ function Studio() {
 
 function Services() {
   return (
-    <section className="py-24 lg:py-36" aria-labelledby="services-heading">
+    <section className="pb-24 pt-14 lg:pb-36 lg:pt-20" aria-labelledby="services-heading">
       <Container>
         <Reveal>
           <Eyebrow>Services</Eyebrow>
