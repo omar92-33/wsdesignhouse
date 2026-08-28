@@ -61,6 +61,8 @@ function About() {
         </Container>
       </section>
 
+      <Certificates />
+
       <section className="bg-ink py-24 text-ivory lg:py-36">
         <Container>
           <Reveal>
@@ -110,8 +112,6 @@ function About() {
           </Reveal>
         </Container>
       </section>
-
-      <Certificates />
 
       <FinalCta />
     </>
