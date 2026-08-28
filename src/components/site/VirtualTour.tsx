@@ -27,7 +27,7 @@ export function VirtualTour() {
                 rel="noopener noreferrer"
                 className="label border border-champagne px-8 py-4 text-center text-champagne transition-colors duration-500 hover:bg-champagne hover:text-accent-foreground"
               >
-                Explore in 360°
+                View the Virtual Tour
               </a>
             </div>
           </Reveal>

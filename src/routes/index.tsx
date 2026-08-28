@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
 import { Container, Eyebrow } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { Frame } from "@/components/site/Frame";
@@ -106,12 +105,6 @@ function Hero() {
               >
                 Book a Private Consultation
               </Link>
-              <Link
-                to="/portfolio"
-                className="label border border-ivory/35 px-8 py-5 text-center transition-colors duration-500 hover:border-ivory"
-              >
-                Explore Our Work
-              </Link>
             </div>
             <div className="mt-6 lg:text-right">
               <a
@@ -120,8 +113,8 @@ function Hero() {
                 rel="noopener noreferrer"
                 className="label link-underline inline-flex items-center gap-2 opacity-60 hover:opacity-100"
               >
-                Explore in 360°
-                <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={1.2} aria-hidden />
+                View the Virtual Tour
+
               </a>
             </div>
           </Reveal>
@@ -285,14 +278,8 @@ function ServicesPreview() {
                 <p className="max-w-lg text-sm leading-relaxed text-muted-foreground">
                   {s.short}
                 </p>
-                <span className="label flex items-center gap-2 text-champagne">
-                  Explore
-                  <ArrowUpRight
-                    className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1"
-                    strokeWidth={1.2}
-                    aria-hidden
-                  />
-                </span>
+                <span aria-hidden />
+
               </Link>
             </Reveal>
           ))}
