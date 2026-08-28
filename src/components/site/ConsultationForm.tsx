@@ -186,7 +186,7 @@ export function ConsultationForm() {
           Send Details on WhatsApp
         </button>
       </div>
-      <p className="text-xs leading-relaxed text-muted-foreground">
+      <p className="text-base leading-relaxed text-muted-foreground">
         Your details are used only to arrange your consultation and are never shared publicly.
       </p>
     </form>
@@ -211,7 +211,7 @@ function Field({
       </label>
       <div className="mt-1">{children}</div>
       {error && (
-        <p role="alert" className="mt-2 text-xs text-destructive">
+        <p role="alert" className="mt-2 text-base text-destructive">
           {error}
         </p>
       )}
