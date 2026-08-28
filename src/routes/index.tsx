@@ -333,9 +333,13 @@ function Proof() {
           <h2 id="proof-heading" className="display mt-7 text-[clamp(2rem,5vw,3.75rem)]">
             Verified Experience.
           </h2>
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
+            Awarded placements, degrees and diplomas — documented credentials, separate from
+            the concept and competition work shown further below.
+          </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-10 md:grid-cols-3">
+        <div className="mt-14 grid gap-10 sm:gap-12 md:grid-cols-3">
           {[
             {
               title: "Third Prize — LX Club and Offices Competition",
@@ -394,8 +398,9 @@ function BeyondTheFinishedSpace() {
             Beyond the Finished Space.
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-            Competition entries, design research and studio work — separate from our completed
-            client projects.
+            Competition entries, design research and studio work. Everything in this section is
+            concept work — not completed client projects — and any feedback shown belongs to the
+            competition submissions themselves.
           </p>
         </Reveal>
       </Container>
