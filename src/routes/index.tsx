@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
 import { Container, Eyebrow } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { Frame } from "@/components/site/Frame";
