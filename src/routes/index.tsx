@@ -67,14 +67,22 @@ function Home() {
 function Hero() {
   return (
     <section className="relative flex min-h-[100svh] items-end overflow-hidden bg-ink text-ivory">
+      <img
+        src={entryAsset.url}
+        alt=""
+        aria-hidden
+        fetchPriority="high"
+        className="absolute inset-0 h-full w-full object-cover opacity-45"
+      />
       <div
         aria-hidden
         className="absolute inset-0"
         style={{
           backgroundImage:
-            "radial-gradient(120% 90% at 68% 12%, #2c2c29 0%, #141413 68%)",
+            "linear-gradient(180deg, rgba(20,20,19,0.72) 0%, rgba(20,20,19,0.55) 45%, rgba(20,20,19,0.92) 100%)",
         }}
       />
+
 
       <Container className="relative pb-20 pt-40 lg:pb-28">
         <Reveal>
