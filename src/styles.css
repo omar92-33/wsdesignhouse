@@ -109,6 +109,29 @@
     font-size: 112.5%;
   }
 
+  /* Lenis inertial scrolling (GPU transform based) */
+  html.lenis-active,
+  html.lenis-active body {
+    scroll-behavior: auto !important;
+  }
+
+  html.lenis-active.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  html.lenis-active.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  html.lenis-active.lenis-stopped {
+    overflow: hidden;
+  }
+
+  html.lenis-active .lenis-content {
+    will-change: transform;
+  }
+
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
