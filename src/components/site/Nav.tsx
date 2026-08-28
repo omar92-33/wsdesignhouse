@@ -79,18 +79,29 @@ export function Nav() {
           <div className="flex items-center justify-end gap-4">
             <Link
               to="/contact"
-              className="label hidden border border-ivory/40 px-6 py-3 transition-colors duration-500 hover:border-champagne hover:bg-champagne hover:text-accent-foreground lg:inline-block"
+              className="label lux-press hidden border border-ivory/40 px-6 py-3 hover:border-champagne hover:bg-champagne hover:text-accent-foreground lg:inline-block"
             >
               Book a Consultation
             </Link>
             <button
               type="button"
-              onClick={() => setOpen(true)}
-              className="label flex items-center gap-2 py-2 lg:hidden"
-              aria-label="Open menu"
+              onClick={() => setOpen((v) => !v)}
+              className="label lux-press relative flex h-11 w-11 items-center justify-center lg:hidden"
+              aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
             >
-              <Menu className="h-5 w-5" strokeWidth={1} aria-hidden />
+              <span className="relative block h-4 w-6" aria-hidden>
+                <span
+                  className={`absolute left-0 block h-px w-6 bg-current transition-transform duration-500 [transition-timing-function:var(--ease-lux)] ${
+                    open ? "top-1/2 rotate-45" : "top-0.5 rotate-0"
+                  }`}
+                />
+                <span
+                  className={`absolute left-0 block h-px w-6 bg-current transition-transform duration-500 [transition-timing-function:var(--ease-lux)] ${
+                    open ? "top-1/2 -rotate-45" : "top-[calc(100%-2px)] rotate-0"
+                  }`}
+                />
+              </span>
             </button>
           </div>
         </div>
@@ -98,8 +109,10 @@ export function Nav() {
 
       {/* Mobile full-screen menu */}
       <div
-        className={`fixed inset-0 z-[60] bg-ink text-ivory transition-opacity duration-500 lg:hidden ${
-          open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+        className={`menu-panel fixed inset-0 z-[60] bg-ink text-ivory lg:hidden ${
+          open
+            ? "pointer-events-auto opacity-100 [clip-path:inset(0_0_0%_0)]"
+            : "pointer-events-none opacity-0 [clip-path:inset(0_0_100%_0)]"
         }`}
         aria-hidden={!open}
       >
@@ -110,7 +123,7 @@ export function Nav() {
               type="button"
               onClick={() => setOpen(false)}
               aria-label="Close menu"
-              className="p-2"
+              className="lux-press p-2"
             >
               <X className="h-6 w-6" strokeWidth={1} aria-hidden />
             </button>
@@ -118,13 +131,16 @@ export function Nav() {
 
           <nav className="mt-14 flex-1" aria-label="Mobile">
             <ul className="space-y-6">
-              {navItems.map((item) => (
-                <li key={item.to}>
+              {navItems.map((item, i) => (
+                <li
+                  key={item.to}
+                  className={open ? "menu-item-in" : "opacity-0"}
+                  style={open ? { animationDelay: `${120 + i * 70}ms` } : undefined}
+                >
                   <Link
                     to={item.to}
-                    className="font-display text-4xl leading-none tracking-tight"
+                    className="lux-press inline-block font-display text-4xl leading-none tracking-tight"
                     activeProps={{ className: "text-champagne" }}
-                    
                   >
                     {item.label}
                   </Link>
@@ -133,10 +149,13 @@ export function Nav() {
             </ul>
           </nav>
 
-          <div className="space-y-4 border-t border-ivory/15 pt-6">
+          <div
+            className={`space-y-4 border-t border-ivory/15 pt-6 ${open ? "menu-item-in" : "opacity-0"}`}
+            style={open ? { animationDelay: `${180 + navItems.length * 70}ms` } : undefined}
+          >
             <Link
               to="/contact"
-              className="label block border border-champagne bg-champagne px-6 py-4 text-center text-accent-foreground"
+              className="label lux-press block border border-champagne bg-champagne px-6 py-4 text-center text-accent-foreground"
             >
               Book a Private Consultation
             </Link>
@@ -144,7 +163,7 @@ export function Nav() {
               href={whatsappUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="label flex items-center justify-center gap-2 border border-ivory/30 px-6 py-4"
+              className="label lux-press flex items-center justify-center gap-2 border border-ivory/30 px-6 py-4"
             >
               <MessageCircle className="h-4 w-4" strokeWidth={1.2} aria-hidden />
               WhatsApp the Studio
@@ -152,6 +171,7 @@ export function Nav() {
           </div>
         </div>
       </div>
+
     </>
   );
 }
