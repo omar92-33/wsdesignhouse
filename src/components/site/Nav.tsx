@@ -149,7 +149,6 @@ export function Nav() {
               <MessageCircle className="h-4 w-4" strokeWidth={1.2} aria-hidden />
               WhatsApp the Studio
             </a>
-            <p className="label pt-2 opacity-50">{site.location}</p>
           </div>
         </div>
       </div>
