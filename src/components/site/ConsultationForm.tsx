@@ -20,7 +20,13 @@ const schema = z.object({
     .min(7, "Please enter a valid phone or WhatsApp number")
     .max(30)
     .regex(/^[0-9+()\-\s]+$/, "Use digits and + ( ) - only"),
-  email: z.string().trim().email("Please enter a valid email address").max(255),
+  email: z
+    .string()
+    .trim()
+    .max(255)
+    .email("Please enter a valid email address")
+    .optional()
+    .or(z.literal("")),
   projectType: z.enum(projectTypes, { errorMap: () => ({ message: "Select a project type" }) }),
   location: z.string().trim().max(120).optional().or(z.literal("")),
   size: z.string().trim().max(80).optional().or(z.literal("")),
@@ -61,7 +67,7 @@ export function ConsultationForm() {
       "",
       `Name: ${d.name}`,
       `Phone: ${d.phone}`,
-      `Email: ${d.email}`,
+      d.email ? `Email: ${d.email}` : null,
       `Project type: ${d.projectType}`,
       d.location ? `Location: ${d.location}` : null,
       d.size ? `Estimated size: ${d.size}` : null,
@@ -70,9 +76,11 @@ export function ConsultationForm() {
       .filter(Boolean)
       .join("\n");
 
+    const link = whatsappUrl(summary);
     setErrors({});
-    setWaLink(whatsappUrl(summary));
+    setWaLink(link);
     setSent(true);
+    window.open(link, "_blank", "noopener,noreferrer");
   }
 
   if (sent) {
@@ -81,8 +89,8 @@ export function ConsultationForm() {
         <span className="rule-accent" aria-hidden />
         <h3 className="display mt-6 text-3xl">Thank you</h3>
         <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
-          Your request has been prepared. Send it directly to the studio on WhatsApp, or email
-          us and we will respond to arrange your private consultation.
+          Your details have been prepared in WhatsApp. If the chat did not open automatically,
+          use the button below — or email the studio instead.
         </p>
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
           {waLink && (
@@ -126,7 +134,7 @@ export function ConsultationForm() {
             placeholder="01xxxxxxxxx"
           />
         </Field>
-        <Field id="email" label="Email" error={errors.email}>
+        <Field id="email" label="Email (optional)" error={errors.email}>
           <input
             id="email"
             name="email"
@@ -175,16 +183,8 @@ export function ConsultationForm() {
           type="submit"
           className="label border border-ink bg-ink px-10 py-5 text-ivory transition-opacity duration-500 hover:opacity-85"
         >
-          Request Private Consultation
+          Send Details on WhatsApp
         </button>
-        <a
-          href={whatsappUrl()}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="label border border-input px-10 py-5 text-center transition-colors duration-500 hover:border-foreground"
-        >
-          Chat on WhatsApp
-        </a>
       </div>
       <p className="text-xs leading-relaxed text-muted-foreground">
         Your details are used only to arrange your consultation and are never shared publicly.
