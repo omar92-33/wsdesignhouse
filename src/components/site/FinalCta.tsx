@@ -16,7 +16,7 @@ export function FinalCta({
         className="absolute inset-0 opacity-70"
         style={{
           backgroundImage:
-            "radial-gradient(120% 90% at 50% 0%, oklch(0.28 0.012 85) 0%, oklch(0.16 0.006 90) 70%)",
+            "radial-gradient(120% 90% at 50% 0%, oklch(0.36 0.032 62) 0%, oklch(0.24 0.024 62) 70%)",
         }}
       />
       <div className="relative mx-auto max-w-[1100px] px-5 py-32 text-center sm:px-8 lg:py-44">

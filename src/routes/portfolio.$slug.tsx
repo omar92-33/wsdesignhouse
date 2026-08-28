@@ -68,7 +68,7 @@ function ProjectPage() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "linear-gradient(to top, oklch(0.16 0.006 90 / 0.92) 0%, oklch(0.16 0.006 90 / 0.25) 55%, transparent 100%)",
+              "linear-gradient(to top, oklch(0.24 0.024 62 / 0.92) 0%, oklch(0.24 0.024 62 / 0.25) 55%, transparent 100%)",
           }}
         />
         <Container className="relative flex min-h-[85svh] flex-col justify-end pb-20 pt-40">

@@ -74,16 +74,17 @@ function Hero() {
         alt=""
         aria-hidden
         fetchPriority="high"
-        className="absolute inset-0 h-full w-full object-cover opacity-45"
+        className="absolute inset-0 h-full w-full object-cover opacity-60"
       />
       <div
         aria-hidden
         className="absolute inset-0"
         style={{
           backgroundImage:
-            "linear-gradient(180deg, rgba(20,20,19,0.72) 0%, rgba(20,20,19,0.55) 45%, rgba(20,20,19,0.92) 100%)",
+            "linear-gradient(180deg, rgba(45,33,25,0.78) 0%, rgba(45,33,25,0.62) 45%, rgba(45,33,25,0.95) 100%)",
         }}
       />
+
 
 
       <Container className="relative pb-20 pt-40 lg:pb-28">
@@ -108,7 +109,7 @@ function Hero() {
           <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Link
               to={secondaryCta.to}
-              className="label inline-flex items-center justify-center border border-ivory bg-ivory px-9 py-5 text-ink transition-opacity duration-500 hover:opacity-85"
+              className="label inline-flex items-center justify-center border border-champagne bg-champagne px-9 py-5 text-accent-foreground transition-opacity duration-500 hover:opacity-85"
             >
               {secondaryCta.label}
             </Link>
@@ -250,7 +251,7 @@ function Process() {
 
 function Studio() {
   return (
-    <section className="border-y border-border bg-muted/60 py-24 lg:py-36" aria-labelledby="studio-heading">
+    <section className="border-y border-border bg-muted py-24 lg:py-36" aria-labelledby="studio-heading">
       <Container>
         <div className="grid gap-14 lg:grid-cols-[1fr_1fr] lg:gap-24">
           <Reveal>
