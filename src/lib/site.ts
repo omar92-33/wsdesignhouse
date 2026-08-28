@@ -46,10 +46,39 @@ export function telUrl(phone: string) {
 }
 
 export const navItems = [
-  { label: "Home", to: "/" },
-  { label: "About", to: "/about" },
+  { label: "Projects", to: "/portfolio" },
+  { label: "Services", to: "/services" },
+  { label: "Studio", to: "/about" },
   { label: "Process", to: "/process" },
   { label: "Contact", to: "/contact" },
+] as const;
+
+/** The single primary conversion action used site-wide. */
+export const primaryCta = { label: "Book a Private Consultation", to: "/contact" } as const;
+export const secondaryCta = { label: "View Selected Projects", to: "/portfolio" } as const;
+
+/** Four editorial service categories shown on the homepage. */
+export const serviceCategories = [
+  {
+    title: "Interior Architecture",
+    body: "Intelligent spatial planning and architectural transformation.",
+    slug: "interior-architecture",
+  },
+  {
+    title: "Complete Interior Design",
+    body: "Materials, lighting, furniture, finishes, and complete interior direction.",
+    slug: "interior-design",
+  },
+  {
+    title: "Bespoke Design",
+    body: "Custom furniture and distinctive elements created specifically for each project.",
+    slug: "bespoke-furniture",
+  },
+  {
+    title: "Project Development",
+    body: "Technical expertise and coordination supporting the transition from design to execution.",
+    slug: "project-management",
+  },
 ] as const;
 
 export interface Service {
@@ -180,6 +209,10 @@ export interface Project {
   craft?: string;
   materials?: string[];
   projectLocation?: string;
+  /** Property type label, e.g. "Private Residence". */
+  propertyType?: string;
+  /** Scope of work line, e.g. "Interior Architecture & Design". */
+  scope?: string;
   date?: string;
   videoUrl?: string;
   gallery: ProjectImage[];
@@ -193,6 +226,8 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: "the-marble-kitchen",
+    propertyType: "Private Residence",
+    scope: "Interior Architecture & Design",
     title: "The Marble Kitchen",
     category: "Kitchen Design",
     description:
@@ -215,6 +250,8 @@ export const projects: Project[] = [
   },
   {
     slug: "velvet-master-suite",
+    propertyType: "Private Residence",
+    scope: "Interior Design & Bespoke Joinery",
     title: "Velvet Master Suite",
     category: "Bedroom Architecture",
     description:
@@ -237,6 +274,8 @@ export const projects: Project[] = [
   },
   {
     slug: "modern-villa-entry",
+    propertyType: "Private Villa",
+    scope: "Interior Architecture & Design",
     title: "Modern Villa Entry",
     category: "Living Area",
     description:
@@ -262,23 +301,18 @@ export const projects: Project[] = [
 export const pillars = [
   {
     number: "01",
-    title: "Bespoke",
-    body: "Every space is designed around the client's lifestyle, personality and requirements.",
+    title: "Design",
+    body: "A complete design language tailored to the architecture, lifestyle, and identity of every client.",
   },
   {
     number: "02",
-    title: "Architectural",
-    body: "Design goes beyond decoration. We shape the architecture of how you live.",
+    title: "Detail",
+    body: "Materials, lighting, furniture, proportions, and bespoke elements considered as one complete experience.",
   },
   {
     number: "03",
-    title: "End-to-End",
-    body: "From concept to execution, every stage is carefully considered and managed.",
-  },
-  {
-    number: "04",
-    title: "Artisanal",
-    body: "Bespoke furniture and carefully selected materials complete the space.",
+    title: "Delivery",
+    body: "Design expertise supported by real-world experience in construction, execution, and project coordination.",
   },
 ] as const;
 
@@ -295,23 +329,38 @@ export const journey = [
 export const method = [
   {
     number: "01",
-    title: "Consultation",
-    body: "Understanding your unique lifestyle and aesthetic requirements.",
+    title: "Discover",
+    body: "Understanding the client's lifestyle, property, requirements, and vision.",
   },
   {
     number: "02",
-    title: "Curation",
-    body: "Selecting artisanal materials and detailing the architectural vision.",
+    title: "Design",
+    body: "Developing the spatial concept, design direction, materials, lighting, and defining details.",
   },
   {
     number: "03",
-    title: "Creation",
-    body: "Meticulous execution and on-site management for a perfect finish.",
+    title: "Develop",
+    body: "Transforming the concept into technical documentation and an execution strategy.",
+  },
+  {
+    number: "04",
+    title: "Deliver",
+    body: "Supporting the project through design development and implementation to the finished space.",
   },
 ] as const;
 
 /** Add verified client testimonials here; the section stays hidden while empty. */
 export const testimonials: { quote: string; author: string }[] = [];
+
+export const studioSummary = {
+  heading: "A Studio Built on Experience.",
+  body: "WS DESIGNHOUSE brings together interior architecture, construction knowledge, and bespoke furniture expertise to create spaces that are deeply considered and beautifully executed.",
+  credibility: [
+    "25+ Years Experience",
+    "International Background",
+    "Design + Construction Expertise",
+  ],
+} as const;
 
 export const founder = {
   name: "Dr. Wessam Abdellatif",

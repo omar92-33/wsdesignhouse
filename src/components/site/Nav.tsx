@@ -49,7 +49,7 @@ export function Nav() {
                 className="h-9 w-auto shrink-0 sm:h-11"
               />
               <span className="min-w-0">
-                <span className="block font-display text-lg leading-none tracking-[0.14em] sm:text-2xl">
+                <span className="block whitespace-nowrap font-display text-lg leading-none tracking-[0.14em] sm:text-2xl">
                   WS DESIGN HOUSE
                 </span>
                 <span className="label mt-1.5 hidden opacity-60 sm:block">
@@ -67,7 +67,7 @@ export function Nav() {
                     to={item.to}
                     className="label link-underline opacity-80 transition-opacity hover:opacity-100"
                     activeProps={{ className: "label opacity-100 text-champagne" }}
-                    activeOptions={{ exact: item.to === "/" }}
+                    
                   >
                     {item.label}
                   </Link>
@@ -81,7 +81,7 @@ export function Nav() {
               to="/contact"
               className="label hidden border border-ivory/40 px-6 py-3 transition-colors duration-500 hover:border-champagne hover:bg-champagne hover:text-accent-foreground lg:inline-block"
             >
-              Start a Project
+              Book a Consultation
             </Link>
             <button
               type="button"
@@ -124,7 +124,7 @@ export function Nav() {
                     to={item.to}
                     className="font-display text-4xl leading-none tracking-tight"
                     activeProps={{ className: "text-champagne" }}
-                    activeOptions={{ exact: item.to === "/" }}
+                    
                   >
                     {item.label}
                   </Link>
