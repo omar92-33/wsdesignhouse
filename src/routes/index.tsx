@@ -106,12 +106,6 @@ function Hero() {
               >
                 Book a Private Consultation
               </Link>
-              <Link
-                to="/portfolio"
-                className="label border border-ivory/35 px-8 py-5 text-center transition-colors duration-500 hover:border-ivory"
-              >
-                Explore Our Work
-              </Link>
             </div>
             <div className="mt-6 lg:text-right">
               <a
