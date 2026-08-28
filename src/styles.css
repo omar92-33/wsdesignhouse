@@ -7,7 +7,7 @@
 /*
  * WS DESIGNHOUSE — luxury editorial design system.
  * Serif display: Cormorant Garamond. Sans body: Jost.
- * Palette: cream / soft blue / walnut brown.
+ * Palette: cream / muted sage / walnut brown.
  */
 
 @theme inline {
@@ -56,19 +56,19 @@
 :root {
   --radius: 0px;
 
-  /* Brand palette — Cream (60%) · Soft Blue (25%) · Walnut Brown (15%) */
+  /* Brand palette — Cream (60%) · Muted Sage (25%) · Walnut Brown (15%) */
   --cream: #f2ebdd;      /* Primary background & light surfaces */
-  --blue: #6e93aa;       /* Primary accent on cream (deeper tone of #8FAFC2) */
-  --blue-light: #8fafc2; /* Brand soft blue — used on dark surfaces */
+  --sage-accent: #7a8067;       /* Muted Sage — primary accent */
+  --sage-light: #a3a98d; /* Lighter sage — accent on dark surfaces */
   --walnut: #6b4a35;     /* Secondary accent — headings, borders, details */
 
   --ink: #3b2c22;        /* Deep walnut — immersive dark sections only */
   --ivory: var(--cream); /* Text on dark sections */
   --greige: var(--cream);
   --stone: #ddd2c0;
-  --champagne: var(--blue);
+  --champagne: var(--sage-accent);
   --forest: var(--walnut);
-  --sage: #e6edf1;       /* Soft blue tinted secondary surfaces */
+  --sage: #e8e9df;       /* Sage tinted secondary surfaces */
 
   --background: var(--cream);
   --foreground: var(--walnut);
@@ -82,18 +82,18 @@
   --secondary-foreground: var(--walnut);
   --muted: var(--sage);
   --muted-foreground: #7a6350;
-  --accent: var(--blue);
+  --accent: var(--sage-accent);
   --accent-foreground: #33261d;
   --destructive: oklch(0.52 0.18 27);
   --destructive-foreground: var(--cream);
   --border: #ddd0bd;
   --input: #ddd0bd;
-  --ring: var(--blue);
+  --ring: var(--sage-accent);
 }
 
-/* Inside deep walnut sections the accent stays soft blue and borders soften */
+/* Inside deep walnut sections the accent lightens and borders soften */
 [class*="bg-ink"] {
-  --champagne: var(--blue-light);
+  --champagne: var(--sage-light);
   --border: color-mix(in srgb, #f2ebdd 18%, transparent);
 }
 
