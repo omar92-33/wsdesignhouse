@@ -3,6 +3,7 @@ import { Container, Eyebrow, PageHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { Frame } from "@/components/site/Frame";
 import { FinalCta } from "@/components/site/FinalCta";
+import { Certificates } from "@/components/site/Certificates";
 import { founder, pillars, site } from "@/lib/site";
 
 export const Route = createFileRoute("/about")({
@@ -111,6 +112,8 @@ function About() {
           </Reveal>
         </Container>
       </section>
+
+      <Certificates />
 
       <FinalCta />
     </>
