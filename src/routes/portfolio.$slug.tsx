@@ -72,7 +72,6 @@ function ProjectPage() {
           }}
         />
         <Container className="relative flex min-h-[85svh] flex-col justify-end pb-20 pt-40">
-          <p className="label text-ink">{project.category}</p>
           <h1 className="display mt-5 max-w-[14ch] text-[clamp(2.75rem,9vw,7rem)]">
             {project.title}
           </h1>
