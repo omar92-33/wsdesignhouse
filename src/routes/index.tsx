@@ -94,10 +94,6 @@ function Hero() {
         <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-end">
           <Reveal delay={300}>
             <p className="label text-[0.75rem] opacity-60">{site.serviceLine}</p>
-            <p className="mt-6 max-w-xl text-sm leading-relaxed opacity-70 sm:text-base">
-              From bespoke Kitchens to artisanal Bedrooms. We design in-house spaces in New Cairo
-              that define your lifestyle with luxury and elegance.
-            </p>
             <p className="label mt-8 opacity-50">{site.location}</p>
           </Reveal>
 
