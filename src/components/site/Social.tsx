@@ -11,7 +11,12 @@ const channels = [
     href: site.social.instagram,
     Icon: Instagram,
   },
-  { name: "TikTok", handle: site.social.tiktokHandle, href: site.social.tiktok, Icon: null },
+  {
+    name: "TikTok",
+    handle: site.social.tiktokHandle,
+    href: site.social.tiktok,
+    Icon: TikTokIcon,
+  },
   {
     name: "LinkedIn",
     handle: site.social.linkedinName,
