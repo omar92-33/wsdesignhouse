@@ -251,7 +251,7 @@ function Process() {
 
 function Studio() {
   return (
-    <section className="border-y border-border bg-muted/60 py-24 lg:py-36" aria-labelledby="studio-heading">
+    <section className="border-y border-border bg-muted py-24 lg:py-36" aria-labelledby="studio-heading">
       <Container>
         <div className="grid gap-14 lg:grid-cols-[1fr_1fr] lg:gap-24">
           <Reveal>
