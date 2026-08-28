@@ -28,7 +28,7 @@ export function Social() {
           <h2 id="social-heading" className="display mt-8 text-[clamp(2.25rem,6vw,4.5rem)]">
             Inside WS DESIGNHOUSE
           </h2>
-          <p className="mt-6 max-w-lg text-sm leading-relaxed text-muted-foreground">
+          <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground">
             Discover our latest spaces, design ideas and creative work across our social
             channels.
           </p>

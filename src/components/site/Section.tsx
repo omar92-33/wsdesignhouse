@@ -36,7 +36,7 @@ export function PageHeader({
         <Eyebrow>{eyebrow}</Eyebrow>
         <h1 className="display mt-8 max-w-4xl text-[clamp(2.75rem,8vw,6.5rem)]">{title}</h1>
         {intro && (
-          <p className="mt-8 max-w-xl text-sm leading-relaxed opacity-65 sm:text-base">{intro}</p>
+          <p className="mt-8 max-w-xl text-base leading-relaxed opacity-65 sm:text-lg">{intro}</p>
         )}
       </Container>
     </header>

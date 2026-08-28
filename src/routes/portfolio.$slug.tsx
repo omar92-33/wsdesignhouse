@@ -76,7 +76,7 @@ function ProjectPage() {
           <h1 className="display mt-5 max-w-[14ch] text-[clamp(2.75rem,9vw,7rem)]">
             {project.title}
           </h1>
-          <p className="mt-8 max-w-xl text-sm leading-relaxed opacity-75">
+          <p className="mt-8 max-w-xl text-base leading-relaxed opacity-75">
             {project.description}
           </p>
         </Container>
@@ -105,7 +105,7 @@ function ProjectPage() {
               <Reveal key={s.title} delay={(i % 2) * 90}>
                 <div className="border-t border-champagne pt-8">
                   <h2 className="label text-champagne">{s.title}</h2>
-                  <p className="mt-6 max-w-lg text-sm leading-loose text-muted-foreground sm:text-base">
+                  <p className="mt-6 max-w-lg text-base leading-loose text-muted-foreground sm:text-lg">
                     {s.body}
                   </p>
                 </div>
@@ -150,7 +150,7 @@ function ProjectPage() {
             <h2 className="display mt-8 text-[clamp(2.25rem,7vw,5rem)]">
               Inspired by this space?
             </h2>
-            <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed opacity-70">
+            <p className="mx-auto mt-6 max-w-md text-base leading-relaxed opacity-70">
               Let's create something designed around the way you live.
             </p>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -177,7 +177,7 @@ function ProjectPage() {
             >
               Or message the studio on WhatsApp
             </a>
-            <p className="label mt-10 text-[0.95rem] opacity-40">{site.location}</p>
+            <p className="label mt-10 opacity-40">{site.location}</p>
           </Reveal>
         </Container>
       </section>

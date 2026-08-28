@@ -44,7 +44,7 @@ function ProcessPage() {
                   <h2 className="font-display text-4xl uppercase tracking-wide sm:text-5xl">
                     {m.title}
                   </h2>
-                  <p className="max-w-lg text-sm leading-loose text-muted-foreground sm:text-base">
+                  <p className="max-w-lg text-base leading-loose text-muted-foreground sm:text-lg">
                     {m.body}
                   </p>
                 </div>

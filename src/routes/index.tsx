@@ -93,7 +93,7 @@ function Hero() {
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-end">
           <Reveal delay={300}>
-            <p className="label text-[0.95rem] opacity-60">{site.serviceLine}</p>
+            <p className="label opacity-60">{site.serviceLine}</p>
             <p className="label mt-8 opacity-50">{site.location}</p>
           </Reveal>
 
@@ -133,7 +133,7 @@ function Vision() {
             <h2 id="vision-heading" className="display mt-8 text-[clamp(2.25rem,6vw,4.75rem)]">
               Boutique Design for Sovereign Living
             </h2>
-            <p className="mt-10 max-w-lg text-sm leading-loose text-muted-foreground sm:text-base">
+            <p className="mt-10 max-w-lg text-base leading-loose text-muted-foreground sm:text-lg">
               WS DESIGNHOUSE is a premium interior studio specializing in artisanal residential
               spaces. Based in New Cairo, we bring a global luxury perspective to every Egyptian
               home.
@@ -175,7 +175,7 @@ function BrandStatement() {
           </p>
         </Reveal>
         <Reveal delay={160}>
-          <p className="mx-auto mt-14 max-w-2xl text-sm leading-loose text-muted-foreground sm:text-base">
+          <p className="mx-auto mt-14 max-w-2xl text-base leading-loose text-muted-foreground sm:text-lg">
             Every space begins with an idea. Through thoughtful design, visualization, planning
             and execution, we transform that idea into an environment designed around the way you
             live.
@@ -199,7 +199,7 @@ function Founder() {
             <h2 id="founder-heading" className="display mt-8 text-[clamp(2.25rem,6vw,4.5rem)]">
               About Me
             </h2>
-            <div className="mt-10 max-w-2xl space-y-6 text-sm leading-loose text-muted-foreground">
+            <div className="mt-10 max-w-2xl space-y-6 text-base leading-loose text-muted-foreground">
               <p>
                 I began my professional journey in the late 1990s, working in real estate
                 design—an experience that laid the foundation for my understanding of space,
@@ -243,7 +243,7 @@ function Pillars() {
                 <h3 className="font-display text-3xl uppercase tracking-wide sm:text-4xl">
                   {p.title}
                 </h3>
-                <p className="max-w-md text-sm leading-relaxed opacity-65">{p.body}</p>
+                <p className="max-w-md text-base leading-relaxed opacity-65">{p.body}</p>
               </div>
             </Reveal>
           ))}
@@ -274,7 +274,7 @@ function ServicesPreview() {
                 className="group grid gap-3 border-b border-border py-8 transition-colors duration-500 hover:bg-muted/60 md:grid-cols-[1fr_1.1fr_auto] md:items-center md:gap-10"
               >
                 <h3 className="font-display text-3xl sm:text-4xl">{s.title}</h3>
-                <p className="max-w-lg text-sm leading-relaxed text-muted-foreground">
+                <p className="max-w-lg text-base leading-relaxed text-muted-foreground">
                   {s.short}
                 </p>
                 <span aria-hidden />
@@ -316,7 +316,7 @@ function Journey() {
           {journey.map((step, i) => (
             <Reveal as="li" key={step} delay={i * 70} className="flex items-center">
               <span className="group flex flex-col items-center px-4 py-3">
-                <span className="label text-[0.95rem] text-champagne">
+                <span className="label text-champagne">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span className="mt-2 font-display text-xl uppercase tracking-[0.12em] transition-colors duration-500 group-hover:text-champagne sm:text-2xl">
@@ -346,7 +346,7 @@ function Portfolio() {
           <h2 id="portfolio-heading" className="display mt-8 text-[clamp(2.25rem,6vw,4.75rem)]">
             Portfolio Collection
           </h2>
-          <p className="mt-6 max-w-lg text-sm leading-relaxed text-muted-foreground">
+          <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground">
             A curated selection of residential masterpieces in Egypt.
           </p>
         </Reveal>
@@ -367,7 +367,7 @@ function Portfolio() {
                     <p className="label text-champagne">{p.category}</p>
                     <h3 className="display mt-3 text-[clamp(1.75rem,5vw,3.5rem)]">{p.title}</h3>
                   </div>
-                  <p className="max-w-md text-sm leading-relaxed text-muted-foreground md:pb-3">
+                  <p className="max-w-md text-base leading-relaxed text-muted-foreground md:pb-3">
                     {p.description}
                   </p>
                 </div>
@@ -396,7 +396,7 @@ function Process() {
               <div className="border-t border-champagne pt-8">
                 <span className="label text-champagne">{m.number}</span>
                 <h3 className="mt-4 font-display text-3xl uppercase tracking-wide">{m.title}</h3>
-                <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{m.body}</p>
+                <p className="mt-5 text-base leading-relaxed text-muted-foreground">{m.body}</p>
               </div>
             </Reveal>
           ))}
@@ -447,7 +447,7 @@ function StudioLocation() {
             >
               Visit Our Studio
             </h2>
-            <p className="mt-6 text-sm leading-relaxed text-muted-foreground">{site.location}</p>
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground">{site.location}</p>
             <a
               href={`https://www.google.com/maps/search/?api=1&query=${site.coordinates.lat},${site.coordinates.lng}`}
               target="_blank"

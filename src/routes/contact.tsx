@@ -47,7 +47,7 @@ function ContactPage() {
               <div className="space-y-10">
                 <div>
                   <Eyebrow>The Studio</Eyebrow>
-                  <ul className="mt-8 space-y-5 text-sm">
+                  <ul className="mt-8 space-y-5 text-base">
                     {site.phones.map((p) => (
                       <li key={p}>
                         <a
@@ -98,7 +98,7 @@ function ContactPage() {
 
                 <div>
                   <h2 className="display text-3xl uppercase">Visit Our Studio</h2>
-                  <p className="mt-3 text-sm text-muted-foreground">{site.location}</p>
+                  <p className="mt-3 text-base text-muted-foreground">{site.location}</p>
                   <div className="mt-6 aspect-[4/3] w-full overflow-hidden border border-border">
                     <iframe
                       title="WS DESIGNHOUSE studio location, New Cairo"

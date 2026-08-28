@@ -33,7 +33,7 @@ export function Recognition() {
               </h2>
             </Reveal>
             <Reveal delay={140}>
-              <div className="mt-8 max-w-md space-y-5 text-sm leading-relaxed opacity-70 sm:text-base">
+              <div className="mt-8 max-w-md space-y-5 text-base leading-relaxed opacity-70 sm:text-lg">
                 <p>
                   A closer look at the jury feedback for our Living Studio | Milan Design Loft
                   proposal.

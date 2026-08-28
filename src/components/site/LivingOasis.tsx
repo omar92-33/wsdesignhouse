@@ -49,7 +49,7 @@ export function LivingOasis() {
               </h2>
             </Reveal>
             <Reveal delay={140}>
-              <div className="mt-8 max-w-md space-y-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
+              <div className="mt-8 max-w-md space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 <p>
                   A climate-responsive retreat shaped by shade, landscape, natural ventilation,
                   and passive design.

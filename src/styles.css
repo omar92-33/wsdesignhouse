@@ -95,7 +95,7 @@
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
-    font-size: 118.75%;
+    font-size: 112.5%;
   }
 
   body {
@@ -130,7 +130,7 @@
 /* Small uppercase editorial label */
 @utility label {
   font-family: var(--font-sans);
-  font-size: 1.02rem;
+  font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
