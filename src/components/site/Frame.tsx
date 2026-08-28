@@ -45,38 +45,5 @@ export function Frame({
     );
   }
 
-  const dark = tone === "dark";
-
-  return (
-    <div
-      role="img"
-      aria-label={alt || "Photography placeholder"}
-      className={`relative overflow-hidden ${ratio} ${
-        dark ? "bg-ink/90 text-ivory/60" : "bg-muted text-muted-foreground"
-      } ${className}`}
-    >
-      <div
-        aria-hidden
-        className={`absolute inset-3 border sm:inset-5 ${dark ? "border-ivory/15" : "border-border"}`}
-      />
-      <div
-        aria-hidden
-        className="absolute inset-0 opacity-40"
-        style={{
-          backgroundImage: dark
-            ? "linear-gradient(135deg, oklch(0.22 0.006 90) 0%, oklch(0.16 0.006 90) 100%)"
-            : "linear-gradient(135deg, oklch(0.955 0.008 85) 0%, oklch(0.9 0.012 85) 100%)",
-        }}
-      />
-      <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 px-6 text-center">
-        <span className="rule-accent" aria-hidden />
-        <span className="label opacity-80">Photography</span>
-        {(caption || image?.alt) && (
-          <span className="max-w-xs font-display text-lg leading-snug opacity-70">
-            {caption ?? image?.alt}
-          </span>
-        )}
-      </div>
-    </div>
-  );
+  return null;
 }
