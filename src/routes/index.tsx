@@ -81,7 +81,7 @@ function Hero() {
         </Reveal>
 
         <Reveal delay={120}>
-          <h1 className="display mt-10 max-w-[15ch] text-[clamp(2.9rem,9vw,8rem)]">
+          <h1 className="display mt-10 max-w-[15ch] text-[clamp(2.9rem,9vw,8rem)] leading-[1.18] tracking-[0.005em]">
             Designing Spaces That Define Lifestyle
           </h1>
         </Reveal>
