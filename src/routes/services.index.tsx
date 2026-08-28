@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { Container, PageHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
-import { Frame } from "@/components/site/Frame";
 import { FinalCta } from "@/components/site/FinalCta";
 import { journey, services } from "@/lib/site";
 
@@ -49,7 +48,6 @@ function ServicesPage() {
                       params={{ slug: s.slug }}
                       className="group block"
                     >
-                      <Frame aspect="landscape" caption={`${s.title} — project photography`} />
                       <h2 className="display mt-8 text-[clamp(1.9rem,4vw,3rem)]">{s.title}</h2>
                       <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground">
                         {s.short}
@@ -57,7 +55,6 @@ function ServicesPage() {
                     </Link>
                   ) : (
                     <div>
-                      <Frame aspect="landscape" caption={`${s.title} — project photography`} />
                       <h2 className="display mt-8 text-[clamp(1.9rem,4vw,3rem)]">{s.title}</h2>
                       <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground">
                         {s.short}

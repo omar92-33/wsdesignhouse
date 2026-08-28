@@ -1,7 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Container, PageHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
-import { Frame } from "@/components/site/Frame";
 import { FinalCta } from "@/components/site/FinalCta";
 import { services } from "@/lib/site";
 
@@ -44,7 +43,7 @@ function ServiceDetail() {
 
       <section className="py-20 lg:py-32">
         <Container>
-          <div className="grid gap-16 lg:grid-cols-[1.1fr_1fr] lg:gap-24">
+          <div className="grid gap-16">
             <Reveal>
               <div className="max-w-2xl space-y-6 text-base leading-loose text-muted-foreground sm:text-lg">
                 {service.body.map((p) => (
@@ -57,9 +56,6 @@ function ServiceDetail() {
               >
                 Discuss Your Project
               </Link>
-            </Reveal>
-            <Reveal delay={120}>
-              <Frame aspect="portrait" caption={`${service.title} — project photography`} />
             </Reveal>
           </div>
         </Container>
