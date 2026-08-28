@@ -49,7 +49,7 @@ export function Nav() {
                 className="h-9 w-auto shrink-0 sm:h-11"
               />
               <span className="min-w-0">
-                <span className="block font-display text-lg leading-none tracking-[0.14em] sm:text-2xl">
+                <span className="block whitespace-nowrap font-display text-lg leading-none tracking-[0.14em] sm:text-2xl">
                   WS DESIGN HOUSE
                 </span>
                 <span className="label mt-1.5 hidden opacity-60 sm:block">
