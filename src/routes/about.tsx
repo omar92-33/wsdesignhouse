@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Container, Eyebrow, PageHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
-import { Frame } from "@/components/site/Frame";
 import { FinalCta } from "@/components/site/FinalCta";
 import { Certificates } from "@/components/site/Certificates";
 import { founder, pillars, site } from "@/lib/site";
@@ -41,8 +40,7 @@ function About() {
         <Container>
           <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
             <Reveal>
-              <Frame aspect="tall" caption="Founder portrait" />
-              <p className="label mt-6 text-muted-foreground">{founder.name}</p>
+              <p className="label text-muted-foreground">{founder.name}</p>
             </Reveal>
             <Reveal delay={100}>
               <Eyebrow>The Founder</Eyebrow>

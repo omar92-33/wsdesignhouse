@@ -200,8 +200,7 @@ function Founder() {
       <Container>
         <div className="grid gap-16 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
           <Reveal>
-            <Frame aspect="tall" caption="Founder portrait" />
-            <p className="label mt-6 text-muted-foreground">Dr. Wessam Abdellatif</p>
+            <p className="label text-muted-foreground">Dr. Wessam Abdellatif</p>
           </Reveal>
           <Reveal delay={120}>
             <Eyebrow>The Founder</Eyebrow>
