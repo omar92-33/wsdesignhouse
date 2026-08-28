@@ -62,19 +62,6 @@ function Home() {
   );
 }
 
-/* ---------------------------------------------------------------- shared */
-
-function PrimaryLink({ className = "" }: { className?: string }) {
-  return (
-    <Link
-      to={primaryCta.to}
-      className={`label inline-flex items-center justify-center border border-ink bg-ink px-9 py-5 text-ivory transition-opacity duration-500 hover:opacity-85 ${className}`}
-    >
-      {primaryCta.label}
-    </Link>
-  );
-}
-
 /* ------------------------------------------------------------- 01 — hero */
 
 function Hero() {

@@ -3,8 +3,8 @@ import { site, whatsappUrl } from "@/lib/site";
 import { Reveal } from "./Reveal";
 
 export function FinalCta({
-  heading = "Ready to Elevate Your Space?",
-  description = "Call us directly for a private consultation.",
+  heading = "Your Space Deserves More Than a Template.",
+  description = "Every exceptional project begins with a conversation.",
 }: {
   heading?: string | undefined;
   description?: string | undefined;
@@ -31,7 +31,7 @@ export function FinalCta({
               to="/contact"
               className="label w-full border border-champagne bg-champagne px-10 py-5 text-accent-foreground transition-opacity duration-500 hover:opacity-85 sm:w-auto"
             >
-              Start Your Project
+              Book Your Private Consultation
             </Link>
             <a
               href={whatsappUrl()}
@@ -39,7 +39,7 @@ export function FinalCta({
               rel="noopener noreferrer"
               className="label w-full border border-ivory/35 px-10 py-5 transition-colors duration-500 hover:border-ivory sm:w-auto"
             >
-              WhatsApp Us
+              Prefer to Talk? WhatsApp Us →
             </a>
           </div>
           <p className="label mt-10 opacity-45">

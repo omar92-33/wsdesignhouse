@@ -81,7 +81,7 @@ export function Nav() {
               to="/contact"
               className="label hidden border border-ivory/40 px-6 py-3 transition-colors duration-500 hover:border-champagne hover:bg-champagne hover:text-accent-foreground lg:inline-block"
             >
-              Start a Project
+              Book a Consultation
             </Link>
             <button
               type="button"
