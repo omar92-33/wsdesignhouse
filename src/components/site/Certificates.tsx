@@ -48,7 +48,7 @@ export function Certificates() {
               </div>
               <figcaption className="mt-5">
                 <p className="font-display text-xl leading-snug">{c.title}</p>
-                <p className="mt-2 text-sm text-muted-foreground">{c.issuer}</p>
+                <p className="mt-2 text-base text-muted-foreground">{c.issuer}</p>
                 <p className="label mt-2 opacity-70">{c.date}</p>
               </figcaption>
             </Reveal>

@@ -23,7 +23,7 @@ export function FinalCta({
         <Reveal>
           <span className="rule-accent" aria-hidden />
           <h2 className="display mt-8 text-[clamp(2.5rem,7vw,5.5rem)]">{heading}</h2>
-          <p className="mx-auto mt-6 max-w-lg text-sm leading-relaxed opacity-70">
+          <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed opacity-70">
             {description}
           </p>
           <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -42,7 +42,7 @@ export function FinalCta({
               WhatsApp Us
             </a>
           </div>
-          <p className="label mt-10 text-[0.95rem] opacity-45">
+          <p className="label mt-10 opacity-45">
             {site.location} — {site.established}
           </p>
         </Reveal>

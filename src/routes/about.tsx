@@ -45,7 +45,7 @@ function About() {
             <Reveal delay={100}>
               <Eyebrow>The Founder</Eyebrow>
               <h2 className="display mt-8 text-[clamp(2.25rem,6vw,4.5rem)]">{founder.heading}</h2>
-              <div className="mt-10 max-w-2xl space-y-6 text-sm leading-loose text-muted-foreground sm:text-base">
+              <div className="mt-10 max-w-2xl space-y-6 text-base leading-loose text-muted-foreground sm:text-lg">
                 {founder.bio.map((p) => (
                   <p key={p.slice(0, 24)}>{p}</p>
                 ))}
@@ -77,7 +77,7 @@ function About() {
                   <h3 className="mt-4 font-display text-3xl uppercase tracking-wide">
                     {p.title}
                   </h3>
-                  <p className="mt-4 max-w-md text-sm leading-relaxed opacity-65">{p.body}</p>
+                  <p className="mt-4 max-w-md text-base leading-relaxed opacity-65">{p.body}</p>
                 </div>
               </Reveal>
             ))}
@@ -91,7 +91,7 @@ function About() {
             <h2 className="display max-w-4xl text-[clamp(1.9rem,4.5vw,3.5rem)]">
               Interior architecture, not decoration
             </h2>
-            <div className="mt-10 grid max-w-5xl gap-10 text-sm leading-loose text-muted-foreground md:grid-cols-2 sm:text-base">
+            <div className="mt-10 grid max-w-5xl gap-10 text-base leading-loose text-muted-foreground md:grid-cols-2 sm:text-lg">
               <p>
                 Interior decoration works with what a space already is — colour, furniture,
                 finishes. Interior architecture asks whether the space itself is right: where the

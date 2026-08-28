@@ -37,7 +37,7 @@ const schema = z.object({
 type Errors = Partial<Record<keyof z.infer<typeof schema>, string>>;
 
 const fieldClass =
-  "w-full border-b border-input bg-transparent py-3 text-sm outline-none transition-colors focus:border-champagne placeholder:text-muted-foreground/60";
+  "w-full border-b border-input bg-transparent py-3 text-base outline-none transition-colors focus:border-champagne placeholder:text-muted-foreground/60";
 
 export function ConsultationForm() {
   const [errors, setErrors] = useState<Errors>({});
@@ -88,7 +88,7 @@ export function ConsultationForm() {
       <div className="border border-border bg-card p-10 text-center">
         <span className="rule-accent" aria-hidden />
         <h3 className="display mt-6 text-3xl">Thank you</h3>
-        <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
+        <p className="mx-auto mt-4 max-w-md text-base leading-relaxed text-muted-foreground">
           Your details have been prepared in WhatsApp. If the chat did not open automatically,
           use the button below — or email the studio instead.
         </p>

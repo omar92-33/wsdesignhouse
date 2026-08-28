@@ -51,7 +51,7 @@ function ServicesPage() {
                     >
                       <Frame aspect="landscape" caption={`${s.title} — project photography`} />
                       <h2 className="display mt-8 text-[clamp(1.9rem,4vw,3rem)]">{s.title}</h2>
-                      <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
+                      <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground">
                         {s.short}
                       </p>
                     </Link>
@@ -59,7 +59,7 @@ function ServicesPage() {
                     <div>
                       <Frame aspect="landscape" caption={`${s.title} — project photography`} />
                       <h2 className="display mt-8 text-[clamp(1.9rem,4vw,3rem)]">{s.title}</h2>
-                      <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
+                      <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground">
                         {s.short}
                       </p>
                       <Link

@@ -46,7 +46,7 @@ function ServiceDetail() {
         <Container>
           <div className="grid gap-16 lg:grid-cols-[1.1fr_1fr] lg:gap-24">
             <Reveal>
-              <div className="max-w-2xl space-y-6 text-sm leading-loose text-muted-foreground sm:text-base">
+              <div className="max-w-2xl space-y-6 text-base leading-loose text-muted-foreground sm:text-lg">
                 {service.body.map((p) => (
                   <p key={p.slice(0, 24)}>{p}</p>
                 ))}

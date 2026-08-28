@@ -52,7 +52,7 @@ export function Nav() {
                 <span className="block font-display text-lg leading-none tracking-[0.14em] sm:text-2xl">
                   WS DESIGN HOUSE
                 </span>
-                <span className="label mt-1.5 hidden text-[0.95rem] opacity-60 sm:block">
+                <span className="label mt-1.5 hidden opacity-60 sm:block">
                   {site.positioning}
                 </span>
               </span>
@@ -149,7 +149,7 @@ export function Nav() {
               <MessageCircle className="h-4 w-4" strokeWidth={1.2} aria-hidden />
               WhatsApp the Studio
             </a>
-            <p className="label pt-2 text-[0.95rem] opacity-50">{site.location}</p>
+            <p className="label pt-2 opacity-50">{site.location}</p>
           </div>
         </div>
       </div>

@@ -44,7 +44,7 @@ function PortfolioPage() {
                   <Frame image={p.hero} aspect="wide" caption={`${p.title} — hero photograph`} />
                   <p className="label mt-8 text-champagne">{p.category}</p>
                   <h2 className="display mt-3 text-[clamp(1.75rem,5vw,3.5rem)]">{p.title}</h2>
-                  <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground">
+                  <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">
                     {p.description}
                   </p>
                 </div>

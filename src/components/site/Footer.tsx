@@ -12,7 +12,7 @@ export function Footer() {
             <img src={wsLogo.url} alt="WS DESIGN HOUSE" width={745} height={541} className="h-24 w-auto sm:h-28" />
             <p className="mt-4 font-display text-xl italic opacity-80">{site.tagline}</p>
             <p className="label mt-6 opacity-60">{site.positioning}</p>
-            <p className="mt-4 text-sm leading-relaxed opacity-60">{site.serviceLine}</p>
+            <p className="mt-4 text-base leading-relaxed opacity-60">{site.serviceLine}</p>
           </div>
 
           <nav aria-label="Footer">
@@ -20,7 +20,7 @@ export function Footer() {
             <ul className="space-y-3">
               {navItems.map((item) => (
                 <li key={item.to}>
-                  <Link to={item.to} className="text-sm opacity-70 hover:opacity-100">
+                  <Link to={item.to} className="text-base opacity-70 hover:opacity-100">
                     {item.label}
                   </Link>
                 </li>
@@ -30,7 +30,7 @@ export function Footer() {
 
           <div>
             <p className="label mb-6 text-champagne">Studio</p>
-            <ul className="space-y-3 text-sm opacity-70">
+            <ul className="space-y-3 text-base opacity-70">
               <li>{site.location}</li>
               <li>
                 <a href={`mailto:${site.email}`} className="hover:opacity-100">
@@ -49,7 +49,7 @@ export function Footer() {
 
           <div>
             <p className="label mb-6 text-champagne">Follow</p>
-            <ul className="space-y-3 text-sm opacity-70">
+            <ul className="space-y-3 text-base opacity-70">
               <li>
                 <a
                   href={site.social.instagram}
@@ -90,7 +90,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 pt-8 text-[0.95rem] tracking-[0.12em] uppercase opacity-45 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-3 pt-8 tracking-[0.12em] uppercase opacity-45 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 WS DESIGNHOUSE. Crafting Luxury Interiors.</p>
           <p>Tax ID Number: {site.taxId}</p>
           <p>{site.established}</p>

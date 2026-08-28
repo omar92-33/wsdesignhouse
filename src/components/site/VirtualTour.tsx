@@ -16,7 +16,7 @@ export function VirtualTour() {
             <h2 id="tour-heading" className="display mt-8 text-[clamp(2.5rem,6vw,4.5rem)]">
               Step Inside
             </h2>
-            <p className="mt-6 max-w-md text-sm leading-relaxed opacity-65">
+            <p className="mt-6 max-w-md text-base leading-relaxed opacity-65">
               Experience the space from a new perspective through our immersive virtual
               experience. It opens in a new window.
             </p>
