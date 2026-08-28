@@ -67,9 +67,9 @@ export function Footer() {
                   href={site.social.tiktok}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:opacity-100"
+                  className="inline-flex items-center gap-2 hover:opacity-100"
                 >
-                  TikTok
+                  <TikTokIcon className="h-4 w-4" /> TikTok
                 </a>
               </li>
               <li>
