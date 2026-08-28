@@ -1,14 +1,17 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import wsMark from "@/assets/ws-mark-light.png.asset.json";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { X, MessageCircle } from "lucide-react";
 import { navItems, site, whatsappUrl } from "@/lib/site";
+import { lockScroll, unlockScroll } from "@/components/site/SmoothScroll";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [closing, setClosing] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const overHero = pathname === "/";
+  const lockedRef = useRef(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -21,19 +24,38 @@ export function Nav() {
     setOpen(false);
   }, [pathname]);
 
+  // Lock through the smooth-scroll engine rather than body overflow, so
+  // inertial scrolling resumes cleanly (and correctly on iOS) after closing.
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    if (open && !lockedRef.current) {
+      lockedRef.current = true;
+      lockScroll();
+    } else if (!open && lockedRef.current) {
+      lockedRef.current = false;
+      unlockScroll();
+    }
     return () => {
-      document.body.style.overflow = "";
+      if (lockedRef.current) {
+        lockedRef.current = false;
+        unlockScroll();
+      }
     };
   }, [open]);
+
+  const closeMenu = () => {
+    if (!open) return;
+    setClosing(true);
+    setOpen(false);
+    window.setTimeout(() => setClosing(false), 450);
+  };
+
 
   const solid = scrolled || !overHero;
 
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ${
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-[900ms] [transition-timing-function:var(--ease-lux)] ${
           solid
             ? "bg-ink/95 backdrop-blur-sm text-ivory shadow-[0_1px_0_0_rgba(255,255,255,0.08)]"
             : "bg-transparent text-ivory"
@@ -65,7 +87,7 @@ export function Nav() {
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className="label link-underline opacity-80 transition-opacity hover:opacity-100"
+                    className="label link-underline opacity-75 transition-[opacity,letter-spacing] duration-500 [transition-timing-function:var(--ease-lux)] hover:opacity-100"
                     activeProps={{ className: "label opacity-100 text-champagne" }}
                     
                   >
@@ -85,20 +107,25 @@ export function Nav() {
             </Link>
             <button
               type="button"
-              onClick={() => setOpen((v) => !v)}
+              onClick={() => (open ? closeMenu() : setOpen(true))}
               className="label lux-press relative flex h-11 w-11 items-center justify-center lg:hidden"
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
             >
               <span className="relative block h-4 w-6" aria-hidden>
+                {/* Two-stage: lines glide to centre, then rotate */}
                 <span
-                  className={`absolute left-0 block h-px w-6 bg-current transition-transform duration-500 [transition-timing-function:var(--ease-lux)] ${
-                    open ? "top-1/2 rotate-45" : "top-0.5 rotate-0"
+                  className={`absolute left-0 block h-px w-6 bg-current transition-all duration-[600ms] [transition-timing-function:var(--ease-lux)] ${
+                    open
+                      ? "top-1/2 rotate-45 [transition-delay:100ms]"
+                      : "top-0.5 rotate-0 [transition-delay:60ms]"
                   }`}
                 />
                 <span
-                  className={`absolute left-0 block h-px w-6 bg-current transition-transform duration-500 [transition-timing-function:var(--ease-lux)] ${
-                    open ? "top-1/2 -rotate-45" : "top-[calc(100%-2px)] rotate-0"
+                  className={`absolute left-0 block h-px w-6 bg-current transition-all duration-[600ms] [transition-timing-function:var(--ease-lux)] ${
+                    open
+                      ? "top-1/2 -rotate-45 [transition-delay:100ms]"
+                      : "top-[calc(100%-2px)] rotate-0 [transition-delay:60ms]"
                   }`}
                 />
               </span>
@@ -115,13 +142,14 @@ export function Nav() {
             : "pointer-events-none opacity-0 [clip-path:inset(0_0_100%_0)]"
         }`}
         aria-hidden={!open}
+        data-lenis-prevent
       >
-        <div className="flex h-full flex-col px-6 py-5">
+        <div className="flex h-full flex-col overflow-y-auto px-6 py-5">
           <div className="flex items-center justify-between">
             <span className="flex items-center gap-3"><img src={wsMark.url} alt="" aria-hidden className="h-9 w-auto" /><span className="font-display text-lg tracking-[0.14em]">WS DESIGN HOUSE</span></span>
             <button
               type="button"
-              onClick={() => setOpen(false)}
+              onClick={closeMenu}
               aria-label="Close menu"
               className="lux-press p-2"
             >
@@ -134,8 +162,14 @@ export function Nav() {
               {navItems.map((item, i) => (
                 <li
                   key={item.to}
-                  className={open ? "menu-item-in" : "opacity-0"}
-                  style={open ? { animationDelay: `${120 + i * 70}ms` } : undefined}
+                  className={open ? "menu-item-in" : closing ? "menu-item-out" : "opacity-0"}
+                  style={
+                    open
+                      ? { animationDelay: `${140 + i * 80}ms` }
+                      : closing
+                        ? { animationDelay: `${i * 35}ms` }
+                        : undefined
+                  }
                 >
                   <Link
                     to={item.to}
@@ -150,9 +184,18 @@ export function Nav() {
           </nav>
 
           <div
-            className={`space-y-4 border-t border-ivory/15 pt-6 ${open ? "menu-item-in" : "opacity-0"}`}
-            style={open ? { animationDelay: `${180 + navItems.length * 70}ms` } : undefined}
+            className={`space-y-4 border-t border-ivory/15 pt-6 ${
+              open ? "menu-item-in" : closing ? "menu-item-out" : "opacity-0"
+            }`}
+            style={
+              open
+                ? { animationDelay: `${200 + navItems.length * 80}ms` }
+                : closing
+                  ? { animationDelay: "0ms" }
+                  : undefined
+            }
           >
+
             <Link
               to="/contact"
               className="label lux-press block border border-champagne bg-champagne px-6 py-4 text-center text-accent-foreground"
