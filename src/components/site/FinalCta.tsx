@@ -43,8 +43,10 @@ export function FinalCta({
             </a>
           </div>
           <p className="label mt-10 opacity-45">
-            {site.location} — {site.established}
+            {site.location} — built on decades of experience across design, construction, and
+            bespoke furniture
           </p>
+
         </Reveal>
       </div>
     </section>
