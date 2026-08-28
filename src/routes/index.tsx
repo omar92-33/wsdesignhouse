@@ -109,7 +109,7 @@ function Hero() {
           <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Link
               to={secondaryCta.to}
-              className="label inline-flex items-center justify-center border border-ivory bg-ivory px-9 py-5 text-ink transition-opacity duration-500 hover:opacity-85"
+              className="label inline-flex items-center justify-center border border-champagne bg-champagne px-9 py-5 text-accent-foreground transition-opacity duration-500 hover:opacity-85"
             >
               {secondaryCta.label}
             </Link>
