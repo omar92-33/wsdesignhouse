@@ -1,4 +1,5 @@
 import { Instagram, Linkedin, Facebook, ArrowUpRight } from "lucide-react";
+import { TikTokIcon } from "./TikTokIcon";
 import { site } from "@/lib/site";
 import { Container, Eyebrow } from "./Section";
 import { Reveal } from "./Reveal";
