@@ -93,7 +93,7 @@ function Hero() {
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-end">
           <Reveal delay={300}>
-            <p className="label text-[0.75rem] opacity-60">{site.serviceLine}</p>
+            <p className="label text-[0.95rem] opacity-60">{site.serviceLine}</p>
             <p className="label mt-8 opacity-50">{site.location}</p>
           </Reveal>
 
@@ -316,7 +316,7 @@ function Journey() {
           {journey.map((step, i) => (
             <Reveal as="li" key={step} delay={i * 70} className="flex items-center">
               <span className="group flex flex-col items-center px-4 py-3">
-                <span className="label text-[0.7rem] text-champagne">
+                <span className="label text-[0.95rem] text-champagne">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span className="mt-2 font-display text-xl uppercase tracking-[0.12em] transition-colors duration-500 group-hover:text-champagne sm:text-2xl">
