@@ -55,7 +55,7 @@ export function Nav() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ${
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-[900ms] [transition-timing-function:var(--ease-lux)] ${
           solid
             ? "bg-ink/95 backdrop-blur-sm text-ivory shadow-[0_1px_0_0_rgba(255,255,255,0.08)]"
             : "bg-transparent text-ivory"
@@ -87,7 +87,7 @@ export function Nav() {
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className="label link-underline opacity-80 transition-opacity hover:opacity-100"
+                    className="label link-underline opacity-75 transition-[opacity,letter-spacing] duration-500 [transition-timing-function:var(--ease-lux)] hover:opacity-100"
                     activeProps={{ className: "label opacity-100 text-champagne" }}
                     
                   >
@@ -117,15 +117,15 @@ export function Nav() {
                 <span
                   className={`absolute left-0 block h-px w-6 bg-current transition-all duration-[600ms] [transition-timing-function:var(--ease-lux)] ${
                     open
-                      ? "top-1/2 rotate-45 [transition-delay:120ms,0ms]"
-                      : "top-0.5 rotate-0 [transition-delay:0ms,120ms]"
+                      ? "top-1/2 rotate-45 [transition-delay:100ms]"
+                      : "top-0.5 rotate-0 [transition-delay:60ms]"
                   }`}
                 />
                 <span
                   className={`absolute left-0 block h-px w-6 bg-current transition-all duration-[600ms] [transition-timing-function:var(--ease-lux)] ${
                     open
-                      ? "top-1/2 -rotate-45 [transition-delay:120ms,0ms]"
-                      : "top-[calc(100%-2px)] rotate-0 [transition-delay:0ms,120ms]"
+                      ? "top-1/2 -rotate-45 [transition-delay:100ms]"
+                      : "top-[calc(100%-2px)] rotate-0 [transition-delay:60ms]"
                   }`}
                 />
               </span>
