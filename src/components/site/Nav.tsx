@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import wsMark from "@/assets/ws-mark-light.png.asset.json";
 import { useEffect, useState } from "react";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { X, MessageCircle } from "lucide-react";
 import { navItems, site, whatsappUrl } from "@/lib/site";
 
 export function Nav() {
