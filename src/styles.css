@@ -58,7 +58,8 @@
 
   /* Brand palette — Cream (60%) · Soft Blue (25%) · Walnut Brown (15%) */
   --cream: #f2ebdd;      /* Primary background & light surfaces */
-  --blue: #8fafc2;       /* Primary accent — buttons, links, highlights */
+  --blue: #6e93aa;       /* Primary accent on cream (deeper tone of #8FAFC2) */
+  --blue-light: #8fafc2; /* Brand soft blue — used on dark surfaces */
   --walnut: #6b4a35;     /* Secondary accent — headings, borders, details */
 
   --ink: #3b2c22;        /* Deep walnut — immersive dark sections only */
@@ -92,7 +93,7 @@
 
 /* Inside deep walnut sections the accent stays soft blue and borders soften */
 [class*="bg-ink"] {
-  --champagne: #a6c2d3;
+  --champagne: var(--blue-light);
   --border: color-mix(in srgb, #f2ebdd 18%, transparent);
 }
 
