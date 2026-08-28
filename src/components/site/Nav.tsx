@@ -1,14 +1,17 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import wsMark from "@/assets/ws-mark-light.png.asset.json";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { X, MessageCircle } from "lucide-react";
 import { navItems, site, whatsappUrl } from "@/lib/site";
+import { lockScroll, unlockScroll } from "@/components/site/SmoothScroll";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [closing, setClosing] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const overHero = pathname === "/";
+  const lockedRef = useRef(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -21,12 +24,31 @@ export function Nav() {
     setOpen(false);
   }, [pathname]);
 
+  // Lock through the smooth-scroll engine rather than body overflow, so
+  // inertial scrolling resumes cleanly (and correctly on iOS) after closing.
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    if (open && !lockedRef.current) {
+      lockedRef.current = true;
+      lockScroll();
+    } else if (!open && lockedRef.current) {
+      lockedRef.current = false;
+      unlockScroll();
+    }
     return () => {
-      document.body.style.overflow = "";
+      if (lockedRef.current) {
+        lockedRef.current = false;
+        unlockScroll();
+      }
     };
   }, [open]);
+
+  const closeMenu = () => {
+    if (!open) return;
+    setClosing(true);
+    setOpen(false);
+    window.setTimeout(() => setClosing(false), 450);
+  };
+
 
   const solid = scrolled || !overHero;
 
