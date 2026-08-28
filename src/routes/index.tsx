@@ -50,8 +50,8 @@ function Home() {
       <Journey />
       <Portfolio />
       <Recognition />
+      <LivingOasis />
       <Certificates />
-      <VirtualTour />
       <VirtualTour />
       <Process />
       {testimonials.length > 0 && <ClientExperiences />}
