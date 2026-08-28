@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Container } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { Frame } from "@/components/site/Frame";
-import { projects, site, whatsappUrl } from "@/lib/site";
+import { projects, whatsappUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/portfolio/$slug")({
   loader: ({ params }) => {
