@@ -159,10 +159,11 @@ function SelectedProjects() {
                       <p className="label text-muted-foreground">{p.propertyType}</p>
                     )}
                     <h3 className="display mt-3 text-[clamp(1.7rem,4.5vw,3.1rem)]">{p.title}</h3>
-                    <p className="mt-3 text-base text-muted-foreground">
-                      {p.projectLocation ?? ""}
-                      {p.scope ? ` · ${p.scope}` : ""}
-                    </p>
+                    {(p.projectLocation || p.scope) && (
+                      <p className="mt-3 text-base text-muted-foreground">
+                        {[p.projectLocation, p.scope].filter(Boolean).join(" · ")}
+                      </p>
+                    )}
                   </div>
                   <div>
                     <p className="max-w-md text-base leading-relaxed text-muted-foreground">
