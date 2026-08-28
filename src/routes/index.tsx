@@ -413,8 +413,6 @@ function BeyondTheFinishedSpace() {
 
       <Recognition />
       <LivingOasis />
-      <StudioFilm />
-      <VirtualTour />
     </section>
   );
 }
