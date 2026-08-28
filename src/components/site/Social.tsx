@@ -1,4 +1,5 @@
 import { Instagram, Linkedin, Facebook, ArrowUpRight } from "lucide-react";
+import { TikTokIcon } from "./TikTokIcon";
 import { site } from "@/lib/site";
 import { Container, Eyebrow } from "./Section";
 import { Reveal } from "./Reveal";
@@ -10,7 +11,12 @@ const channels = [
     href: site.social.instagram,
     Icon: Instagram,
   },
-  { name: "TikTok", handle: site.social.tiktokHandle, href: site.social.tiktok, Icon: null },
+  {
+    name: "TikTok",
+    handle: site.social.tiktokHandle,
+    href: site.social.tiktok,
+    Icon: TikTokIcon,
+  },
   {
     name: "LinkedIn",
     handle: site.social.linkedinName,
