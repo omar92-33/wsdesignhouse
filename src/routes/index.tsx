@@ -42,6 +42,7 @@ function Home() {
   return (
     <>
       <Hero />
+      <StudioFilm />
       <Vision />
       <BrandStatement />
       <Founder />
@@ -51,7 +52,7 @@ function Home() {
       <Portfolio />
       <Recognition />
       <LivingOasis />
-      <StudioFilm />
+
       <VirtualTour />
       <Process />
       {testimonials.length > 0 && <ClientExperiences />}
