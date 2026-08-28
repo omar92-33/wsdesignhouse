@@ -83,7 +83,7 @@ export function Certificates() {
           </h2>
         </Reveal>
 
-        <div className="mx-auto mt-16 grid max-w-4xl gap-12 sm:grid-cols-2">
+        <div className="mx-auto mt-16 grid max-w-5xl gap-12 sm:grid-cols-2 lg:grid-cols-3">
           {certificates.map((c, i) => (
             <Reveal key={c.title} delay={i * 120} as="figure">
               <div className="overflow-hidden border border-border bg-background">
