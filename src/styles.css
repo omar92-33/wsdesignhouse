@@ -131,6 +131,14 @@
     will-change: transform;
   }
 
+  /* Velocity-linked motion softening (GPU filter, capped very low) */
+  html.lenis-active #main {
+    filter: blur(var(--scroll-blur, 0px));
+    will-change: filter;
+  }
+
+
+
 
   body {
     background-color: var(--color-background);
