@@ -6,6 +6,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { Frame } from "@/components/site/Frame";
 import { VirtualTour } from "@/components/site/VirtualTour";
 import { FinalCta } from "@/components/site/FinalCta";
+import { StudioMap } from "@/components/site/StudioMap";
 import { Recognition } from "@/components/site/Recognition";
 import { LivingOasis } from "@/components/site/LivingOasis";
 import { StudioFilm } from "@/components/site/StudioFilm";
@@ -59,6 +60,7 @@ function Home() {
       <Services />
       <Proof />
       <BeyondTheFinishedSpace />
+      <StudioMap />
       <FinalCta />
     </>
   );
