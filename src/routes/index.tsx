@@ -279,14 +279,8 @@ function ServicesPreview() {
                 <p className="max-w-lg text-sm leading-relaxed text-muted-foreground">
                   {s.short}
                 </p>
-                <span className="label flex items-center gap-2 text-champagne">
-                  Explore
-                  <ArrowUpRight
-                    className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1"
-                    strokeWidth={1.2}
-                    aria-hidden
-                  />
-                </span>
+                <span aria-hidden />
+
               </Link>
             </Reveal>
           ))}
