@@ -1,6 +1,7 @@
 import { Container, Eyebrow } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import film from "@/assets/studio-film.mp4.asset.json";
+import poster from "@/assets/studio-film-poster.jpg.asset.json";
 
 export function StudioFilm() {
   return (
@@ -31,7 +32,8 @@ export function StudioFilm() {
           <Reveal>
             <div className="mx-auto w-full max-w-sm overflow-hidden rounded-sm border border-border bg-muted">
               <video
-                className="block h-auto w-full"
+                className="block aspect-[9/16] w-full object-cover"
+                poster={poster.url}
                 src={film.url}
                 controls
                 playsInline
