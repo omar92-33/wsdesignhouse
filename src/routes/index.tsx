@@ -114,8 +114,8 @@ function Hero() {
                 rel="noopener noreferrer"
                 className="label link-underline inline-flex items-center gap-2 opacity-60 hover:opacity-100"
               >
-                Explore in 360°
-                <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={1.2} aria-hidden />
+                View the Virtual Tour
+
               </a>
             </div>
           </Reveal>
