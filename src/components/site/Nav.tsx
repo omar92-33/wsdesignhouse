@@ -65,7 +65,7 @@ export function Nav() {
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className="label link-underline press inline-block opacity-80 hover:opacity-100"
+                    className="label link-underline opacity-80 transition-opacity hover:opacity-100"
                     activeProps={{ className: "label opacity-100 text-champagne" }}
                     
                   >
@@ -79,30 +79,27 @@ export function Nav() {
           <div className="flex items-center justify-end gap-4">
             <Link
               to="/contact"
-              className="label press hidden border border-ivory/40 px-6 py-3 hover:border-champagne hover:bg-champagne hover:text-accent-foreground lg:inline-block"
+              className="label hidden border border-ivory/40 px-6 py-3 transition-colors duration-500 hover:border-champagne hover:bg-champagne hover:text-accent-foreground lg:inline-block"
             >
               Book a Consultation
             </Link>
             <button
               type="button"
               onClick={() => setOpen(true)}
-              className="label press flex items-center gap-2 py-2 lg:hidden"
+              className="label flex items-center gap-2 py-2 lg:hidden"
               aria-label="Open menu"
               aria-expanded={open}
             >
               <Menu className="h-5 w-5" strokeWidth={1} aria-hidden />
             </button>
           </div>
-
         </div>
       </header>
 
       {/* Mobile full-screen menu */}
       <div
-        className={`fixed inset-0 z-[60] bg-ink/95 text-ivory backdrop-blur-xl transition-all duration-700 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] lg:hidden ${
-          open
-            ? "pointer-events-auto opacity-100 [clip-path:inset(0%_0%_0%_0%)]"
-            : "pointer-events-none opacity-0 [clip-path:inset(0%_0%_100%_0%)]"
+        className={`fixed inset-0 z-[60] bg-ink text-ivory transition-opacity duration-500 lg:hidden ${
+          open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
         aria-hidden={!open}
       >
@@ -113,7 +110,7 @@ export function Nav() {
               type="button"
               onClick={() => setOpen(false)}
               aria-label="Close menu"
-              className={`press p-2 duration-700 ${open ? "rotate-0" : "-rotate-90"}`}
+              className="p-2"
             >
               <X className="h-6 w-6" strokeWidth={1} aria-hidden />
             </button>
@@ -121,15 +118,11 @@ export function Nav() {
 
           <nav className="mt-14 flex-1" aria-label="Mobile">
             <ul className="space-y-6">
-              {navItems.map((item, i) => (
-                <li
-                  key={item.to}
-                  className={open ? "menu-item-shown" : "menu-item-hidden"}
-                  style={{ transitionDelay: open ? `${120 + i * 70}ms` : "0ms" }}
-                >
+              {navItems.map((item) => (
+                <li key={item.to}>
                   <Link
                     to={item.to}
-                    className="press inline-block font-display text-4xl leading-none tracking-tight"
+                    className="font-display text-4xl leading-none tracking-tight"
                     activeProps={{ className: "text-champagne" }}
                     
                   >
@@ -140,13 +133,10 @@ export function Nav() {
             </ul>
           </nav>
 
-          <div
-            className={`space-y-4 border-t border-ivory/15 pt-6 ${open ? "menu-item-shown" : "menu-item-hidden"}`}
-            style={{ transitionDelay: open ? `${180 + navItems.length * 70}ms` : "0ms" }}
-          >
+          <div className="space-y-4 border-t border-ivory/15 pt-6">
             <Link
               to="/contact"
-              className="label press block border border-champagne bg-champagne px-6 py-4 text-center text-accent-foreground"
+              className="label block border border-champagne bg-champagne px-6 py-4 text-center text-accent-foreground"
             >
               Book a Private Consultation
             </Link>
@@ -154,7 +144,7 @@ export function Nav() {
               href={whatsappUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="label press flex items-center justify-center gap-2 border border-ivory/30 px-6 py-4"
+              className="label flex items-center justify-center gap-2 border border-ivory/30 px-6 py-4"
             >
               <MessageCircle className="h-4 w-4" strokeWidth={1.2} aria-hidden />
               WhatsApp the Studio
@@ -162,7 +152,6 @@ export function Nav() {
           </div>
         </div>
       </div>
-
     </>
   );
 }

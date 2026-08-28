@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-/** Apple-style scroll reveal: slow fade, gentle rise, micro scale, once. */
+/** Restrained scroll reveal: a single fade + small rise, once. */
 export function Reveal({
   children,
   delay = 0,
@@ -18,10 +18,7 @@ export function Reveal({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    if (
-      typeof IntersectionObserver === "undefined" ||
-      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches
-    ) {
+    if (typeof IntersectionObserver === "undefined") {
       setShown(true);
       return;
     }
@@ -34,7 +31,7 @@ export function Reveal({
           }
         }
       },
-      { rootMargin: "0px 0px -10% 0px", threshold: 0.05 },
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.05 },
     );
 
     io.observe(el);
@@ -47,7 +44,7 @@ export function Reveal({
     <Component
       ref={ref}
       className={`${shown ? "reveal-shown" : "reveal-hidden"} ${className}`}
-      style={delay ? { transitionDelay: shown ? `${delay}ms` : "0ms" } : undefined}
+      style={shown && delay ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}
     </Component>

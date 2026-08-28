@@ -185,56 +185,20 @@
 
 @utility reveal-hidden {
   opacity: 0;
-  transform: translate3d(0, 26px, 0) scale(0.988);
+  transform: translate3d(0, 12px, 0);
   filter: blur(2px);
   will-change: opacity, transform;
-  transition:
-    opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
-    filter 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @utility reveal-shown {
   opacity: 1;
-  transform: translate3d(0, 0, 0) scale(1);
+  transform: translate3d(0, 0, 0);
   filter: blur(0);
   transition:
-    opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
-    filter 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.1s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 1.1s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-/* Premium press / hover micro-interactions */
-@utility press {
-  transition:
-    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-    background-color 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-    color 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-  &:hover {
-    transform: translate3d(0, -1px, 0);
-  }
-  &:active {
-    transform: translate3d(0, 0, 0) scale(0.975);
-    transition-duration: 0.12s;
-  }
-}
-
-/* Mobile menu panel + staggered items */
-@utility menu-item-hidden {
-  opacity: 0;
-  transform: translate3d(0, 22px, 0);
-}
-
-@utility menu-item-shown {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-  transition:
-    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
 
 
 @media (prefers-reduced-motion: reduce) {
