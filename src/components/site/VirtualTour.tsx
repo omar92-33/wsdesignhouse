@@ -25,7 +25,7 @@ export function VirtualTour() {
                 href={site.virtualTour}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="label border border-champagne px-8 py-4 text-center text-champagne transition-colors duration-500 hover:bg-champagne hover:text-accent-foreground"
+                className="label border-2 border-champagne bg-champagne px-10 py-5 text-center text-accent-foreground shadow-lg transition-all duration-500 hover:bg-transparent hover:text-champagne"
               >
                 View the Virtual Tour
               </a>

@@ -111,10 +111,9 @@ function Hero() {
                 href={site.virtualTour}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="label link-underline inline-flex items-center gap-2 opacity-60 hover:opacity-100"
+                className="label inline-flex items-center gap-2 border border-champagne px-8 py-4 text-champagne transition-colors duration-500 hover:bg-champagne hover:text-accent-foreground"
               >
                 View the Virtual Tour
-
               </a>
             </div>
           </Reveal>
