@@ -67,7 +67,7 @@ export function Nav() {
                     to={item.to}
                     className="label link-underline opacity-80 transition-opacity hover:opacity-100"
                     activeProps={{ className: "label opacity-100 text-champagne" }}
-                    activeOptions={{ exact: item.to === "/" }}
+                    
                   >
                     {item.label}
                   </Link>
@@ -124,7 +124,7 @@ export function Nav() {
                     to={item.to}
                     className="font-display text-4xl leading-none tracking-tight"
                     activeProps={{ className: "text-champagne" }}
-                    activeOptions={{ exact: item.to === "/" }}
+                    
                   >
                     {item.label}
                   </Link>
