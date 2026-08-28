@@ -1,6 +1,7 @@
 import { Container, Eyebrow } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { Slideshow } from "@/components/site/Slideshow";
+import { ConceptTag } from "@/components/site/ConceptTag";
 import o1 from "@/assets/oasis-5408.jpg.asset.json";
 import o2 from "@/assets/oasis-5405.jpg.asset.json";
 import o3 from "@/assets/oasis-5406.jpg.asset.json";
@@ -39,10 +40,11 @@ export function LivingOasis() {
 
           <div className="lg:order-first">
             <Reveal>
-              <Eyebrow>Competition Entry</Eyebrow>
+              <ConceptTag>Design Research — Concept Entry, Not a Client Project</ConceptTag>
+              <Eyebrow className="mt-6">Competition Entry</Eyebrow>
               <h2
                 id="living-oasis-heading"
-                className="display mt-8 text-[clamp(2.25rem,5vw,4rem)]"
+                className="display mt-6 text-[clamp(2.25rem,5vw,4rem)]"
               >
                 The Living Oasis
                 <span className="block text-champagne">Designed for the Saudi Climate</span>

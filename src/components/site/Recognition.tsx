@@ -1,6 +1,7 @@
 import { Container, Eyebrow } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { Slideshow } from "@/components/site/Slideshow";
+import { ConceptTag } from "@/components/site/ConceptTag";
 import s1 from "@/assets/milan-5400.jpg.asset.json";
 import s2 from "@/assets/milan-5401.jpg.asset.json";
 import s3 from "@/assets/milan-5402.jpg.asset.json";
@@ -23,10 +24,11 @@ export function Recognition() {
         <div className="grid gap-16 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:gap-24">
           <div>
             <Reveal>
-              <Eyebrow>Jury Feedback</Eyebrow>
+              <ConceptTag>Concept Work — Competition Entry, Not a Client Project</ConceptTag>
+              <Eyebrow className="mt-6">Jury Feedback</Eyebrow>
               <h2
                 id="recognition-heading"
-                className="display mt-8 text-[clamp(2.25rem,5vw,4rem)]"
+                className="display mt-6 text-[clamp(2.25rem,5vw,4rem)]"
               >
                 Living Studio
                 <span className="block text-champagne">Milan Design Loft</span>
