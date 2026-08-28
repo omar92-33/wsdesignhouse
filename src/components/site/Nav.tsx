@@ -65,7 +65,7 @@ export function Nav() {
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className="label link-underline opacity-80 transition-opacity hover:opacity-100"
+                    className="label link-underline press inline-block opacity-80 hover:opacity-100"
                     activeProps={{ className: "label opacity-100 text-champagne" }}
                     
                   >
@@ -79,20 +79,21 @@ export function Nav() {
           <div className="flex items-center justify-end gap-4">
             <Link
               to="/contact"
-              className="label hidden border border-ivory/40 px-6 py-3 transition-colors duration-500 hover:border-champagne hover:bg-champagne hover:text-accent-foreground lg:inline-block"
+              className="label press hidden border border-ivory/40 px-6 py-3 hover:border-champagne hover:bg-champagne hover:text-accent-foreground lg:inline-block"
             >
               Book a Consultation
             </Link>
             <button
               type="button"
               onClick={() => setOpen(true)}
-              className="label flex items-center gap-2 py-2 lg:hidden"
+              className="label press flex items-center gap-2 py-2 lg:hidden"
               aria-label="Open menu"
               aria-expanded={open}
             >
               <Menu className="h-5 w-5" strokeWidth={1} aria-hidden />
             </button>
           </div>
+
         </div>
       </header>
 
