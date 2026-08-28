@@ -34,7 +34,6 @@ export function Footer() {
           <div>
             <p className="label mb-6 text-champagne">Studio</p>
             <ul className="space-y-3 text-base opacity-70">
-              <li>{site.location}</li>
               <li>
                 <a href={`mailto:${site.email}`} className="hover:opacity-100">
                   {site.email}

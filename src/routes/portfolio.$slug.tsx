@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Container } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { Frame } from "@/components/site/Frame";
-import { projects, site, whatsappUrl } from "@/lib/site";
+import { projects, whatsappUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/portfolio/$slug")({
   loader: ({ params }) => {
@@ -72,7 +72,7 @@ function ProjectPage() {
           }}
         />
         <Container className="relative flex min-h-[85svh] flex-col justify-end pb-20 pt-40">
-          <p className="label text-champagne">{project.category}</p>
+          <p className="label text-ink">{project.category}</p>
           <h1 className="display mt-5 max-w-[14ch] text-[clamp(2.75rem,9vw,7rem)]">
             {project.title}
           </h1>
@@ -103,8 +103,8 @@ function ProjectPage() {
           <div className="grid gap-14 lg:grid-cols-2 lg:gap-24">
             {sections.map((s, i) => (
               <Reveal key={s.title} delay={(i % 2) * 90}>
-                <div className="border-t border-champagne pt-8">
-                  <h2 className="label text-champagne">{s.title}</h2>
+                <div className="border-t border-ink pt-8">
+                  <h2 className="label text-ink">{s.title}</h2>
                   <p className="mt-6 max-w-lg text-base leading-loose text-muted-foreground sm:text-lg">
                     {s.body}
                   </p>
@@ -156,7 +156,7 @@ function ProjectPage() {
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 to="/contact"
-                className="label w-full border border-champagne bg-champagne px-10 py-5 text-accent-foreground sm:w-auto"
+                className="label w-full border border-ink bg-ink px-10 py-5 text-ivory sm:w-auto"
               >
                 Start Your Project
               </Link>
@@ -177,7 +177,6 @@ function ProjectPage() {
             >
               Or message the studio on WhatsApp
             </a>
-            <p className="label mt-10 opacity-40">{site.location}</p>
           </Reveal>
         </Container>
       </section>

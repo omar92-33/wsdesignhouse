@@ -18,7 +18,7 @@ export const Route = createFileRoute("/contact")({
       {
         property: "og:description",
         content:
-          "Reach out to our design team in New Cairo for a private consultation.",
+          "Reach out to our design team for a private consultation.",
       },
       { property: "og:url", content: "/contact" },
     ],
@@ -33,7 +33,7 @@ function ContactPage() {
       <PageHeader
         eyebrow="Connect"
         title="Start Your Journey"
-        intro="Experience the art of artisanal living. Reach out to our design team in New Cairo for a private consultation."
+        intro="Experience the art of artisanal living. Reach out to our design team for a private consultation."
       />
 
       <section className="py-20 lg:py-32">
