@@ -1,16 +1,29 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-/** Restrained scroll reveal: a single fade + small rise, once. */
+type Variant = "rise" | "zoom" | "mask";
+
+const CLASSES: Record<Variant, { hidden: string; shown: string }> = {
+  rise: { hidden: "reveal-hidden", shown: "reveal-shown" },
+  zoom: { hidden: "reveal-zoom-hidden", shown: "reveal-zoom-shown" },
+  mask: { hidden: "reveal-mask-hidden", shown: "reveal-mask-shown" },
+};
+
+/**
+ * Restrained scroll reveal — GPU-composited (opacity/transform/filter only),
+ * long decelerating easing, fires once when the element enters the viewport.
+ */
 export function Reveal({
   children,
   delay = 0,
   className = "",
+  variant = "rise",
   as: Tag = "div",
 }: {
   children: ReactNode;
   delay?: number | undefined;
   className?: string | undefined;
-  as?: "div" | "section" | "li" | "article" | "figure" | undefined;
+  variant?: Variant | undefined;
+  as?: "div" | "section" | "li" | "article" | "figure" | "span" | undefined;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [shown, setShown] = useState(false);
@@ -18,7 +31,10 @@ export function Reveal({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    if (typeof IntersectionObserver === "undefined") {
+    const reduced =
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    if (reduced || typeof IntersectionObserver === "undefined") {
       setShown(true);
       return;
     }
@@ -26,12 +42,13 @@ export function Reveal({
       (entries) => {
         for (const e of entries) {
           if (e.isIntersecting) {
-            setShown(true);
+            // Schedule on the next frame so the transition always composites.
+            requestAnimationFrame(() => setShown(true));
             io.disconnect();
           }
         }
       },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.05 },
+      { rootMargin: "0px 0px -10% 0px", threshold: 0.05 },
     );
 
     io.observe(el);
@@ -39,14 +56,20 @@ export function Reveal({
   }, []);
 
   const Component = Tag as "div";
-
-  return (
+  const v = CLASSES[variant];
+  const inner = (
     <Component
       ref={ref}
-      className={`${shown ? "reveal-shown" : "reveal-hidden"} ${className}`}
+      className={`${shown ? v.shown : v.hidden} ${className}`}
       style={shown && delay ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}
     </Component>
   );
+
+  if (variant === "mask") {
+    return <span className="reveal-mask-clip">{inner}</span>;
+  }
+
+  return inner;
 }
