@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MessageCircle } from "lucide-react";
 import entryAsset from "@/assets/entry.png.asset.json";
 
 import { Container, Eyebrow } from "@/components/site/Section";
@@ -21,7 +20,6 @@ import {
   site,
   studioSummary,
   testimonials,
-  whatsappUrl,
 } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
@@ -113,7 +111,7 @@ function Hero() {
         </Reveal>
 
         <Reveal delay={320}>
-          <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
+          <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Link
               to={secondaryCta.to}
               className="label inline-flex items-center justify-center border border-champagne bg-champagne px-9 py-5 text-accent-foreground transition-opacity duration-500 hover:opacity-85"
@@ -126,15 +124,6 @@ function Hero() {
             >
               {primaryCta.label}
             </Link>
-            <a
-              href={whatsappUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="label inline-flex items-center justify-center gap-2 border border-ivory/40 px-9 py-5 transition-colors duration-500 hover:border-ivory hover:bg-ivory/10"
-            >
-              <MessageCircle className="h-4 w-4 shrink-0" strokeWidth={1.5} aria-hidden />
-              WhatsApp +20 100 258 3892
-            </a>
           </div>
         </Reveal>
 
