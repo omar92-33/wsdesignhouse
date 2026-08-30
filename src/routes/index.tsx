@@ -175,7 +175,6 @@ function SelectedProjects() {
                     <p className="max-w-md text-base leading-relaxed text-muted-foreground">
                       {p.description}
                     </p>
-                    <span className="label link-underline mt-6 inline-block">View Project →</span>
                   </div>
                 </div>
               </Link>
