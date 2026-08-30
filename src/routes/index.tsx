@@ -10,6 +10,7 @@ import { StudioMap } from "@/components/site/StudioMap";
 import { Recognition } from "@/components/site/Recognition";
 import { LivingOasis } from "@/components/site/LivingOasis";
 import { StudioFilm } from "@/components/site/StudioFilm";
+import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import {
   method,
   pillars,
