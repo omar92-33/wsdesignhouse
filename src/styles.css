@@ -339,6 +339,24 @@
   will-change: clip-path, opacity;
 }
 
+/* Floating WhatsApp button entrance */
+@keyframes wa-float-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fixed[href*="wa.me"] {
+    animation: none !important;
+  }
+}
+
 
 
 
