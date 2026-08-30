@@ -65,6 +65,7 @@ function Home() {
       <VirtualTour />
       <StudioMap />
       <FinalCta />
+      <WhatsAppFloat />
     </>
   );
 }
