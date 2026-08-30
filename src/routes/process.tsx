@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Container, PageHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { FinalCta } from "@/components/site/FinalCta";
-import { journey, method } from "@/lib/site";
+import { method } from "@/lib/site";
 
 export const Route = createFileRoute("/process")({
   head: () => ({
@@ -51,28 +51,6 @@ function ProcessPage() {
               </Reveal>
             ))}
           </ol>
-        </Container>
-      </section>
-
-      <section className="border-y border-border bg-muted/50 py-24 lg:py-32">
-        <Container>
-          <Reveal>
-            <h2 className="display text-center text-[clamp(1.9rem,5vw,3.75rem)] uppercase">
-              From Idea to Final Space
-            </h2>
-            <ol className="mx-auto mt-14 max-w-2xl">
-              {journey.map((step, i) => (
-                <li key={step} className="flex items-center gap-6 border-b border-border py-5">
-                  <span className="label w-8 text-champagne">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span className="font-display text-2xl uppercase tracking-[0.1em] sm:text-3xl">
-                    {step}
-                  </span>
-                </li>
-              ))}
-            </ol>
-          </Reveal>
         </Container>
       </section>
 
