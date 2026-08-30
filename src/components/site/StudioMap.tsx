@@ -43,7 +43,7 @@ export function StudioMap() {
                   className="flex h-full w-full flex-col items-center justify-center gap-4 p-6 text-center transition-colors duration-300 hover:bg-muted/80"
                   aria-label="Load interactive Google Map"
                 >
-                  <MapPin className="h-8 w-8 text-sage-accent" aria-hidden />
+                  <MapPin className="h-8 w-8 text-[var(--sage-accent)]" aria-hidden />
                   <span className="label text-muted-foreground">Tap to load the interactive map</span>
                 </button>
               )}
