@@ -203,7 +203,10 @@ function WhyStudio() {
       <Container>
         <Reveal>
           <Eyebrow>Why WS DESIGNHOUSE</Eyebrow>
-          <h2 id="why-heading" className="display mt-7 max-w-[20ch] text-[clamp(2.1rem,5.5vw,4.25rem)]">
+          <h2
+            id="why-heading"
+            className="display mt-7 whitespace-nowrap text-[clamp(1.35rem,3.2vw,2.35rem)]"
+          >
             Designed with Vision. Delivered with Precision.
           </h2>
         </Reveal>
