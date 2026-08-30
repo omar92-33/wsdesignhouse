@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { MessageCircle } from "lucide-react";
 import entryAsset from "@/assets/entry.png.asset.json";
 
 import { Container, Eyebrow } from "@/components/site/Section";
@@ -20,6 +21,7 @@ import {
   site,
   studioSummary,
   testimonials,
+  whatsappUrl,
 } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
