@@ -12,13 +12,13 @@ export const Route = createFileRoute("/services/")({
       {
         name: "description",
         content:
-          "End-to-end interior design in New Cairo: interior architecture, visualization, planning, engineering, FF&E, bespoke furniture and project management.",
+          "Consultation, 3D visualisation and turnkey execution for private residences and luxury interiors in New Cairo, Egypt.",
       },
       { property: "og:title", content: "Services — WS DESIGNHOUSE" },
       {
         property: "og:description",
         content:
-          "Interior design, interior architecture, visualization, planning, engineering, FF&E and bespoke furniture from a New Cairo studio.",
+          "Consultation, 3D visualisation and turnkey execution for private residences and luxury interiors.",
       },
       { property: "og:url", content: "/services" },
     ],
@@ -33,7 +33,7 @@ function ServicesPage() {
       <PageHeader
         eyebrow="Our Expertise"
         title="From Vision to Reality"
-        intro="End-to-End Interior Design | Visualization • Planning • Engineering • FF&E"
+        intro="Consultation • 3D Visualisation • Turnkey Execution"
       />
 
       <section className="py-20 lg:py-28">

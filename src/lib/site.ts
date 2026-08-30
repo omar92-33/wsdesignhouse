@@ -13,8 +13,7 @@ export const site = {
   name: "WS DESIGNHOUSE",
   tagline: "Design Spaces… Creating Dreams",
   positioning: "Interior Architecture Specialists",
-  serviceLine:
-    "End-to-End Interior Design | Visualization • Planning • Engineering • FF&E",
+  serviceLine: "Consultation • 3D Visualisation • Turnkey Execution",
   location: "New Cairo, Egypt",
   established: "EST. 2026",
   taxId: "504-743-953",
@@ -59,27 +58,22 @@ export const navItems = [
 export const primaryCta = { label: "Book a Private Consultation", to: "/contact" } as const;
 export const secondaryCta = { label: "View Selected Projects", to: "/portfolio" } as const;
 
-/** Four editorial service categories shown on the homepage. */
+/** Three core service categories shown on the homepage. */
 export const serviceCategories = [
   {
-    title: "Interior Architecture",
-    body: "Intelligent spatial planning and architectural transformation.",
-    slug: "interior-architecture",
+    title: "Consultation",
+    body: "We listen, understand, and shape a direction that fits your space and lifestyle.",
+    slug: "consultation",
   },
   {
-    title: "Complete Interior Design",
-    body: "Materials, lighting, furniture, finishes, and complete interior direction.",
-    slug: "interior-design",
+    title: "3D Visualisation",
+    body: "See the concept before execution through realistic visuals, moodboards, and material direction.",
+    slug: "3d-visualisation",
   },
   {
-    title: "Bespoke Design",
-    body: "Custom furniture and distinctive elements created specifically for each project.",
-    slug: "bespoke-furniture",
-  },
-  {
-    title: "Project Development",
-    body: "Technical expertise and coordination supporting the transition from design to execution.",
-    slug: "project-management",
+    title: "Turnkey Execution",
+    body: "From planning to final finishing, every detail is managed with care and precision.",
+    slug: "turnkey-execution",
   },
 ] as const;
 
@@ -94,99 +88,39 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    slug: "interior-design",
-    title: "Interior Design",
+    slug: "consultation",
+    title: "Consultation",
     short:
-      "Complete interior design solutions tailored to the client's lifestyle and requirements.",
+      "We listen, understand, and shape a direction that fits your space and lifestyle.",
     intro:
-      "A complete residential interior design service, shaped around how you actually live.",
+      "Every project begins with a conversation about how you live and what you want your space to become.",
     body: [
-      "Interior design at WS DESIGNHOUSE begins with the client, not the catalogue. We study how a home is used across a day and a season — where light falls, where people gather, where quiet is needed — and design from those observations outward.",
-      "The result is a scheme where layout, materials, lighting and furniture are decided together rather than in isolation. Every surface, junction and finish is specified as part of one considered whole.",
-      "The service covers concept development, material and finish selection, lighting design, joinery detailing and full documentation for execution.",
+      "The consultation is where we learn the character of the space, the rhythms of daily life, and the ambitions behind the project. We ask, listen, and translate those observations into a clear design direction.",
+      "By the end of this stage you have a defined brief, an understanding of the possibilities, and a confident path forward — whether the project is a single room or an entire residence.",
     ],
     hasPage: true,
   },
   {
-    slug: "interior-architecture",
-    title: "Interior Architecture",
-    short: "Space planning and structural redesign for luxury residences.",
-    intro:
-      "Reshaping the architecture of a home so the plan itself supports the way you live.",
-    body: [
-      "Interior architecture is the difference between decorating a room and designing a space. We work at the level of the plan — walls, openings, ceiling heights, circulation and sightlines — to resolve how a residence is organised before any finish is chosen.",
-      "This is the discipline that turns an awkward villa or apartment layout into a home with proportion, generosity and flow.",
-      "Interior architecture vs. interior decoration: decoration dresses what already exists; interior architecture questions it. Both matter — we simply start with the harder question first.",
-    ],
-    hasPage: true,
-  },
-  {
-    slug: "visualization",
-    title: "Visualization",
+    slug: "3d-visualisation",
+    title: "3D Visualisation",
     short:
-      "Professional visualization to help communicate and explore the design vision.",
-    intro: "Seeing the space before it is built, so decisions are made with confidence.",
+      "See the concept before execution through realistic visuals, moodboards, and material direction.",
+    intro: "A shared vision before anything is built.",
     body: [
-      "Visualization is a design tool, not a sales image. We use it to test proportion, material combinations and light, and to give clients a clear, honest understanding of what is being proposed.",
-      "Reviewing a space visually — including immersive 360° walkthroughs where appropriate — removes ambiguity long before construction begins.",
+      "We translate the design direction into clear visuals — 3D renders, moodboards, and material palettes — so you can experience the space before construction begins.",
+      "This stage removes guesswork. Layouts, proportions, light, and finishes are reviewed together, allowing decisions to be made with confidence and the design intent to be protected through every later step.",
     ],
     hasPage: true,
   },
   {
-    slug: "planning",
-    title: "Planning",
+    slug: "turnkey-execution",
+    title: "Turnkey Execution",
     short:
-      "Thoughtful planning focused on space, function and the overall design journey.",
-    intro: "The quiet discipline that makes everything downstream possible.",
+      "From planning to final finishing, every detail is managed with care and precision.",
+    intro: "One studio accountable from planning to handover.",
     body: [
-      "Planning covers both the spatial plan and the project plan: how rooms relate to one another, and how the stages of design and delivery follow each other without friction.",
-      "Careful planning protects the design intent through every later stage of the project.",
-    ],
-    hasPage: true,
-  },
-  {
-    slug: "engineering",
-    title: "Engineering",
-    short:
-      "Integrated engineering consideration as part of the end-to-end project process.",
-    intro: "Technical coordination considered as part of the design, not after it.",
-    body: [
-      "Engineering considerations — services routing, lighting infrastructure, ventilation, and the technical requirements of joinery and finishes — are integrated into the design process from an early stage.",
-      "Considering them alongside the design avoids the compromises that appear when technical requirements are discovered late.",
-    ],
-    hasPage: true,
-  },
-  {
-    slug: "ffe",
-    title: "FF&E",
-    short:
-      "Furniture, Fixtures & Equipment carefully considered as part of the complete interior environment.",
-    intro: "Furniture, fixtures and equipment specified as part of one environment.",
-    body: [
-      "FF&E is where an interior becomes habitable. Every piece is selected or designed in relation to the architecture around it — scale, material, tone and use.",
-      "We schedule, specify and coordinate FF&E as an integral part of the interior rather than a final decorative layer.",
-    ],
-    hasPage: true,
-  },
-  {
-    slug: "bespoke-furniture",
-    title: "Bespoke Furniture",
-    short: "Custom designed artisanal pieces tailored to the client's exact taste.",
-    intro: "Pieces made for one space, and one client.",
-    body: [
-      "When a space asks for something that does not exist, we design it. Bespoke furniture allows dimensions, materials and detailing to answer the room exactly — a kitchen island sized to its marble slab, a headboard proportioned to its wall.",
-      "Each piece is developed through drawings and material selection, then made by craftsmen working to those drawings.",
-    ],
-    hasPage: true,
-  },
-  {
-    slug: "project-management",
-    title: "Project Management",
-    short: "End-to-end execution with meticulous attention to detail.",
-    intro: "One studio accountable from first sketch to final handover.",
-    body: [
-      "End-to-end delivery means the people who designed the space are the people who see it built. We coordinate trades, review workmanship against the drawings, and manage the sequence of works on site.",
-      "Meticulous attention at this stage is what separates a rendered idea from a finished space.",
+      "Turnkey execution means we carry the design through every practical stage: technical planning, contractor coordination, material procurement, site supervision, and final finishing.",
+      "The same studio that conceived the space oversees its completion, so the result stays faithful to the design rather than being diluted across multiple hands.",
     ],
     hasPage: true,
   },
