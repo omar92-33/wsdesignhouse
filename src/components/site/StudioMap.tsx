@@ -26,7 +26,7 @@ export function StudioMap() {
             <div className="aspect-[16/10] w-full overflow-hidden border border-border">
               <iframe
                 title="WS DESIGNHOUSE studio location"
-                loading="lazy"
+                loading="eager"
                 className="h-full w-full"
                 referrerPolicy="no-referrer-when-downgrade"
                 src={`https://www.google.com/maps?q=${site.coordinates.lat},${site.coordinates.lng}&z=14&output=embed`}
