@@ -27,7 +27,6 @@ export function StudioMap() {
               <iframe
                 title="WS DESIGNHOUSE studio location"
                 loading="eager"
-                fetchPriority="low"
                 className="h-full w-full"
                 referrerPolicy="no-referrer-when-downgrade"
                 src={`https://www.google.com/maps?q=${site.coordinates.lat},${site.coordinates.lng}&z=14&output=embed`}
