@@ -1,12 +1,8 @@
-import { useState } from "react";
 import { Container, Eyebrow } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { mapsUrl, site } from "@/lib/site";
-import { MapPin } from "lucide-react";
 
 export function StudioMap() {
-  const [loadMap, setLoadMap] = useState(false);
-
   return (
     <section className="py-24 lg:py-32" aria-labelledby="studio-map-heading">
       <Container>
@@ -27,26 +23,14 @@ export function StudioMap() {
           </Reveal>
 
           <Reveal delay={120}>
-            <div className="aspect-[16/10] w-full overflow-hidden border border-border bg-muted">
-              {loadMap ? (
-                <iframe
-                  title="WS DESIGNHOUSE studio location"
-                  loading="lazy"
-                  className="h-full w-full"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  src={`https://www.google.com/maps?q=${site.coordinates.lat},${site.coordinates.lng}&z=14&output=embed`}
-                />
-              ) : (
-                <button
-                  type="button"
-                  onClick={() => setLoadMap(true)}
-                  className="flex h-full w-full flex-col items-center justify-center gap-4 p-6 text-center transition-colors duration-300 hover:bg-muted/80"
-                  aria-label="Load interactive Google Map"
-                >
-                  <MapPin className="h-8 w-8 text-[var(--sage-accent)]" aria-hidden />
-                  <span className="label text-muted-foreground">Tap to load the interactive map</span>
-                </button>
-              )}
+            <div className="aspect-[16/10] w-full overflow-hidden border border-border">
+              <iframe
+                title="WS DESIGNHOUSE studio location"
+                loading="lazy"
+                className="h-full w-full"
+                referrerPolicy="no-referrer-when-downgrade"
+                src={`https://www.google.com/maps?q=${site.coordinates.lat},${site.coordinates.lng}&z=14&output=embed`}
+              />
             </div>
           </Reveal>
         </div>
