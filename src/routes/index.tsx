@@ -94,26 +94,26 @@ function Hero() {
 
 
 
-      <Container className="relative pb-14 pt-32 sm:pb-20 sm:pt-40 lg:pb-12 lg:pt-28 xl:pb-24 xl:pt-40">
+      <Container className="relative pb-14 pt-32 sm:pb-20 sm:pt-40 lg:pb-8 lg:pt-24 xl:pb-24 xl:pt-40">
         <Reveal>
           <p className="label opacity-55">{site.positioning}</p>
         </Reveal>
 
         <Reveal delay={120}>
-          <h1 className="display mt-7 max-w-[16ch] text-[clamp(2.7rem,7vw,5.25rem)] leading-[1.06] xl:text-[clamp(3rem,7vw,7rem)]">
+          <h1 className="display mt-7 max-w-[16ch] text-[clamp(2.7rem,6vw,4.25rem)] leading-[1.06] xl:text-[clamp(3rem,7vw,7rem)]">
             Interiors Designed for the Way You Live.
           </h1>
         </Reveal>
 
         <Reveal delay={220}>
-          <p className="mt-6 max-w-xl text-base leading-relaxed opacity-70 xl:mt-9 xl:text-lg">
+          <p className="mt-5 max-w-xl text-base leading-relaxed opacity-70 xl:mt-9 xl:text-lg">
             Luxury interior architecture and bespoke design for private residences, villas, and
             exceptional spaces.
           </p>
         </Reveal>
 
         <Reveal delay={320}>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center xl:mt-12 xl:gap-4">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center xl:mt-12 xl:gap-4">
             <Link
               to={secondaryCta.to}
               className="label inline-flex items-center justify-center border border-champagne bg-champagne px-8 py-4 text-accent-foreground transition-opacity duration-500 hover:opacity-85 xl:px-9 xl:py-5"
@@ -130,7 +130,7 @@ function Hero() {
         </Reveal>
 
         <Reveal delay={420}>
-          <p className="label mt-8 opacity-45 xl:mt-14">New Cairo · Egypt · International Projects</p>
+          <p className="label mt-6 opacity-45 xl:mt-14">New Cairo · Egypt · International Projects</p>
         </Reveal>
       </Container>
     </section>
