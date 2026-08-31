@@ -4,9 +4,9 @@ import { mapsUrl, site } from "@/lib/site";
 
 export function StudioMap() {
   return (
-    <section className="py-24 lg:py-32" aria-labelledby="studio-map-heading">
+    <section className="py-20 lg:py-20 xl:py-28" aria-labelledby="studio-map-heading">
       <Container>
-        <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-end lg:gap-20">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:gap-14 xl:grid-cols-[1fr_1.4fr] xl:gap-20">
           <Reveal>
             <Eyebrow>Location</Eyebrow>
             <h2 id="studio-map-heading" className="display mt-7 text-[clamp(2rem,5vw,3.5rem)]">

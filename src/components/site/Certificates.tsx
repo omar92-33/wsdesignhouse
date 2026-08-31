@@ -72,7 +72,7 @@ const certificates = [
 export function Certificates() {
   return (
     <section
-      className="border-t border-border py-28 lg:py-40"
+      className="border-t border-border py-24 lg:py-24 xl:py-36"
       aria-labelledby="certificates-heading"
     >
       <Container>
@@ -83,7 +83,7 @@ export function Certificates() {
           </h2>
         </Reveal>
 
-        <div className="mx-auto mt-16 grid max-w-5xl gap-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-14 grid max-w-5xl gap-10 sm:grid-cols-2 lg:max-w-4xl lg:grid-cols-3 xl:max-w-5xl xl:gap-12">
           {certificates.map((c, i) => (
             <Reveal key={c.title} delay={i * 120} as="figure">
               <div className="overflow-hidden border border-border bg-background">

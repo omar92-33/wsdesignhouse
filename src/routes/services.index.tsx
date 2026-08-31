@@ -36,9 +36,9 @@ function ServicesPage() {
         intro="Consultation • 3D Visualisation • Turnkey Execution"
       />
 
-      <section className="py-20 lg:py-28">
+      <section className="py-20 lg:py-20 xl:py-28">
         <Container>
-          <ul className="grid gap-16 md:grid-cols-2 lg:gap-24">
+          <ul className="grid gap-14 md:grid-cols-2 lg:gap-16 xl:gap-24">
             {services.map((s, i) => (
               <Reveal as="li" key={s.slug} delay={(i % 2) * 90}>
                 <article>
@@ -75,7 +75,7 @@ function ServicesPage() {
         </Container>
       </section>
 
-      <section className="border-y border-border bg-muted/50 py-24 lg:py-32">
+      <section className="border-y border-border bg-muted/50 py-20 lg:py-20 xl:py-32">
         <Container>
           <Reveal>
             <h2 className="display text-center text-[clamp(1.9rem,5vw,3.75rem)] uppercase">

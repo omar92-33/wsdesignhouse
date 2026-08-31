@@ -94,35 +94,35 @@ function Hero() {
 
 
 
-      <Container className="relative pb-20 pt-40 lg:pb-28">
+      <Container className="relative pb-14 pt-32 sm:pb-20 sm:pt-40 lg:pb-12 lg:pt-28 xl:pb-24 xl:pt-40">
         <Reveal>
           <p className="label opacity-55">{site.positioning}</p>
         </Reveal>
 
         <Reveal delay={120}>
-          <h1 className="display mt-8 max-w-[16ch] text-[clamp(2.7rem,8vw,7rem)] leading-[1.06]">
+          <h1 className="display mt-7 max-w-[16ch] text-[clamp(2.7rem,7vw,5.25rem)] leading-[1.06] xl:text-[clamp(3rem,7vw,7rem)]">
             Interiors Designed for the Way You Live.
           </h1>
         </Reveal>
 
         <Reveal delay={220}>
-          <p className="mt-9 max-w-xl text-lg leading-relaxed opacity-70">
+          <p className="mt-6 max-w-xl text-base leading-relaxed opacity-70 xl:mt-9 xl:text-lg">
             Luxury interior architecture and bespoke design for private residences, villas, and
             exceptional spaces.
           </p>
         </Reveal>
 
         <Reveal delay={320}>
-          <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center xl:mt-12 xl:gap-4">
             <Link
               to={secondaryCta.to}
-              className="label inline-flex items-center justify-center border border-champagne bg-champagne px-9 py-5 text-accent-foreground transition-opacity duration-500 hover:opacity-85"
+              className="label inline-flex items-center justify-center border border-champagne bg-champagne px-8 py-4 text-accent-foreground transition-opacity duration-500 hover:opacity-85 xl:px-9 xl:py-5"
             >
               {secondaryCta.label}
             </Link>
             <Link
               to={primaryCta.to}
-              className="label inline-flex items-center justify-center border border-ivory/40 px-9 py-5 transition-colors duration-500 hover:border-ivory"
+              className="label inline-flex items-center justify-center border border-ivory/40 px-8 py-4 transition-colors duration-500 hover:border-ivory xl:px-9 xl:py-5"
             >
               {primaryCta.label}
             </Link>
@@ -130,7 +130,7 @@ function Hero() {
         </Reveal>
 
         <Reveal delay={420}>
-          <p className="label mt-14 opacity-45">New Cairo · Egypt · International Projects</p>
+          <p className="label mt-8 opacity-45 xl:mt-14">New Cairo · Egypt · International Projects</p>
         </Reveal>
       </Container>
     </section>
@@ -141,7 +141,7 @@ function Hero() {
 
 function SelectedProjects() {
   return (
-    <section className="pb-14 pt-24 lg:pb-20 lg:pt-36" aria-labelledby="projects-heading">
+    <section className="pb-12 pt-20 lg:pb-14 lg:pt-24 xl:pb-20 xl:pt-36" aria-labelledby="projects-heading">
       <Container>
         <Reveal>
           <Eyebrow>Selected Projects</Eyebrow>
@@ -154,7 +154,7 @@ function SelectedProjects() {
 
         </Reveal>
 
-        <div className="mt-12 space-y-16 sm:mt-16 sm:space-y-24 lg:space-y-36">
+        <div className="mx-auto mt-12 max-w-5xl space-y-16 sm:mt-14 sm:space-y-20 lg:space-y-20 xl:mt-16 xl:space-y-28">
           {projects.map((p, i) => (
             <Reveal as="article" key={p.slug} delay={i * 60}>
               <Link to="/portfolio/$slug" params={{ slug: p.slug }} className="group block">
@@ -199,7 +199,7 @@ function SelectedProjects() {
 
 function WhyStudio() {
   return (
-    <section className="bg-ink py-24 text-ivory lg:py-36" aria-labelledby="why-heading">
+    <section className="bg-ink py-20 text-ivory lg:py-24 xl:py-36" aria-labelledby="why-heading">
       <Container>
         <Reveal>
           <Eyebrow>Why WS DESIGNHOUSE</Eyebrow>
@@ -208,10 +208,10 @@ function WhyStudio() {
           </h2>
         </Reveal>
 
-        <ul className="mt-16 border-t border-ivory/12">
+        <ul className="mt-12 border-t border-ivory/12 xl:mt-16">
           {pillars.map((p, i) => (
             <Reveal as="li" key={p.number} delay={i * 70}>
-              <div className="grid gap-4 border-b border-ivory/12 py-10 md:grid-cols-[auto_1fr_1.3fr] md:items-baseline md:gap-14">
+              <div className="grid gap-4 border-b border-ivory/12 py-7 md:grid-cols-[auto_1fr_1.3fr] md:items-baseline md:gap-10 xl:py-10 xl:gap-14">
                 <span className="label opacity-50">{p.number}</span>
                 <h3 className="font-display text-3xl uppercase tracking-[0.08em] sm:text-4xl">
                   {p.title}
@@ -230,7 +230,7 @@ function WhyStudio() {
 
 function Process() {
   return (
-    <section className="py-24 lg:py-36" aria-labelledby="process-heading">
+    <section className="py-20 lg:py-24 xl:py-36" aria-labelledby="process-heading">
       <Container>
         <Reveal>
           <Eyebrow>Process</Eyebrow>
@@ -239,7 +239,7 @@ function Process() {
           </h2>
         </Reveal>
 
-        <ol className="mt-12 grid gap-10 sm:mt-16 sm:grid-cols-2 sm:gap-12 lg:grid-cols-4 lg:gap-10">
+        <ol className="mt-12 grid gap-10 sm:grid-cols-2 sm:gap-12 lg:grid-cols-4 lg:gap-8 xl:mt-16 xl:gap-10">
           {method.map((m, i) => (
             <Reveal as="li" key={m.number} delay={i * 80}>
               <div className="border-t border-ink pt-7">
@@ -261,9 +261,9 @@ function Process() {
 
 function Studio() {
   return (
-    <section className="border-y border-border bg-muted py-24 lg:py-36" aria-labelledby="studio-heading">
+    <section className="border-y border-border bg-muted py-20 lg:py-24 xl:py-36" aria-labelledby="studio-heading">
       <Container>
-        <div className="grid gap-14 lg:grid-cols-[1fr_1fr] lg:gap-24">
+        <div className="grid gap-14 lg:grid-cols-[1fr_1fr] lg:gap-16 xl:gap-24">
           <Reveal>
             <Eyebrow>The Studio</Eyebrow>
             <h2 id="studio-heading" className="display mt-7 text-[clamp(2.1rem,5.5vw,4.25rem)]">
@@ -296,7 +296,7 @@ function Studio() {
 
 function Services() {
   return (
-    <section className="pb-24 pt-14 lg:pb-36 lg:pt-20" aria-labelledby="services-heading">
+    <section className="pb-20 pt-12 lg:pb-24 lg:pt-14 xl:pb-36 xl:pt-20" aria-labelledby="services-heading">
       <Container>
         <Reveal>
           <Eyebrow>Services</Eyebrow>
@@ -305,13 +305,13 @@ function Services() {
           </h2>
         </Reveal>
 
-        <ul className="mt-16 grid gap-px border border-border bg-border sm:grid-cols-2">
+        <ul className="mt-12 grid gap-px border border-border bg-border sm:grid-cols-2 xl:mt-16">
           {serviceCategories.map((s, i) => (
             <Reveal as="li" key={s.slug} delay={i * 60} className="bg-background">
               <Link
                 to="/services/$slug"
                 params={{ slug: s.slug }}
-                className="block h-full px-8 py-12 transition-colors duration-500 hover:bg-muted/70 lg:px-12 lg:py-16"
+                className="block h-full px-8 py-10 transition-colors duration-500 hover:bg-muted/70 lg:px-9 lg:py-10 xl:px-12 xl:py-16"
               >
                 <h3 className="font-display text-3xl sm:text-4xl">{s.title}</h3>
                 <p className="mt-4 max-w-sm text-base leading-relaxed text-muted-foreground">
@@ -336,7 +336,7 @@ function Services() {
 
 function Proof() {
   return (
-    <section className="border-y border-border py-24 lg:py-32" aria-labelledby="proof-heading">
+    <section className="border-y border-border py-20 lg:py-24 xl:py-32" aria-labelledby="proof-heading">
       <Container>
         <Reveal>
           <Eyebrow>Recognition & Credentials</Eyebrow>
@@ -349,7 +349,7 @@ function Proof() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-10 sm:gap-12 md:grid-cols-3">
+        <div className="mt-12 grid gap-10 sm:gap-12 md:grid-cols-3 xl:mt-14">
           {[
             {
               title: "Third Prize — LX Club and Offices Competition",
@@ -401,7 +401,7 @@ function Proof() {
 function BeyondTheFinishedSpace() {
   return (
     <section aria-labelledby="beyond-heading">
-      <Container className="pt-24 lg:pt-36">
+      <Container className="pt-20 lg:pt-24 xl:pt-36">
         <Reveal>
           <Eyebrow>Concepts · Recognition · Studio Work</Eyebrow>
           <h2 id="beyond-heading" className="display mt-7 text-[clamp(2rem,5vw,3.75rem)]">
