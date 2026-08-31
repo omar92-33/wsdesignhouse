@@ -106,7 +106,7 @@ export function Slideshow({
         onPointerLeave={endDrag}
       >
         <div
-          className={`flex ${drag ? "" : "transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)]"}`}
+          className={`flex ${drag ? "" : "transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"}`}
           style={{ transform: `translate3d(${-index * 100 + offsetPct}%,0,0)` }}
         >
           {slides.map((s, i) => (

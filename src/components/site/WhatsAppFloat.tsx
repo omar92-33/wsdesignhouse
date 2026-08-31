@@ -7,9 +7,9 @@ export function WhatsAppFloat() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with WS DESIGNHOUSE on WhatsApp"
-      className="fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-500 [transition-timing-function:var(--ease-lux)] hover:scale-110 hover:shadow-xl active:scale-95 sm:bottom-8 sm:right-8 sm:h-14 sm:w-14"
+      className="fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-200 [transition-timing-function:var(--ease-lux)] hover:scale-105 hover:shadow-xl active:scale-95 sm:bottom-8 sm:right-8 sm:h-14 sm:w-14"
       style={{
-        animation: "wa-float-in 0.9s var(--ease-lux) 0.4s both",
+        animation: "wa-float-in 0.45s var(--ease-lux) 0.15s both",
       }}
     >
       <svg

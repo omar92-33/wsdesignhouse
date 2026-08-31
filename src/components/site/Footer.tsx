@@ -96,7 +96,7 @@ export function Footer() {
             </ul>
             <Link
               to="/contact"
-              className="label mt-8 inline-block border border-champagne px-5 py-3 text-champagne transition-colors duration-500 hover:bg-champagne hover:text-accent-foreground"
+              className="label mt-8 inline-block border border-champagne px-5 py-3 text-champagne transition-colors duration-200 hover:bg-champagne hover:text-accent-foreground"
             >
               Book a Private Consultation
             </Link>

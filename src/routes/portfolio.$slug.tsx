@@ -161,7 +161,7 @@ function ProjectPage() {
               </Link>
               <Link
                 to="/contact"
-                className="label w-full border border-ivory/35 px-10 py-5 transition-colors duration-500 hover:border-ivory sm:w-auto"
+                className="label w-full border border-ivory/35 px-10 py-5 transition-colors duration-200 hover:border-ivory sm:w-auto"
               >
                 Book a Private Consultation
               </Link>

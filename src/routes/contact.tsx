@@ -90,7 +90,7 @@ function ContactPage() {
                   </ul>
                   <a
                     href={`mailto:${site.email}`}
-                    className="label mt-10 inline-block border border-ink px-8 py-4 transition-colors duration-500 hover:bg-ink hover:text-ivory"
+                    className="label mt-10 inline-block border border-ink px-8 py-4 transition-colors duration-200 hover:bg-ink hover:text-ivory"
                   >
                     Email the Studio
                   </a>
@@ -112,7 +112,7 @@ function ContactPage() {
                     href={mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="label mt-6 inline-block border border-input px-8 py-4 transition-colors duration-500 hover:border-foreground"
+                    className="label mt-6 inline-block border border-input px-8 py-4 transition-colors duration-200 hover:border-foreground"
                   >
                     Get Directions
                   </a>
