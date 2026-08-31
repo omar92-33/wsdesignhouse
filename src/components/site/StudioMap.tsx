@@ -16,7 +16,7 @@ export function StudioMap() {
               href={mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="label mt-8 inline-block border border-input px-8 py-4 transition-colors duration-500 hover:border-foreground"
+              className="label mt-8 inline-block border border-input px-8 py-4 transition-colors duration-200 hover:border-foreground"
             >
               Get Directions →
             </a>

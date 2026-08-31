@@ -58,7 +58,7 @@ function ProcessPage() {
         <Container>
           <Link
             to="/contact"
-            className="label inline-block border border-ink px-10 py-5 transition-colors duration-500 hover:bg-ink hover:text-ivory"
+            className="label inline-block border border-ink px-10 py-5 transition-colors duration-200 hover:bg-ink hover:text-ivory"
           >
             Begin Your Journey
           </Link>

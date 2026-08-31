@@ -52,7 +52,7 @@ function About() {
               </div>
               <Link
                 to="/contact"
-                className="label mt-12 inline-block border border-ink px-8 py-4 transition-colors duration-500 hover:bg-ink hover:text-ivory"
+                className="label mt-12 inline-block border border-ink px-8 py-4 transition-colors duration-200 hover:bg-ink hover:text-ivory"
               >
                 Book a Private Consultation
               </Link>

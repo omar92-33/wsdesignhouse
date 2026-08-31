@@ -116,13 +116,13 @@ function Hero() {
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center 2xl:mt-12 2xl:gap-4">
             <Link
               to={secondaryCta.to}
-              className="label inline-flex items-center justify-center border border-champagne bg-champagne px-8 py-4 text-accent-foreground transition-opacity duration-500 hover:opacity-85 2xl:px-9 2xl:py-5"
+              className="label inline-flex items-center justify-center border border-champagne bg-champagne px-8 py-4 text-accent-foreground transition-opacity duration-200 hover:opacity-85 2xl:px-9 2xl:py-5"
             >
               {secondaryCta.label}
             </Link>
             <Link
               to={primaryCta.to}
-              className="label inline-flex items-center justify-center border border-ivory/40 px-8 py-4 transition-colors duration-500 hover:border-ivory 2xl:px-9 2xl:py-5"
+              className="label inline-flex items-center justify-center border border-ivory/40 px-8 py-4 transition-colors duration-200 hover:border-ivory 2xl:px-9 2xl:py-5"
             >
               {primaryCta.label}
             </Link>
@@ -185,7 +185,7 @@ function SelectedProjects() {
         <Reveal className="mt-10 flex justify-center">
           <Link
             to={secondaryCta.to}
-            className="label inline-flex items-center justify-center border border-ink px-9 py-4 transition-colors duration-500 hover:bg-ink hover:text-ivory"
+            className="label inline-flex items-center justify-center border border-ink px-9 py-4 transition-colors duration-200 hover:bg-ink hover:text-ivory"
           >
             {secondaryCta.label} →
           </Link>
@@ -311,7 +311,7 @@ function Services() {
               <Link
                 to="/services/$slug"
                 params={{ slug: s.slug }}
-                className="block h-full px-8 py-10 transition-colors duration-500 hover:bg-muted/70 lg:px-9 lg:py-10 2xl:px-12 2xl:py-16"
+                className="block h-full px-8 py-10 transition-colors duration-200 hover:bg-muted/70 lg:px-9 lg:py-10 2xl:px-12 2xl:py-16"
               >
                 <h3 className="font-display text-3xl sm:text-4xl">{s.title}</h3>
                 <p className="mt-4 max-w-sm text-base leading-relaxed text-muted-foreground">

@@ -57,11 +57,12 @@ export function Reveal({
 
   const Component = Tag as "div";
   const v = CLASSES[variant];
+  const restrainedDelay = Math.min(delay, 120);
   const inner = (
     <Component
       ref={ref}
       className={`${shown ? v.shown : v.hidden} ${className}`}
-      style={shown && delay ? { transitionDelay: `${delay}ms` } : undefined}
+      style={shown && restrainedDelay ? { transitionDelay: `${restrainedDelay}ms` } : undefined}
     >
       {children}
     </Component>

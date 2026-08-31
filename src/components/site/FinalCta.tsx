@@ -29,7 +29,7 @@ export function FinalCta({
           <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               to="/contact"
-              className="label w-full border border-champagne bg-champagne px-10 py-5 text-accent-foreground transition-opacity duration-500 hover:opacity-85 sm:w-auto"
+              className="label w-full border border-champagne bg-champagne px-10 py-5 text-accent-foreground transition-opacity duration-200 hover:opacity-85 sm:w-auto"
             >
               Book Your Private Consultation
             </Link>
@@ -37,7 +37,7 @@ export function FinalCta({
               href={whatsappUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="label w-full border border-ivory/35 px-10 py-5 transition-colors duration-500 hover:border-ivory sm:w-auto"
+              className="label w-full border border-ivory/35 px-10 py-5 transition-colors duration-200 hover:border-ivory sm:w-auto"
             >
               Prefer to Talk? WhatsApp Us →
             </a>
