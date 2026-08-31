@@ -48,16 +48,16 @@ export function SmoothScroll() {
       if (cancelled) return;
 
       const lenis = new Lenis({
-        duration: 1.35,
-        // Long, decelerating, never bouncy — same curve family as --ease-lux.
+        duration: 0.8,
+        // Responsive and controlled, with a short decelerating finish.
         easing: (t: number) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
-        lerp: 0.085,
-        wheelMultiplier: 0.95,
-        touchMultiplier: 1.6,
+        lerp: 0.14,
+        wheelMultiplier: 1,
+        touchMultiplier: 1.25,
         // Inertial scrolling on phones/tablets too.
         syncTouch: true,
-        syncTouchLerp: 0.075,
-        touchInertiaExponent: 1.9,
+        syncTouchLerp: 0.12,
+        touchInertiaExponent: 1.6,
         autoRaf: true,
         anchors: { offset: -80 },
         prevent: (node: Element) => node.hasAttribute?.("data-lenis-prevent"),
@@ -72,9 +72,9 @@ export function SmoothScroll() {
 
       const tick = () => {
         const v = Math.abs(lenis.velocity);
-        // Map velocity to a very small blur; text must never look broken.
-        const target = allowBlur ? Math.min(3, v * 0.045) : 0;
-        current += (target - current) * 0.18;
+        // Keep motion softening barely perceptible and let it settle quickly.
+        const target = allowBlur ? Math.min(0.75, v * 0.012) : 0;
+        current += (target - current) * 0.3;
         if (current < 0.02) current = 0;
         root.style.setProperty("--scroll-blur", `${current.toFixed(2)}px`);
         raf = requestAnimationFrame(tick);

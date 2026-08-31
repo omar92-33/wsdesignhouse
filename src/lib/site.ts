@@ -49,7 +49,7 @@ export function telUrl(phone: string) {
 export const navItems = [
   { label: "Projects", to: "/portfolio" },
   { label: "Services", to: "/services" },
-  { label: "Studio", to: "/about" },
+  { label: "About WS", to: "/about" },
   { label: "Process", to: "/process" },
   { label: "Contact", to: "/contact" },
 ] as const;

@@ -46,7 +46,7 @@ export function Nav() {
     if (!open) return;
     setClosing(true);
     setOpen(false);
-    window.setTimeout(() => setClosing(false), 450);
+    window.setTimeout(() => setClosing(false), 240);
   };
 
 
@@ -55,7 +55,7 @@ export function Nav() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-[900ms] [transition-timing-function:var(--ease-lux)] ${
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-[400ms] [transition-timing-function:var(--ease-lux)] ${
           solid
             ? "bg-ink/95 backdrop-blur-sm text-ivory shadow-[0_1px_0_0_rgba(255,255,255,0.08)]"
             : "bg-transparent text-ivory"
@@ -87,7 +87,7 @@ export function Nav() {
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className="label link-underline opacity-75 transition-[opacity,letter-spacing] duration-500 [transition-timing-function:var(--ease-lux)] hover:opacity-100"
+                    className="label link-underline opacity-75 transition-opacity duration-200 [transition-timing-function:var(--ease-lux)] hover:opacity-100"
                     activeProps={{ className: "label opacity-100 text-champagne" }}
                     
                   >
@@ -115,17 +115,17 @@ export function Nav() {
               <span className="relative block h-4 w-6" aria-hidden>
                 {/* Two-stage: lines glide to centre, then rotate */}
                 <span
-                  className={`absolute left-0 block h-px w-6 bg-current transition-all duration-[600ms] [transition-timing-function:var(--ease-lux)] ${
+                  className={`absolute left-0 block h-px w-6 bg-current transition-all duration-300 [transition-timing-function:var(--ease-lux)] ${
                     open
-                      ? "top-1/2 rotate-45 [transition-delay:100ms]"
-                      : "top-0.5 rotate-0 [transition-delay:60ms]"
+                      ? "top-1/2 rotate-45 [transition-delay:40ms]"
+                      : "top-0.5 rotate-0"
                   }`}
                 />
                 <span
-                  className={`absolute left-0 block h-px w-6 bg-current transition-all duration-[600ms] [transition-timing-function:var(--ease-lux)] ${
+                  className={`absolute left-0 block h-px w-6 bg-current transition-all duration-300 [transition-timing-function:var(--ease-lux)] ${
                     open
-                      ? "top-1/2 -rotate-45 [transition-delay:100ms]"
-                      : "top-[calc(100%-2px)] rotate-0 [transition-delay:60ms]"
+                      ? "top-1/2 -rotate-45 [transition-delay:40ms]"
+                      : "top-[calc(100%-2px)] rotate-0"
                   }`}
                 />
               </span>
@@ -165,9 +165,9 @@ export function Nav() {
                   className={open ? "menu-item-in" : closing ? "menu-item-out" : "opacity-0"}
                   style={
                     open
-                      ? { animationDelay: `${140 + i * 80}ms` }
+                      ? { animationDelay: `${60 + i * 45}ms` }
                       : closing
-                        ? { animationDelay: `${i * 35}ms` }
+                        ? { animationDelay: `${i * 15}ms` }
                         : undefined
                   }
                 >
@@ -189,7 +189,7 @@ export function Nav() {
             }`}
             style={
               open
-                ? { animationDelay: `${200 + navItems.length * 80}ms` }
+                ? { animationDelay: `${80 + navItems.length * 45}ms` }
                 : closing
                   ? { animationDelay: "0ms" }
                   : undefined
