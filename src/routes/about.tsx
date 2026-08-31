@@ -36,9 +36,9 @@ function About() {
         intro="WS DESIGNHOUSE is a premium interior studio specializing in artisanal residential spaces. We bring a global luxury perspective to every home."
       />
 
-      <section className="py-24 lg:py-36">
+      <section className="py-20 lg:py-24 2xl:py-36">
         <Container>
-          <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
+          <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16 2xl:gap-24">
             <Reveal>
               <p className="label text-muted-foreground">{founder.name}</p>
             </Reveal>
@@ -63,7 +63,7 @@ function About() {
 
       <Certificates />
 
-      <section className="bg-ink py-24 text-ivory lg:py-36">
+      <section className="bg-ink py-20 text-ivory lg:py-24 2xl:py-36">
         <Container>
           <Reveal>
             <Eyebrow>The Difference</Eyebrow>
@@ -87,7 +87,7 @@ function About() {
         </Container>
       </section>
 
-      <section className="py-24 lg:py-36">
+      <section className="py-20 lg:py-24 2xl:py-36">
         <Container>
           <Reveal>
             <h2 className="display max-w-4xl text-[clamp(1.9rem,4.5vw,3.5rem)]">

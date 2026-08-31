@@ -6,11 +6,11 @@ import poster from "@/assets/studio-film-poster.jpg.asset.json";
 export function StudioFilm() {
   return (
     <section
-      className="border-t border-border py-28 lg:py-44"
+      className="border-t border-border py-24 lg:py-24 2xl:py-36"
       aria-labelledby="studio-film-heading"
     >
       <Container>
-        <div className="grid gap-16 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-24">
+        <div className="grid gap-12 lg:grid-cols-[1fr_0.8fr] lg:items-center lg:gap-16 2xl:gap-24">
           <div>
             <Reveal>
               <Eyebrow>Studio Film</Eyebrow>
@@ -30,7 +30,7 @@ export function StudioFilm() {
           </div>
 
           <Reveal>
-            <div className="mx-auto w-full max-w-sm overflow-hidden rounded-sm border border-border bg-muted">
+            <div className="mx-auto w-full max-w-sm overflow-hidden rounded-sm border border-border bg-muted lg:max-w-[300px] 2xl:max-w-sm">
               <video
                 className="block aspect-[9/16] w-full object-cover"
                 poster={poster.url}

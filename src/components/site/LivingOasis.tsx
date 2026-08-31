@@ -29,12 +29,12 @@ const slides = [
 export function LivingOasis() {
   return (
     <section
-      className="border-t border-border bg-muted/50 py-28 lg:py-44"
+      className="border-t border-border bg-muted/50 py-24 lg:py-24 2xl:py-36"
       aria-labelledby="living-oasis-heading"
     >
       <Container>
-        <div className="grid gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-start lg:gap-24">
-          <Reveal>
+        <div className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-16 2xl:gap-24">
+          <Reveal className="lg:mx-auto lg:w-full lg:max-w-[620px]">
             <Slideshow slides={slides} />
           </Reveal>
 

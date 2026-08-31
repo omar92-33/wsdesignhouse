@@ -109,6 +109,18 @@
     font-size: 112.5%;
   }
 
+  /* Laptop density: reserve the expansive 18px scale for large displays. */
+  @media (min-width: 1024px) and (max-width: 1535px) {
+    html {
+      font-size: 100%;
+    }
+
+    .laptop-hero-density {
+      padding-top: 6rem !important;
+      padding-bottom: 2rem !important;
+    }
+  }
+
   /* Lenis inertial scrolling (GPU transform based) */
   html.lenis-active,
   html.lenis-active body {

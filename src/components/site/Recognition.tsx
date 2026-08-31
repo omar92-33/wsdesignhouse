@@ -17,11 +17,11 @@ const slides = [
 export function Recognition() {
   return (
     <section
-      className="border-t border-border py-28 lg:py-44"
+      className="border-t border-border py-24 lg:py-24 2xl:py-36"
       aria-labelledby="recognition-heading"
     >
       <Container>
-        <div className="grid gap-16 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:gap-24">
+        <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-16 2xl:gap-24">
           <div>
             <Reveal>
               <ConceptTag>Concept Work — Competition Entry, Not a Client Project</ConceptTag>
@@ -51,7 +51,7 @@ export function Recognition() {
             </Reveal>
           </div>
 
-          <Reveal delay={200}>
+          <Reveal delay={200} className="lg:mx-auto lg:w-full lg:max-w-[620px]">
             <Slideshow slides={slides} />
           </Reveal>
         </div>

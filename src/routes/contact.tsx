@@ -36,9 +36,9 @@ function ContactPage() {
         intro="Experience the art of artisanal living. Reach out to our design team for a private consultation."
       />
 
-      <section className="py-20 lg:py-32">
+      <section className="py-20 lg:py-24 2xl:py-32">
         <Container>
-          <div className="grid gap-16 lg:grid-cols-[1.3fr_1fr] lg:gap-24">
+          <div className="grid gap-16 lg:grid-cols-[1.3fr_1fr] lg:gap-16 2xl:gap-24">
             <Reveal>
               <ConsultationForm />
             </Reveal>

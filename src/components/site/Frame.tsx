@@ -38,7 +38,7 @@ export function Frame({
         alt={alt}
         loading={priority ? "eager" : "lazy"}
         decoding="async"
-        className="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.04]"
+        className="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.025]"
       />
     </div>
   );
