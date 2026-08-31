@@ -6,8 +6,8 @@ import { navItems, site, telUrl } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="bg-ink pb-16 pt-16 text-ivory xl:pb-20 xl:pt-20">
-      <div className="mx-auto max-w-[1180px] px-5 sm:px-8 xl:max-w-[1400px] 2xl:max-w-[1600px]">
+    <footer className="bg-ink pb-16 pt-16 text-ivory 2xl:pb-20 2xl:pt-20">
+      <div className="mx-auto max-w-[1180px] px-5 sm:px-8 2xl:max-w-[1400px] 22xl:max-w-[1600px]">
         <div className="grid gap-14 border-b border-ivory/12 pb-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div className="max-w-sm">
             <img src={wsLogo.url} alt="WS DESIGN HOUSE" width={745} height={541} className="h-24 w-auto sm:h-28" />

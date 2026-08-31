@@ -8,7 +8,7 @@ import { Reveal } from "./Reveal";
  */
 export function VirtualTour() {
   return (
-    <section className="bg-ink py-24 text-ivory lg:py-24 xl:py-36" aria-labelledby="tour-heading">
+    <section className="bg-ink py-24 text-ivory lg:py-24 2xl:py-36" aria-labelledby="tour-heading">
       <Container>
         <div className="max-w-2xl">
           <Reveal>

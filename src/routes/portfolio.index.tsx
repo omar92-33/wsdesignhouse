@@ -35,12 +35,12 @@ function PortfolioPage() {
         intro="A curated selection of residential masterpieces in Egypt."
       />
 
-      <section className="py-20 lg:py-20 xl:py-28">
+      <section className="py-20 lg:py-20 2xl:py-28">
         <Container>
-          <div className="space-y-16 sm:space-y-20 lg:space-y-20 xl:space-y-28">
+          <div className="space-y-16 sm:space-y-20 lg:space-y-20 2xl:space-y-28">
             {projects.map((p) => (
               <Reveal as="article" key={p.slug}>
-                <div className="mx-auto max-w-4xl lg:max-w-3xl xl:max-w-4xl">
+                <div className="mx-auto max-w-4xl lg:max-w-3xl 2xl:max-w-4xl">
                   <Frame image={p.hero} aspect="wide" caption={`${p.title} — hero photograph`} />
                   <h2 className="display mt-8 text-[clamp(1.75rem,5vw,3.5rem)]">{p.title}</h2>
                   <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">

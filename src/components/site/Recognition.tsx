@@ -17,11 +17,11 @@ const slides = [
 export function Recognition() {
   return (
     <section
-      className="border-t border-border py-24 lg:py-24 xl:py-36"
+      className="border-t border-border py-24 lg:py-24 2xl:py-36"
       aria-labelledby="recognition-heading"
     >
       <Container>
-        <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-16 xl:gap-24">
+        <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-16 2xl:gap-24">
           <div>
             <Reveal>
               <ConceptTag>Concept Work — Competition Entry, Not a Client Project</ConceptTag>

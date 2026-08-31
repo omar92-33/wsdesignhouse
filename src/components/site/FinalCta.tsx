@@ -19,10 +19,10 @@ export function FinalCta({
             "radial-gradient(120% 90% at 50% 0%, oklch(0.36 0.032 62) 0%, oklch(0.24 0.024 62) 70%)",
         }}
       />
-      <div className="relative mx-auto max-w-[1000px] px-5 py-28 text-center sm:px-8 lg:py-28 xl:py-40">
+      <div className="relative mx-auto max-w-[1000px] px-5 py-28 text-center sm:px-8 lg:py-28 2xl:py-40">
         <Reveal>
           <span className="rule-accent" aria-hidden />
-          <h2 className="display mt-8 text-[clamp(2.5rem,6vw,4.5rem)] xl:text-[clamp(2.5rem,7vw,5.5rem)]">{heading}</h2>
+          <h2 className="display mt-8 text-[clamp(2.5rem,6vw,4.5rem)] 2xl:text-[clamp(2.5rem,7vw,5.5rem)]">{heading}</h2>
           <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed opacity-70">
             {description}
           </p>
