@@ -114,6 +114,11 @@
     html {
       font-size: 100%;
     }
+
+    .laptop-hero-density {
+      padding-top: 6rem !important;
+      padding-bottom: 2rem !important;
+    }
   }
 
   /* Lenis inertial scrolling (GPU transform based) */

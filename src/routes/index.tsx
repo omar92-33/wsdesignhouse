@@ -94,7 +94,7 @@ function Hero() {
 
 
 
-      <Container className="relative pb-14 pt-32 sm:pb-8 sm:pt-24 2xl:pb-24 2xl:pt-40">
+      <Container className="laptop-hero-density relative pb-14 pt-32 2xl:pb-24 2xl:pt-40">
         <Reveal>
           <p className="label opacity-55">{site.positioning}</p>
         </Reveal>
