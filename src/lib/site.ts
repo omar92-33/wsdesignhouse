@@ -7,6 +7,7 @@
 import kitchenAsset from "@/assets/kitchen.png.asset.json";
 import bedroomAsset from "@/assets/bedroom.png.asset.json";
 import entryAsset from "@/assets/entry.png.asset.json";
+import founderPortraitAsset from "@/assets/founder-portrait.jpg.asset.json";
 
 
 export const site = {
@@ -301,8 +302,7 @@ export const studioSummary = {
 export const founder = {
   name: "Dr. Wessam Abdellatif",
   heading: "About Me",
-  /** Replace with a genuine professional portrait when available. */
-  portrait: undefined as string | undefined,
+  portrait: founderPortraitAsset.url,
   bio: [
     "I began my professional journey in the late 1990s, working in real estate design—an experience that laid the foundation for my understanding of space, function, and the built environment. In 2000, I pursued an MBA at The American University in Cairo, but soon realized that my true passion lay elsewhere: design.",
     "Following that realization, I transitioned fully into the creative field. My career took me to Canada, where I founded and managed a furniture business while also overseeing operations within a construction company. This hands-on experience gave me a deep, practical understanding of both design execution and project management.",
