@@ -38,9 +38,20 @@ function About() {
 
       <section className="py-20 lg:py-24 2xl:py-36">
         <Container>
-          <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16 2xl:gap-24">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 2xl:gap-24 items-start">
             <Reveal>
-              <p className="label text-muted-foreground">{founder.name}</p>
+              <div className="relative overflow-hidden aspect-[4/5]">
+                {founder.portrait ? (
+                  <img
+                    src={founder.portrait}
+                    alt={`${founder.name} — Founder & Head of Design, WS DESIGNHOUSE`}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover"
+                  />
+                ) : null}
+              </div>
+              <p className="label mt-6 text-muted-foreground">{founder.name}</p>
             </Reveal>
             <Reveal delay={100}>
               <Eyebrow>The Founder</Eyebrow>
