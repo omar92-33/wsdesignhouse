@@ -14,7 +14,7 @@ export const site = {
   name: "WS DESIGNHOUSE",
   tagline: "Design Spaces… Creating Dreams",
   positioning: "Interior Architecture Specialists",
-  serviceLine: "Consultation • 3D Visualisation • Turnkey Execution",
+  serviceLine: "Consultation, 3D Visualisation, Turnkey Execution",
   location: "New Cairo, Egypt",
   established: "EST. 2026",
   taxId: "504-743-953",
@@ -97,7 +97,7 @@ export const services: Service[] = [
       "Every project begins with a conversation about how you live and what you want your space to become.",
     body: [
       "The consultation is where we learn the character of the space, the rhythms of daily life, and the ambitions behind the project. We ask, listen, and translate those observations into a clear design direction.",
-      "By the end of this stage you have a defined brief, an understanding of the possibilities, and a confident path forward: whether the project is a single room or an entire residence.",
+      "By the end of this stage you have a defined brief, an understanding of the possibilities, and a confident path forward, whether the project is a single room or an entire residence.",
     ],
     hasPage: true,
   },
@@ -108,7 +108,7 @@ export const services: Service[] = [
       "See the concept before execution through realistic visuals, moodboards, and material direction.",
     intro: "A shared vision before anything is built.",
     body: [
-      "We translate the design direction into clear visuals: 3D renders, moodboards, and material palettes: so you can experience the space before construction begins.",
+      "We translate the design direction into clear 3D renders, moodboards, and material palettes, so you can experience the space before construction begins.",
       "This stage removes guesswork. Layouts, proportions, light, and finishes are reviewed together, allowing decisions to be made with confidence and the design intent to be protected through every later step.",
     ],
     hasPage: true,

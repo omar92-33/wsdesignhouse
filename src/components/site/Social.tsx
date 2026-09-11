@@ -47,7 +47,7 @@ export function Social() {
                 href={c.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-between gap-6 border-b border-border py-8 transition-colors duration-200 hover:bg-muted"
+                className="group flex items-center gap-6 border-b border-border py-8 transition-colors duration-200 hover:bg-muted"
               >
                 <span className="flex min-w-0 items-baseline gap-5">
                   <span className="font-display text-3xl sm:text-4xl">{c.name}</span>
