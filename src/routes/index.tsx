@@ -187,7 +187,7 @@ function SelectedProjects() {
             to={secondaryCta.to}
             className="label inline-flex items-center justify-center border border-ink px-9 py-4 transition-colors duration-200 hover:bg-ink hover:text-ivory"
           >
-            {secondaryCta.label} →
+            {secondaryCta.label}
           </Link>
         </Reveal>
       </Container>
@@ -283,7 +283,7 @@ function Studio() {
               ))}
             </ul>
             <Link to="/about" className="label link-underline mt-10 inline-block">
-              Discover the Studio →
+              Discover the Studio
             </Link>
           </Reveal>
         </div>
@@ -324,7 +324,7 @@ function Services() {
 
         <Reveal>
           <Link to="/services" className="label link-underline mt-14 inline-block">
-            Explore Our Services →
+            Explore Our Services
           </Link>
         </Reveal>
       </Container>
@@ -375,7 +375,7 @@ function Proof() {
 
         <Reveal>
           <Link to="/about" className="label link-underline mt-12 inline-block">
-            View Certificates →
+            View Certificates
           </Link>
         </Reveal>
 

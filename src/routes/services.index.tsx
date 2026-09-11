@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
 import { Container, PageHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { FinalCta } from "@/components/site/FinalCta";
@@ -61,10 +60,9 @@ function ServicesPage() {
                       </p>
                       <Link
                         to="/contact"
-                        className="label mt-6 inline-flex items-center gap-2 text-champagne"
+                        className="label mt-6 inline-flex items-center text-champagne"
                       >
                         Discuss Your Project
-                        <ArrowUpRight className="h-4 w-4" strokeWidth={1.2} aria-hidden />
                       </Link>
                     </div>
                   )}

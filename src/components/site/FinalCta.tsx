@@ -39,7 +39,7 @@ export function FinalCta({
               rel="noopener noreferrer"
               className="label w-full border border-ivory/35 px-10 py-5 transition-colors duration-200 hover:border-ivory sm:w-auto"
             >
-              Prefer to Talk? WhatsApp Us →
+              Prefer to Talk? WhatsApp Us
             </a>
           </div>
           <p className="label mt-10 opacity-45">
