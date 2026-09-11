@@ -13,11 +13,11 @@ export const Route = createFileRoute("/portfolio/$slug")({
   head: ({ params, loaderData }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: "Unavailable — WS DESIGNHOUSE" }, { name: "robots", content: "noindex" }],
+        meta: [{ title: "Unavailable · WS DESIGNHOUSE" }, { name: "robots", content: "noindex" }],
       };
     }
     const { project } = loaderData;
-    const title = `${project.title} — ${project.category} | WS DESIGNHOUSE`;
+    const title = `${project.title} · ${project.category} | WS DESIGNHOUSE`;
     return {
       meta: [
         { title },
@@ -60,7 +60,7 @@ function ProjectPage() {
             tone="dark"
             priority
             className="!aspect-auto h-full min-h-[78svh] 2xl:min-h-[85svh]"
-            caption={`${project.title} — hero photograph`}
+            caption={`${project.title}, hero photograph`}
           />
         </div>
         <div
@@ -87,7 +87,7 @@ function ProjectPage() {
             <div className="aspect-video w-full border border-ivory/15">
               <iframe
                 src={project.videoUrl}
-                title={`${project.title} — project film`}
+                title={`${project.title}, project film`}
                 loading="lazy"
                 allowFullScreen
                 className="h-full w-full"

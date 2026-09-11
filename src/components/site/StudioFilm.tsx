@@ -23,7 +23,7 @@ export function StudioFilm() {
             </Reveal>
             <Reveal delay={140}>
               <p className="mt-8 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg">
-                A short walkthrough of our work — materiality, light and detail seen the way
+                A short walkthrough of our work, materiality, light and detail seen the way
                 a space is actually experienced.
               </p>
             </Reveal>
