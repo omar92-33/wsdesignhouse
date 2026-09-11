@@ -7,13 +7,13 @@ import { journey, services } from "@/lib/site";
 export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
-      { title: "Services — Interior Design & Architecture | WS DESIGNHOUSE" },
+      { title: "Services | Interior Design & Architecture | WS DESIGNHOUSE" },
       {
         name: "description",
         content:
           "Consultation, 3D visualisation and turnkey execution for private residences and luxury interiors in New Cairo, Egypt.",
       },
-      { property: "og:title", content: "Services — WS DESIGNHOUSE" },
+      { property: "og:title", content: "Services | WS DESIGNHOUSE" },
       {
         property: "og:description",
         content:
@@ -32,7 +32,7 @@ function ServicesPage() {
       <PageHeader
         eyebrow="Our Expertise"
         title="From Vision to Reality"
-        intro="Consultation • 3D Visualisation • Turnkey Execution"
+        intro="Consultation, 3D Visualisation, Turnkey Execution"
       />
 
       <section className="py-20 lg:py-20 2xl:py-28">

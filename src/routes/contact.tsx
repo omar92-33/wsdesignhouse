@@ -7,13 +7,13 @@ import { mapsUrl, site, telUrl, whatsappUrl } from "@/lib/site";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Book a Private Consultation | WS DESIGNHOUSE" },
+      { title: "Contact | Book a Private Consultation | WS DESIGNHOUSE" },
       {
         name: "description",
         content:
           "Request a private interior design consultation with WS DESIGNHOUSE in New Cairo. Call, email or message the studio on WhatsApp.",
       },
-      { property: "og:title", content: "Start Your Journey — WS DESIGNHOUSE" },
+      { property: "og:title", content: "Start Your Journey | WS DESIGNHOUSE" },
       {
         property: "og:description",
         content:
