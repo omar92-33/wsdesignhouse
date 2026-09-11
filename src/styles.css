@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * WS DESIGNHOUSE: luxury editorial design system.
+ * WS DESIGNHOUSE — luxury editorial design system.
  * Serif display: Cormorant Garamond. Sans body: Jost.
  * Palette: cream / muted sage / walnut brown.
  */
@@ -56,13 +56,13 @@
 :root {
   --radius: 0px;
 
-  /* Brand palette: Cream (60%) · Muted Sage (25%) · Walnut Brown (15%) */
+  /* Brand palette — Cream (60%) · Muted Sage (25%) · Walnut Brown (15%) */
   --cream: #f2ebdd;      /* Primary background & light surfaces */
-  --sage-accent: #7a8067;       /* Muted Sage: primary accent */
-  --sage-light: #a3a98d; /* Lighter sage: accent on dark surfaces */
-  --walnut: #6b4a35;     /* Secondary accent: headings, borders, details */
+  --sage-accent: #7a8067;       /* Muted Sage — primary accent */
+  --sage-light: #a3a98d; /* Lighter sage — accent on dark surfaces */
+  --walnut: #6b4a35;     /* Secondary accent — headings, borders, details */
 
-  --ink: #3b2c22;        /* Deep walnut: immersive dark sections only */
+  --ink: #3b2c22;        /* Deep walnut — immersive dark sections only */
   --ivory: var(--cream); /* Text on dark sections */
   --greige: var(--cream);
   --stone: #ddd2c0;

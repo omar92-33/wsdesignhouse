@@ -10,7 +10,7 @@ const ratios: Record<string, string> = {
 
 /**
  * Renders real photography only. When no image is available the component
- * renders nothing: no placeholder frames, no stock or generated imagery.
+ * renders nothing — no placeholder frames, no stock or generated imagery.
  */
 export function Frame({
   image,

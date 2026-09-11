@@ -9,7 +9,7 @@ const CLASSES: Record<Variant, { hidden: string; shown: string }> = {
 };
 
 /**
- * Restrained scroll reveal: GPU-composited (opacity/transform/filter only),
+ * Restrained scroll reveal — GPU-composited (opacity/transform/filter only),
  * long decelerating easing, fires once when the element enters the viewport.
  */
 export function Reveal({

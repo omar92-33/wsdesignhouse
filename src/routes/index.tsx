@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Interior architecture and bespoke design for private residences, villas and exceptional spaces. WS DESIGNHOUSE in New Cairo, Egypt, with international projects.",
+          "Interior architecture and bespoke design for private residences, villas and exceptional spaces. WS DESIGNHOUSE — New Cairo, Egypt and international projects.",
       },
       {
         property: "og:title",
@@ -70,7 +70,7 @@ function Home() {
   );
 }
 
-/* ------------------------------------------------------------- 01: hero */
+/* ------------------------------------------------------------- 01 — hero */
 
 function Hero() {
   return (
@@ -137,7 +137,7 @@ function Hero() {
   );
 }
 
-/* -------------------------------------------------- 02: selected projects */
+/* -------------------------------------------------- 02 — selected projects */
 
 function SelectedProjects() {
   return (
@@ -158,7 +158,7 @@ function SelectedProjects() {
           {projects.map((p, i) => (
             <Reveal as="article" key={p.slug} delay={i * 60}>
               <Link to="/portfolio/$slug" params={{ slug: p.slug }} className="group block">
-                <Frame image={p.hero} aspect="wide" caption={`${p.title}, photograph`} />
+                <Frame image={p.hero} aspect="wide" caption={`${p.title} — photograph`} />
                 <div className="mt-7 grid gap-5 md:grid-cols-[1.1fr_1fr] md:items-end md:gap-16">
                   <div>
                     {p.propertyType && (
@@ -187,7 +187,7 @@ function SelectedProjects() {
             to={secondaryCta.to}
             className="label inline-flex items-center justify-center border border-ink px-9 py-4 transition-colors duration-200 hover:bg-ink hover:text-ivory"
           >
-            {secondaryCta.label}
+            {secondaryCta.label} →
           </Link>
         </Reveal>
       </Container>
@@ -195,7 +195,7 @@ function SelectedProjects() {
   );
 }
 
-/* ------------------------------------------------------------- 03: why us */
+/* ------------------------------------------------------------- 03 — why us */
 
 function WhyStudio() {
   return (
@@ -226,7 +226,7 @@ function WhyStudio() {
   );
 }
 
-/* ------------------------------------------------------------ 04: process */
+/* ------------------------------------------------------------ 04 — process */
 
 function Process() {
   return (
@@ -257,7 +257,7 @@ function Process() {
   );
 }
 
-/* ------------------------------------------------------------- 05: studio */
+/* ------------------------------------------------------------- 05 — studio */
 
 function Studio() {
   return (
@@ -283,7 +283,7 @@ function Studio() {
               ))}
             </ul>
             <Link to="/about" className="label link-underline mt-10 inline-block">
-              Discover the Studio
+              Discover the Studio →
             </Link>
           </Reveal>
         </div>
@@ -292,7 +292,7 @@ function Studio() {
   );
 }
 
-/* ----------------------------------------------------------- 06: services */
+/* ----------------------------------------------------------- 06 — services */
 
 function Services() {
   return (
@@ -324,7 +324,7 @@ function Services() {
 
         <Reveal>
           <Link to="/services" className="label link-underline mt-14 inline-block">
-            Explore Our Services
+            Explore Our Services →
           </Link>
         </Reveal>
       </Container>
@@ -332,7 +332,7 @@ function Services() {
   );
 }
 
-/* -------------------------------------------------------------- 07: proof */
+/* -------------------------------------------------------------- 07 — proof */
 
 function Proof() {
   return (
@@ -344,7 +344,7 @@ function Proof() {
             Verified Experience.
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-            Awarded placements, degrees and diplomas. These documented credentials are separate from
+            Awarded placements, degrees and diplomas — documented credentials, separate from
             the concept and competition work shown further below.
           </p>
         </Reveal>
@@ -352,7 +352,7 @@ function Proof() {
         <div className="mt-12 grid gap-10 sm:gap-12 md:grid-cols-3 2xl:mt-14">
           {[
             {
-              title: "Third Prize: LX Club and Offices Competition",
+              title: "Third Prize — LX Club and Offices Competition",
               meta: "Arcbazar · 2026",
             },
             {
@@ -375,7 +375,7 @@ function Proof() {
 
         <Reveal>
           <Link to="/about" className="label link-underline mt-12 inline-block">
-            View Certificates
+            View Certificates →
           </Link>
         </Reveal>
 
@@ -396,7 +396,7 @@ function Proof() {
   );
 }
 
-/* ----------------------------------------------- 08: concepts / recognition */
+/* ----------------------------------------------- 08 — concepts / recognition */
 
 function BeyondTheFinishedSpace() {
   return (
@@ -409,7 +409,7 @@ function BeyondTheFinishedSpace() {
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
             Competition entries, design research and studio work. Everything in this section is
-            concept work, not completed client projects. Any feedback shown belongs to the
+            concept work — not completed client projects — and any feedback shown belongs to the
             competition submissions themselves.
           </p>
         </Reveal>

@@ -8,7 +8,7 @@ import s3 from "@/assets/milan-5402.jpg.asset.json";
 import s4 from "@/assets/milan-5403.jpg.asset.json";
 
 const slides = [
-  { src: s1.url, alt: "Project feedback: Milan Design Loft, Living Studio proposal overview" },
+  { src: s1.url, alt: "Project feedback — Milan Design Loft, Living Studio proposal overview" },
   { src: s2.url, alt: "Jury feedback quote on the Living Studio loft proposal" },
   { src: s3.url, alt: "Key strengths of the Living Studio proposal: spatial organization, storage, materiality, visual presentation" },
   { src: s4.url, alt: "Closing evidence board for the Milan Design Loft, Living Studio proposal" },
@@ -24,7 +24,7 @@ export function Recognition() {
         <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-16 2xl:gap-24">
           <div>
             <Reveal>
-              <ConceptTag>Concept Work: Competition Entry, Not a Client Project</ConceptTag>
+              <ConceptTag>Concept Work — Competition Entry, Not a Client Project</ConceptTag>
               <Eyebrow className="mt-6">Jury Feedback</Eyebrow>
               <h2
                 id="recognition-heading"

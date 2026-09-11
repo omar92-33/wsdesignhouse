@@ -13,11 +13,11 @@ export const Route = createFileRoute("/services/$slug")({
   head: ({ params, loaderData }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: "Unavailable | WS DESIGNHOUSE" }, { name: "robots", content: "noindex" }],
+        meta: [{ title: "Unavailable — WS DESIGNHOUSE" }, { name: "robots", content: "noindex" }],
       };
     }
     const { service } = loaderData;
-    const title = `${service.title} in New Cairo | WS DESIGNHOUSE`;
+    const title = `${service.title} in New Cairo — WS DESIGNHOUSE`;
     return {
       meta: [
         { title },

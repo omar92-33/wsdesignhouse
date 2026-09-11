@@ -90,7 +90,7 @@ export function ConsultationForm() {
         <h3 className="display mt-6 text-3xl">Thank you</h3>
         <p className="mx-auto mt-4 max-w-md text-base leading-relaxed text-muted-foreground">
           Your details have been prepared in WhatsApp. If the chat did not open automatically,
-          use the button below, or email the studio instead.
+          use the button below — or email the studio instead.
         </p>
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
           {waLink && (

@@ -12,7 +12,7 @@ import doctorateAr from "@/assets/cert-doctorate-ar.jpg.asset.json";
 const certificates = [
   {
     src: arcbazar.url,
-    title: "3rd Prize: LX Club and Offices Competition",
+    title: "3rd Prize — LX Club and Offices Competition",
     issuer: "Arcbazar, Cambridge, Massachusetts",
     date: "May 2, 2026",
     alt: "Arcbazar certificate awarding WS Design House 3rd Prize in the LX Club and Offices competition",
@@ -21,12 +21,12 @@ const certificates = [
     src: leeds.url,
     title: "Professional Doctorate in Interior Design",
     issuer: "Leeds International College, United Kingdom",
-    date: "2022, Honours Class II (Upper Division)",
+    date: "2022 — Honours Class II (Upper Division)",
     alt: "Leeds International College Professional Doctorate in Interior Design certificate for Wessam Abdellatif Elsaid Aly Sheisha",
   },
   {
     src: doctorateAr.url,
-    title: "Professional Doctorate in Interior Design, Certified Translation",
+    title: "Professional Doctorate in Interior Design — Certified Translation",
     issuer: "Leeds International College, certified in Cairo",
     date: "October 2022",
     alt: "Arabic certified translation of the Professional Doctorate in Interior Design awarded to Wessam Abdellatif Elsaid Aly Sheisha",
@@ -40,14 +40,14 @@ const certificates = [
   },
   {
     src: graduation.url,
-    title: "Graduation Certificate: Professional Masters in Interior Design",
+    title: "Graduation Certificate — Professional Masters in Interior Design",
     issuer: "Leeds International College, United Kingdom",
-    date: "November 2020, With Merit of Honors",
+    date: "November 2020 — With Merit of Honors",
     alt: "Leeds International College graduation certificate for the Professional Masters in Interior Design, awarded with merit of honors",
   },
   {
     src: arabic.url,
-    title: "Graduation Document, Arabic Division",
+    title: "Graduation Document — Arabic Division",
     issuer: "Leeds International College, Arabic Division",
     date: "Final result: Passed with grade Excellent",
     alt: "Leeds International College Arabic Division graduation document confirming the Professional Masters Degree in Interior Design with grade Excellent",
@@ -61,7 +61,7 @@ const certificates = [
   },
   {
     src: eastern.url,
-    title: "Diploma with Distinction in Interior Decorating",
+    title: "Diploma with Distinction — Interior Decorating",
     issuer: "Eastern College, Halifax, Nova Scotia, Canada",
     date: "November 16, 2018",
     alt: "Eastern College diploma with distinction in Interior Decorating awarded to Wessam Sheisha",

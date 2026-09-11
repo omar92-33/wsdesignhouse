@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export type Slide = { src: string; alt: string };
 
@@ -32,7 +33,7 @@ export function Slideshow({
     return () => window.removeEventListener("keydown", onKey);
   }, [go]);
 
-  // Slow, gentle autoplay: paused on hover/focus/touch, hidden tabs, reduced motion.
+  // Slow, gentle autoplay — paused on hover/focus/touch, hidden tabs, reduced motion.
   useEffect(() => {
     if (total < 2 || paused) return;
     if (
@@ -122,6 +123,22 @@ export function Slideshow({
           ))}
         </div>
 
+        <button
+          type="button"
+          onClick={() => go(-1)}
+          aria-label="Previous slide"
+          className="absolute left-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-border/60 bg-background/60 text-foreground opacity-0 backdrop-blur transition duration-300 hover:bg-background focus-visible:opacity-100 group-hover:opacity-100 max-sm:opacity-70 sm:left-3"
+        >
+          <ChevronLeft className="h-4 w-4" aria-hidden />
+        </button>
+        <button
+          type="button"
+          onClick={() => go(1)}
+          aria-label="Next slide"
+          className="absolute right-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-border/60 bg-background/60 text-foreground opacity-0 backdrop-blur transition duration-300 hover:bg-background focus-visible:opacity-100 group-hover:opacity-100 max-sm:opacity-70 sm:right-3"
+        >
+          <ChevronRight className="h-4 w-4" aria-hidden />
+        </button>
       </div>
 
       <div className="mt-4 flex items-center justify-between gap-6">
