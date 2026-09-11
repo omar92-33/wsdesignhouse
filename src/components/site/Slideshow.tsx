@@ -32,7 +32,7 @@ export function Slideshow({
     return () => window.removeEventListener("keydown", onKey);
   }, [go]);
 
-  // Slow, gentle autoplay — paused on hover/focus/touch, hidden tabs, reduced motion.
+  // Slow, gentle autoplay: paused on hover/focus/touch, hidden tabs, reduced motion.
   useEffect(() => {
     if (total < 2 || paused) return;
     if (

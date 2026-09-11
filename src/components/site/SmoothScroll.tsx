@@ -37,7 +37,7 @@ export function SmoothScroll() {
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReduced) return;
 
-    // Skip the velocity blur on low-powered devices — keep the scroll itself.
+    // Skip the velocity blur on low-powered devices: keep the scroll itself.
     const cores = navigator.hardwareConcurrency ?? 8;
     const allowBlur = cores > 4;
 
