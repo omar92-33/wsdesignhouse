@@ -62,7 +62,7 @@ export function Nav() {
         }`}
       >
         <div className="mx-auto grid max-w-[1180px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 sm:px-8 lg:grid-cols-[1fr_auto_1fr] lg:py-4 2xl:max-w-[1600px] 2xl:py-5">
-          <Link to="/" className="min-w-0 leading-none" aria-label="WS DESIGNHOUSE — home">
+          <Link to="/" className="min-w-0 leading-none" aria-label="WS DESIGNHOUSE, home">
             <span className="flex items-center gap-3 sm:gap-4">
               <img
                 src={wsMark.url}
