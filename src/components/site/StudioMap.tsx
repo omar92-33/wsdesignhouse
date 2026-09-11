@@ -18,7 +18,7 @@ export function StudioMap() {
               rel="noopener noreferrer"
               className="label mt-8 inline-block border border-input px-8 py-4 transition-colors duration-200 hover:border-foreground"
             >
-              Get Directions →
+              Get Directions
             </a>
           </Reveal>
 

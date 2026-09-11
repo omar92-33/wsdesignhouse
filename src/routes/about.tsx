@@ -8,7 +8,7 @@ import { founder, pillars, site } from "@/lib/site";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — WS DESIGNHOUSE | Interior Architecture Studio, New Cairo" },
+      { title: "About WS DESIGNHOUSE | Interior Architecture Studio, New Cairo" },
       {
         name: "description",
         content:
@@ -44,7 +44,7 @@ function About() {
                 {founder.portrait ? (
                   <img
                     src={founder.portrait}
-                    alt={`${founder.name} — Founder & Head of Design, WS DESIGNHOUSE`}
+                    alt={`${founder.name}, Founder & Head of Design, WS DESIGNHOUSE`}
                     loading="lazy"
                     decoding="async"
                     className="h-full w-full object-cover"
@@ -106,7 +106,7 @@ function About() {
             </h2>
             <div className="mt-10 grid max-w-5xl gap-10 text-base leading-loose text-muted-foreground md:grid-cols-2 sm:text-lg">
               <p>
-                Interior decoration works with what a space already is — colour, furniture,
+                Interior decoration works with what a space already is: colour, furniture,
                 finishes. Interior architecture asks whether the space itself is right: where the
                 walls fall, how light enters, how people move between rooms. Most homes in New
                 Cairo are delivered as a shell, which makes that question the most valuable one to

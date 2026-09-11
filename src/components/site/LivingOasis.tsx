@@ -10,7 +10,7 @@ import o4 from "@/assets/oasis-5407.jpg.asset.json";
 const slides = [
   {
     src: o1.url,
-    alt: "Shaded communal courtyard with perforated canopy — Designed for the Saudi Climate",
+    alt: "Shaded communal courtyard with perforated canopy, designed for the Saudi climate",
   },
   {
     src: o2.url,
@@ -40,7 +40,7 @@ export function LivingOasis() {
 
           <div className="lg:order-first">
             <Reveal>
-              <ConceptTag>Design Research — Concept Entry, Not a Client Project</ConceptTag>
+              <ConceptTag>Design Research: Concept Entry, Not a Client Project</ConceptTag>
               <Eyebrow className="mt-6">Competition Entry</Eyebrow>
               <h2
                 id="living-oasis-heading"

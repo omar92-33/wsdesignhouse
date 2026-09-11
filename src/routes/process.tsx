@@ -7,16 +7,16 @@ import { method } from "@/lib/site";
 export const Route = createFileRoute("/process")({
   head: () => ({
     meta: [
-      { title: "Our Method — The Design Process | WS DESIGNHOUSE" },
+      { title: "Our Method | The Design Process | WS DESIGNHOUSE" },
       {
         name: "description",
         content:
           "Consultation, curation and creation: how WS DESIGNHOUSE takes a residential interior from first idea through visualization, planning and on-site execution.",
       },
-      { property: "og:title", content: "Our Method — WS DESIGNHOUSE" },
+      { property: "og:title", content: "Our Method | WS DESIGNHOUSE" },
       {
         property: "og:description",
-        content: "From idea to final space — the WS DESIGNHOUSE design and delivery process.",
+        content: "From idea to final space through the WS DESIGNHOUSE design and delivery process.",
       },
       { property: "og:url", content: "/process" },
     ],

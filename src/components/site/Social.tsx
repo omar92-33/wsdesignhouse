@@ -1,5 +1,3 @@
-import { Instagram, Linkedin, Facebook, ArrowUpRight } from "lucide-react";
-import { TikTokIcon } from "./TikTokIcon";
 import { site } from "@/lib/site";
 import { Container, Eyebrow } from "./Section";
 import { Reveal } from "./Reveal";
@@ -9,25 +7,21 @@ const channels = [
     name: "Instagram",
     handle: site.social.instagramHandle,
     href: site.social.instagram,
-    Icon: Instagram,
   },
   {
     name: "TikTok",
     handle: site.social.tiktokHandle,
     href: site.social.tiktok,
-    Icon: TikTokIcon,
   },
   {
     name: "LinkedIn",
     handle: site.social.linkedinName,
     href: site.social.linkedin,
-    Icon: Linkedin,
   },
   {
     name: "Facebook",
     handle: site.social.facebookName,
     href: site.social.facebook,
-    Icon: Facebook,
   },
 ];
 
@@ -53,17 +47,12 @@ export function Social() {
                 href={c.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-between gap-6 border-b border-border py-8 transition-colors duration-200 hover:bg-muted"
+                className="group flex items-center gap-6 border-b border-border py-8 transition-colors duration-200 hover:bg-muted"
               >
                 <span className="flex min-w-0 items-baseline gap-5">
                   <span className="font-display text-3xl sm:text-4xl">{c.name}</span>
                   <span className="label truncate text-muted-foreground">{c.handle}</span>
                 </span>
-                <ArrowUpRight
-                  className="h-6 w-6 shrink-0 text-champagne transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
-                  strokeWidth={1}
-                  aria-hidden
-                />
               </a>
             </Reveal>
           ))}

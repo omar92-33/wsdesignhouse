@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, Phone, MessageCircle, MapPin } from "lucide-react";
 import { Container, Eyebrow, PageHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { ConsultationForm } from "@/components/site/ConsultationForm";
@@ -8,13 +7,13 @@ import { mapsUrl, site, telUrl, whatsappUrl } from "@/lib/site";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Book a Private Consultation | WS DESIGNHOUSE" },
+      { title: "Contact | Book a Private Consultation | WS DESIGNHOUSE" },
       {
         name: "description",
         content:
           "Request a private interior design consultation with WS DESIGNHOUSE in New Cairo. Call, email or message the studio on WhatsApp.",
       },
-      { property: "og:title", content: "Start Your Journey — WS DESIGNHOUSE" },
+      { property: "og:title", content: "Start Your Journey | WS DESIGNHOUSE" },
       {
         property: "og:description",
         content:
@@ -52,9 +51,8 @@ function ContactPage() {
                       <li key={p}>
                         <a
                           href={telUrl(p)}
-                          className="link-underline inline-flex items-center gap-3"
+                          className="link-underline"
                         >
-                          <Phone className="h-4 w-4 text-champagne" strokeWidth={1.2} aria-hidden />
                           {p}
                         </a>
                       </li>
@@ -62,9 +60,8 @@ function ContactPage() {
                     <li>
                       <a
                         href={`mailto:${site.email}`}
-                        className="link-underline inline-flex items-center gap-3"
+                        className="link-underline"
                       >
-                        <Mail className="h-4 w-4 text-champagne" strokeWidth={1.2} aria-hidden />
                         {site.email}
                       </a>
                     </li>
@@ -73,18 +70,12 @@ function ContactPage() {
                         href={whatsappUrl()}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="link-underline inline-flex items-center gap-3"
+                        className="link-underline"
                       >
-                        <MessageCircle
-                          className="h-4 w-4 text-champagne"
-                          strokeWidth={1.2}
-                          aria-hidden
-                        />
                         Chat on WhatsApp
                       </a>
                     </li>
-                    <li className="inline-flex items-center gap-3 text-muted-foreground">
-                      <MapPin className="h-4 w-4 text-champagne" strokeWidth={1.2} aria-hidden />
+                    <li className="text-muted-foreground">
                       {site.location}
                     </li>
                   </ul>

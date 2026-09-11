@@ -1,6 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Linkedin, Facebook } from "lucide-react";
-import { TikTokIcon } from "./TikTokIcon";
 import wsLogo from "@/assets/ws-logo-light.png.asset.json";
 import { navItems, site, telUrl } from "@/lib/site";
 
@@ -58,9 +56,9 @@ export function Footer() {
                   href={site.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 hover:opacity-100"
+                  className="hover:opacity-100"
                 >
-                  <Instagram className="h-4 w-4" strokeWidth={1.2} aria-hidden /> Instagram
+                  Instagram
                 </a>
               </li>
               <li>
@@ -68,9 +66,9 @@ export function Footer() {
                   href={site.social.tiktok}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 hover:opacity-100"
+                  className="hover:opacity-100"
                 >
-                  <TikTokIcon className="h-4 w-4" /> TikTok
+                  TikTok
                 </a>
               </li>
               <li>
@@ -78,9 +76,9 @@ export function Footer() {
                   href={site.social.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 hover:opacity-100"
+                  className="hover:opacity-100"
                 >
-                  <Linkedin className="h-4 w-4" strokeWidth={1.2} aria-hidden /> LinkedIn
+                  LinkedIn
                 </a>
               </li>
               <li>
@@ -88,9 +86,9 @@ export function Footer() {
                   href={site.social.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 hover:opacity-100"
+                  className="hover:opacity-100"
                 >
-                  <Facebook className="h-4 w-4" strokeWidth={1.2} aria-hidden /> Facebook
+                  Facebook
                 </a>
               </li>
             </ul>

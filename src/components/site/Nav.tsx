@@ -1,7 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import wsMark from "@/assets/ws-mark-light.png.asset.json";
 import { useEffect, useRef, useState } from "react";
-import { X, MessageCircle } from "lucide-react";
 import { navItems, site, whatsappUrl } from "@/lib/site";
 import { lockScroll, unlockScroll } from "@/components/site/SmoothScroll";
 
@@ -62,7 +61,7 @@ export function Nav() {
         }`}
       >
         <div className="mx-auto grid max-w-[1180px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 sm:px-8 lg:grid-cols-[1fr_auto_1fr] lg:py-4 2xl:max-w-[1600px] 2xl:py-5">
-          <Link to="/" className="min-w-0 leading-none" aria-label="WS DESIGNHOUSE — home">
+          <Link to="/" className="min-w-0 leading-none" aria-label="WS DESIGNHOUSE home">
             <span className="flex items-center gap-3 sm:gap-4">
               <img
                 src={wsMark.url}
@@ -108,27 +107,11 @@ export function Nav() {
             <button
               type="button"
               onClick={() => (open ? closeMenu() : setOpen(true))}
-              className="label lux-press relative flex h-11 w-11 items-center justify-center lg:hidden"
+              className="label lux-press flex min-h-11 items-center justify-center px-2 lg:hidden"
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
             >
-              <span className="relative block h-4 w-6" aria-hidden>
-                {/* Two-stage: lines glide to centre, then rotate */}
-                <span
-                  className={`absolute left-0 block h-px w-6 bg-current transition-all duration-300 [transition-timing-function:var(--ease-lux)] ${
-                    open
-                      ? "top-1/2 rotate-45 [transition-delay:40ms]"
-                      : "top-0.5 rotate-0"
-                  }`}
-                />
-                <span
-                  className={`absolute left-0 block h-px w-6 bg-current transition-all duration-300 [transition-timing-function:var(--ease-lux)] ${
-                    open
-                      ? "top-1/2 -rotate-45 [transition-delay:40ms]"
-                      : "top-[calc(100%-2px)] rotate-0"
-                  }`}
-                />
-              </span>
+              {open ? "Close" : "Menu"}
             </button>
           </div>
         </div>
@@ -151,9 +134,9 @@ export function Nav() {
               type="button"
               onClick={closeMenu}
               aria-label="Close menu"
-              className="lux-press p-2"
+              className="label lux-press min-h-11 px-2"
             >
-              <X className="h-6 w-6" strokeWidth={1} aria-hidden />
+              Close
             </button>
           </div>
 
@@ -206,9 +189,8 @@ export function Nav() {
               href={whatsappUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="label lux-press flex items-center justify-center gap-2 border border-ivory/30 px-6 py-4"
+              className="label lux-press flex items-center justify-center border border-ivory/30 px-6 py-4"
             >
-              <MessageCircle className="h-4 w-4" strokeWidth={1.2} aria-hidden />
               WhatsApp the Studio
             </a>
           </div>

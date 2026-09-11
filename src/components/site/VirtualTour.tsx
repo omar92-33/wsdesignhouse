@@ -3,7 +3,7 @@ import { Container, Eyebrow } from "./Section";
 import { Reveal } from "./Reveal";
 
 /**
- * 360° experience — the tour host blocks iframe embedding (X-Frame-Options),
+ * 360° experience: the tour host blocks iframe embedding (X-Frame-Options),
  * so the experience always opens in a new tab.
  */
 export function VirtualTour() {
