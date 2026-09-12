@@ -63,20 +63,22 @@ function ServiceDetail() {
 
       <section className="desktop-section border-t border-border py-16 lg:py-20 2xl:py-28">
         <Container>
-          <h2 className="label text-muted-foreground">Other Services</h2>
-          <ul className="mt-8 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
-            {others.map((s) => (
-              <li key={s.slug}>
-                <Link
-                  to="/services/$slug"
-                  params={{ slug: s.slug }}
-                  className="font-display text-2xl link-underline"
-                >
-                  {s.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <Reveal>
+            <h2 className="label text-muted-foreground">Other Services</h2>
+            <ul className="mt-8 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
+              {others.map((s) => (
+                <li key={s.slug}>
+                  <Link
+                    to="/services/$slug"
+                    params={{ slug: s.slug }}
+                    className="font-display text-2xl link-underline"
+                  >
+                    {s.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
         </Container>
       </section>
 

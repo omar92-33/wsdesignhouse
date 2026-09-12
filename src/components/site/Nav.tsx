@@ -2,7 +2,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { X, MessageCircle } from "lucide-react";
 import { navItems, site, whatsappUrl } from "@/lib/site";
-import { lockScroll, unlockScroll } from "@/components/site/SmoothScroll";
+import { lockScroll, scrollToTop, unlockScroll } from "@/components/site/SmoothScroll";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -61,7 +61,15 @@ export function Nav() {
         }`}
       >
         <div className="desktop-container desktop-nav mx-auto grid max-w-[1180px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 sm:px-8 lg:grid-cols-[1fr_auto_1fr] lg:py-4 2xl:max-w-[1600px] 2xl:py-5">
-          <Link to="/" className="min-w-0 leading-none" aria-label="WS DESIGNHOUSE, home">
+          <Link
+            to="/"
+            className="min-w-0 leading-none"
+            aria-label="WS DESIGNHOUSE, home and page top"
+            onClick={(event) => {
+              if (pathname === "/") event.preventDefault();
+              scrollToTop();
+            }}
+          >
             <span className="flex items-center gap-3 sm:gap-4">
               <img
                 src="/media/ws-mark-light.png"

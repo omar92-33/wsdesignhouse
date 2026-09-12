@@ -26,6 +26,17 @@ export function unlockScroll() {
   else document.documentElement.style.overflow = "";
 }
 
+/** Return to the page top through Lenis, with a native fallback. */
+export function scrollToTop() {
+  if (lenisInstance) {
+    lenisInstance.scrollTo(0, { duration: 0.7 });
+    return;
+  }
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+}
+
 /**
  * Premium inertial smooth scrolling (Apple/Porsche feel) for desktop and touch.
  * GPU-composited: transforms/opacity/filter only, driven by a single rAF loop
