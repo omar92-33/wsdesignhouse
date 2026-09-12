@@ -212,6 +212,113 @@
   background: var(--color-champagne);
 }
 
+/* Desktop density layer. Everything below 1280px intentionally remains unchanged. */
+@media (min-width: 1280px) {
+  html {
+    font-size: 100%;
+  }
+
+  .desktop-container {
+    max-width: 1360px !important;
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+  }
+
+  .desktop-nav {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+
+  .desktop-footer {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+
+  .desktop-section {
+    padding-top: 4.75rem !important;
+    padding-bottom: 4.75rem !important;
+  }
+
+  .desktop-section-bottom {
+    padding-bottom: 4.75rem !important;
+  }
+
+  .desktop-page-header {
+    padding-top: 7.5rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  .desktop-hero-content {
+    padding-top: 6.5rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .desktop-hero-heading {
+    font-size: clamp(3.25rem, 4.2vw, 5rem) !important;
+    max-width: 17ch;
+  }
+
+  .desktop-button {
+    padding: 0.8rem 1.65rem !important;
+    min-height: 2.75rem;
+  }
+
+  .desktop-card {
+    padding: 2.25rem !important;
+  }
+
+  .desktop-final-cta {
+    max-width: 900px !important;
+    padding-top: 5.5rem !important;
+    padding-bottom: 5.5rem !important;
+  }
+
+  .desktop-project-wrap {
+    width: min(100%, 780px);
+    max-width: 780px !important;
+  }
+
+  .desktop-project-list {
+    width: min(100%, 780px);
+    max-width: 780px !important;
+  }
+
+  .desktop-project-wrap .desktop-project-image,
+  .desktop-project-list .desktop-project-image,
+  .desktop-project-gallery .desktop-project-image[class~="aspect-[3/2]"] {
+    width: 100%;
+    aspect-ratio: 780 / 498 !important;
+  }
+
+  .desktop-project-wrap .desktop-project-image img,
+  .desktop-project-list .desktop-project-image img,
+  .desktop-project-gallery .desktop-project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .desktop-project-gallery {
+    max-width: 1200px !important;
+    gap: 1.5rem !important;
+  }
+
+  .desktop-project-hero,
+  .desktop-project-hero-image,
+  .desktop-project-hero-content {
+    min-height: min(72svh, 760px) !important;
+  }
+
+  main h2 {
+    font-size: clamp(2.4rem, 3.4vw, 3.75rem);
+  }
+
+  main h3 {
+    font-size: clamp(1.7rem, 2.15vw, 2.4rem);
+  }
+}
+
 /* Restrained link underline */
 @utility link-underline {
   position: relative;

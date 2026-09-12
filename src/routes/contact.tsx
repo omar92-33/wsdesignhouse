@@ -36,7 +36,7 @@ function ContactPage() {
         intro="Experience the art of artisanal living. Reach out to our design team for a private consultation."
       />
 
-      <section className="py-20 lg:py-24 2xl:py-32">
+      <section className="desktop-section py-20 lg:py-24 2xl:py-32">
         <Container>
           <div className="grid gap-16 lg:grid-cols-[1.3fr_1fr] lg:gap-16 2xl:gap-24">
             <Reveal>
@@ -90,7 +90,7 @@ function ContactPage() {
                   </ul>
                   <a
                     href={`mailto:${site.email}`}
-                    className="label mt-10 inline-block border border-ink px-8 py-4 transition-colors duration-200 hover:bg-ink hover:text-ivory"
+                    className="label desktop-button mt-10 inline-block border border-ink px-8 py-4 transition-colors duration-200 hover:bg-ink hover:text-ivory"
                   >
                     Email the Studio
                   </a>
@@ -112,7 +112,7 @@ function ContactPage() {
                     href={mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="label mt-6 inline-block border border-input px-8 py-4 transition-colors duration-200 hover:border-foreground"
+                    className="label desktop-button mt-6 inline-block border border-input px-8 py-4 transition-colors duration-200 hover:border-foreground"
                   >
                     Get Directions
                   </a>

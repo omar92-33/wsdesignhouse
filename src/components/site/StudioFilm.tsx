@@ -1,12 +1,10 @@
 import { Container, Eyebrow } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
-import film from "@/assets/studio-film.mp4.asset.json";
-import poster from "@/assets/studio-film-poster.jpg.asset.json";
 
 export function StudioFilm() {
   return (
     <section
-      className="border-t border-border py-24 lg:py-24 2xl:py-36"
+      className="desktop-section border-t border-border py-24 lg:py-24 2xl:py-36"
       aria-labelledby="studio-film-heading"
     >
       <Container>
@@ -33,8 +31,8 @@ export function StudioFilm() {
             <div className="mx-auto w-full max-w-sm overflow-hidden rounded-sm border border-border bg-muted lg:max-w-[300px] 2xl:max-w-sm">
               <video
                 className="block aspect-[9/16] w-full object-cover"
-                poster={poster.url}
-                src={film.url}
+                poster="/media/studio-film-poster.jpg"
+                src="/media/studio-film.mp4"
                 controls
                 playsInline
                 preload="none"

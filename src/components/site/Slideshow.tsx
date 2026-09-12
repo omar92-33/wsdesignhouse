@@ -98,7 +98,7 @@ export function Slideshow({
     >
       <div
         ref={trackRef}
-        className="relative touch-pan-y overflow-hidden border border-border bg-muted select-none"
+        className="desktop-slideshow relative touch-pan-y overflow-hidden border border-border bg-muted select-none"
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={endDrag}
@@ -110,14 +110,14 @@ export function Slideshow({
           style={{ transform: `translate3d(${-index * 100 + offsetPct}%,0,0)` }}
         >
           {slides.map((s, i) => (
-            <figure key={s.src} className="w-full shrink-0" aria-hidden={i !== index}>
+            <figure key={s.src} className="desktop-slide w-full shrink-0" aria-hidden={i !== index}>
               <img
                 src={s.src}
                 alt={s.alt}
                 loading={i === 0 ? "eager" : "lazy"}
                 decoding="async"
                 draggable={false}
-                className="block h-auto w-full"
+                className="desktop-slide-image block h-auto w-full"
               />
             </figure>
           ))}

@@ -8,7 +8,7 @@ import { Reveal } from "./Reveal";
  */
 export function VirtualTour() {
   return (
-    <section className="bg-ink py-24 text-ivory lg:py-24 2xl:py-36" aria-labelledby="tour-heading">
+    <section className="desktop-section bg-ink py-24 text-ivory lg:py-24 2xl:py-36" aria-labelledby="tour-heading">
       <Container>
         <div className="max-w-2xl">
           <Reveal>
@@ -25,7 +25,7 @@ export function VirtualTour() {
                 href={site.virtualTour}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="label border-2 border-champagne bg-champagne px-10 py-5 text-center text-accent-foreground shadow-lg transition-all duration-200 hover:bg-transparent hover:text-champagne"
+                className="label desktop-button border-2 border-champagne bg-champagne px-10 py-5 text-center text-accent-foreground shadow-lg transition-all duration-200 hover:bg-transparent hover:text-champagne"
               >
                 View the Virtual Tour
               </a>

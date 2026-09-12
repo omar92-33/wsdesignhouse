@@ -52,14 +52,14 @@ function ProjectPage() {
 
   return (
     <>
-      <header className="relative min-h-[78svh] overflow-hidden bg-ink text-ivory 2xl:min-h-[85svh]">
+      <header className="desktop-project-hero relative min-h-[78svh] overflow-hidden bg-ink text-ivory 2xl:min-h-[85svh]">
         <div className="absolute inset-0">
           <Frame
             image={project.hero}
             aspect="wide"
             tone="dark"
             priority
-            className="!aspect-auto h-full min-h-[78svh] 2xl:min-h-[85svh]"
+            className="desktop-project-hero-image !aspect-auto h-full min-h-[78svh] 2xl:min-h-[85svh]"
             caption={`${project.title}, hero photograph`}
           />
         </div>
@@ -71,7 +71,7 @@ function ProjectPage() {
               "linear-gradient(to top, oklch(0.24 0.024 62 / 0.92) 0%, oklch(0.24 0.024 62 / 0.25) 55%, transparent 100%)",
           }}
         />
-        <Container className="relative flex min-h-[78svh] flex-col justify-end pb-14 pt-32 2xl:min-h-[85svh] 2xl:pb-20 2xl:pt-40">
+        <Container className="desktop-project-hero-content relative flex min-h-[78svh] flex-col justify-end pb-14 pt-32 2xl:min-h-[85svh] 2xl:pb-20 2xl:pt-40">
           <h1 className="display mt-5 max-w-[14ch] text-[clamp(2.75rem,7vw,5rem)] 2xl:text-[clamp(3rem,8vw,7rem)]">
             {project.title}
           </h1>
@@ -97,7 +97,7 @@ function ProjectPage() {
         </section>
       )}
 
-      <section className="py-20 lg:py-24 2xl:py-36">
+      <section className="desktop-section py-20 lg:py-24 2xl:py-36">
         <Container>
           <div className="grid gap-14 lg:grid-cols-2 lg:gap-16 2xl:gap-24">
             {sections.map((s, i) => (
@@ -125,9 +125,9 @@ function ProjectPage() {
         </Container>
       </section>
 
-      <section className="pb-20 lg:pb-24 2xl:pb-36" aria-label="Project gallery">
+      <section className="desktop-section-bottom pb-20 lg:pb-24 2xl:pb-36" aria-label="Project gallery">
         <Container>
-          <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:gap-8 2xl:gap-10">
+          <div className="desktop-project-gallery mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:gap-8 2xl:gap-10">
             {project.gallery.map((img, i) => (
               <Reveal
                 as="figure"
@@ -142,7 +142,7 @@ function ProjectPage() {
         </Container>
       </section>
 
-      <section className="bg-ink py-24 text-ivory lg:py-24 2xl:py-40">
+      <section className="desktop-section bg-ink py-24 text-ivory lg:py-24 2xl:py-40">
         <Container className="text-center">
           <Reveal>
             <span className="rule-accent" aria-hidden />
@@ -155,13 +155,13 @@ function ProjectPage() {
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 to="/contact"
-                className="label w-full border border-ink bg-ink px-10 py-5 text-ivory sm:w-auto"
+                className="label desktop-button w-full border border-ink bg-ink px-10 py-5 text-ivory sm:w-auto"
               >
                 Start Your Project
               </Link>
               <Link
                 to="/contact"
-                className="label w-full border border-ivory/35 px-10 py-5 transition-colors duration-200 hover:border-ivory sm:w-auto"
+                className="label desktop-button w-full border border-ivory/35 px-10 py-5 transition-colors duration-200 hover:border-ivory sm:w-auto"
               >
                 Book a Private Consultation
               </Link>

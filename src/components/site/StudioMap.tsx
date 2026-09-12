@@ -4,7 +4,7 @@ import { mapsUrl, site } from "@/lib/site";
 
 export function StudioMap() {
   return (
-    <section className="py-20 lg:py-20 2xl:py-28" aria-labelledby="studio-map-heading">
+    <section className="desktop-section py-20 lg:py-20 2xl:py-28" aria-labelledby="studio-map-heading">
       <Container>
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:gap-14 2xl:grid-cols-[1fr_1.4fr] 2xl:gap-20">
           <Reveal>
@@ -16,7 +16,7 @@ export function StudioMap() {
               href={mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="label mt-8 inline-block border border-input px-8 py-4 transition-colors duration-200 hover:border-foreground"
+              className="label desktop-button mt-8 inline-block border border-input px-8 py-4 transition-colors duration-200 hover:border-foreground"
             >
               Get Directions →
             </a>

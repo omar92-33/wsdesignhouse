@@ -98,14 +98,14 @@ export function ConsultationForm() {
               href={waLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="label border border-champagne bg-champagne px-8 py-4 text-accent-foreground"
+          className="label desktop-button border border-champagne bg-champagne px-8 py-4 text-accent-foreground"
             >
               Send on WhatsApp
             </a>
           )}
           <a
             href={`mailto:${site.email}`}
-            className="label border border-input px-8 py-4 transition-colors hover:border-foreground"
+            className="label desktop-button border border-input px-8 py-4 transition-colors hover:border-foreground"
           >
             Email the Studio
           </a>
@@ -181,7 +181,7 @@ export function ConsultationForm() {
       <div className="flex flex-col gap-4 pt-2 sm:flex-row">
         <button
           type="submit"
-          className="label border border-ink bg-ink px-10 py-5 text-ivory transition-opacity duration-200 hover:opacity-85"
+          className="label desktop-button border border-ink bg-ink px-10 py-5 text-ivory transition-opacity duration-200 hover:opacity-85"
         >
           Send Details on WhatsApp
         </button>

@@ -41,7 +41,7 @@ function ServiceDetail() {
     <>
       <PageHeader eyebrow="Our Expertise" title={service.title} intro={service.intro} />
 
-      <section className="py-20 lg:py-24 2xl:py-32">
+      <section className="desktop-section py-20 lg:py-24 2xl:py-32">
         <Container>
           <div className="grid gap-16">
             <Reveal>
@@ -52,7 +52,7 @@ function ServiceDetail() {
               </div>
               <Link
                 to="/contact"
-                className="label mt-12 inline-block border border-ink px-8 py-4 transition-colors duration-200 hover:bg-ink hover:text-ivory"
+                className="label desktop-button mt-12 inline-block border border-ink px-8 py-4 transition-colors duration-200 hover:bg-ink hover:text-ivory"
               >
                 Discuss Your Project
               </Link>
@@ -61,7 +61,7 @@ function ServiceDetail() {
         </Container>
       </section>
 
-      <section className="border-t border-border py-16 lg:py-20 2xl:py-28">
+      <section className="desktop-section border-t border-border py-16 lg:py-20 2xl:py-28">
         <Container>
           <h2 className="label text-muted-foreground">Other Services</h2>
           <ul className="mt-8 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
