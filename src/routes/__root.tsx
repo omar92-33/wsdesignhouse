@@ -3,6 +3,7 @@ import {
   Outlet,
   Link,
   createRootRouteWithContext,
+  useLocation,
   useRouter,
   HeadContent,
   Scripts,
@@ -158,16 +159,20 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useLocation({ select: (location) => location.pathname });
+  const preserveAboutSizing = pathname === "/about" || pathname === "/about/";
 
   return (
     <QueryClientProvider client={queryClient}>
       <SmoothScroll />
-      <Nav />
-      <main id="main">
-        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-        <Outlet />
-      </main>
-      <Footer />
+      <div className={preserveAboutSizing ? undefined : "desktop-type-boost"}>
+        <Nav />
+        <main id="main">
+          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </QueryClientProvider>
   );
 }

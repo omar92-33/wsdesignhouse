@@ -28,7 +28,7 @@ export function StudioFilm() {
           </div>
 
           <Reveal>
-            <div className="mx-auto w-full max-w-sm overflow-hidden rounded-sm border border-border bg-muted lg:max-w-[300px] 2xl:max-w-sm">
+            <div className="desktop-studio-film mx-auto w-full max-w-sm overflow-hidden rounded-sm border border-border bg-muted lg:max-w-[300px] 2xl:max-w-sm">
               <video
                 className="block aspect-[9/16] w-full object-cover"
                 poster="/media/studio-film-poster.jpg"
