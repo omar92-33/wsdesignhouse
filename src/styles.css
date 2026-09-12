@@ -413,33 +413,23 @@
   --dur-lux: 0.55s;
 }
 
-/* Reveal wrappers remain layout-only so images, video, maps and forms never move. */
 @utility reveal-hidden {
-  opacity: 1;
-  transform: none;
-  filter: none;
+  opacity: 0;
+  transform: translate3d(0, 16px, 0) scale(0.995);
+  filter: blur(1.5px);
+  will-change: opacity, transform, filter;
+  backface-visibility: hidden;
 }
 
 @utility reveal-shown {
   opacity: 1;
   transform: none;
-  filter: none;
-}
-
-/* Short, text-only entrance used consistently across content routes. */
-.text-reveal-ready {
-  opacity: 0;
-  transform: translate3d(0, 7px, 0);
-  transition:
-    opacity 0.38s var(--ease-lux-soft),
-    transform 0.42s var(--ease-lux);
-  will-change: opacity, transform;
-}
-
-.text-reveal-ready.text-reveal-visible {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
+  filter: blur(0);
   will-change: auto;
+  transition:
+    opacity 0.55s var(--ease-lux),
+    transform 0.6s var(--ease-lux),
+    filter 0.45s var(--ease-lux);
 }
 
 
@@ -553,12 +543,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .text-reveal-ready,
-  .text-reveal-ready.text-reveal-visible {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
   .fixed[href*="wa.me"] {
     animation: none !important;
   }
