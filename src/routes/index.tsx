@@ -234,8 +234,8 @@ function Process() {
     >
       <Container>
         <div className="grid gap-12 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] lg:gap-16 2xl:gap-24">
-          <Reveal>
-            <div className="lg:sticky lg:top-28">
+          <Reveal className="process-intro-reveal">
+            <div>
               <Eyebrow>Process</Eyebrow>
               <h2
                 id="process-heading"
