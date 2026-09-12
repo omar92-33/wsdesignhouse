@@ -303,10 +303,6 @@
     min-height: min(72svh, 760px) !important;
   }
 
-  main h1 {
-    max-font-size: 5rem;
-  }
-
   main h2 {
     font-size: clamp(2.4rem, 3.4vw, 3.75rem);
   }
