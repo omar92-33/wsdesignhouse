@@ -159,13 +159,10 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-  const pathname = useLocation({ select: (location) => location.pathname });
-  const preserveAboutSizing = pathname === "/about" || pathname === "/about/";
-
   return (
     <QueryClientProvider client={queryClient}>
       <SmoothScroll />
-      <div className={preserveAboutSizing ? undefined : "desktop-type-boost"}>
+      <div className="desktop-type-boost">
         <Nav />
         <main id="main">
           {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
