@@ -94,7 +94,7 @@ function Hero() {
 
       <Container className="laptop-hero-density desktop-hero-content relative pb-14 pt-32 2xl:pb-24 2xl:pt-40">
         <Reveal>
-          <p className="label opacity-55">{site.positioning}</p>
+          <p className="label desktop-hero-label opacity-55">{site.positioning}</p>
         </Reveal>
 
         <Reveal delay={120}>
@@ -104,7 +104,7 @@ function Hero() {
         </Reveal>
 
         <Reveal delay={220}>
-          <p className="mt-5 max-w-xl text-base leading-relaxed opacity-70 2xl:mt-9 2xl:text-lg">
+          <p className="desktop-hero-lead mt-5 max-w-xl text-base leading-relaxed opacity-70 2xl:mt-9 2xl:text-lg">
             Luxury interior architecture and bespoke design for private residences, villas, and
             exceptional spaces.
           </p>
@@ -114,13 +114,13 @@ function Hero() {
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center 2xl:mt-12 2xl:gap-4">
             <Link
               to={secondaryCta.to}
-              className="label desktop-button inline-flex items-center justify-center border border-champagne bg-champagne px-8 py-4 text-accent-foreground transition-opacity duration-200 hover:opacity-85 2xl:px-9 2xl:py-5"
+              className="label desktop-button desktop-hero-button inline-flex items-center justify-center border border-champagne bg-champagne px-8 py-4 text-accent-foreground transition-opacity duration-200 hover:opacity-85 2xl:px-9 2xl:py-5"
             >
               {secondaryCta.label}
             </Link>
             <Link
               to={primaryCta.to}
-              className="label desktop-button inline-flex items-center justify-center border border-ivory/40 px-8 py-4 transition-colors duration-200 hover:border-ivory 2xl:px-9 2xl:py-5"
+              className="label desktop-button desktop-hero-button inline-flex items-center justify-center border border-ivory/40 px-8 py-4 transition-colors duration-200 hover:border-ivory 2xl:px-9 2xl:py-5"
             >
               {primaryCta.label}
             </Link>
