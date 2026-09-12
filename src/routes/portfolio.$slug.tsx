@@ -72,12 +72,16 @@ function ProjectPage() {
           }}
         />
         <Container className="desktop-project-hero-content relative flex min-h-[78svh] flex-col justify-end pb-14 pt-32 2xl:min-h-[85svh] 2xl:pb-20 2xl:pt-40">
-          <h1 className="display mt-5 max-w-[14ch] text-[clamp(2.75rem,7vw,5rem)] 2xl:text-[clamp(3rem,8vw,7rem)]">
-            {project.title}
-          </h1>
-          <p className="mt-8 max-w-xl text-base leading-relaxed opacity-75">
-            {project.description}
-          </p>
+          <Reveal>
+            <h1 className="display mt-5 max-w-[14ch] text-[clamp(2.75rem,7vw,5rem)] 2xl:text-[clamp(3rem,8vw,7rem)]">
+              {project.title}
+            </h1>
+          </Reveal>
+          <Reveal delay={80}>
+            <p className="mt-8 max-w-xl text-base leading-relaxed opacity-75">
+              {project.description}
+            </p>
+          </Reveal>
         </Container>
       </header>
 
@@ -114,11 +118,11 @@ function ProjectPage() {
 
           {facts.length > 0 && (
             <dl className="mt-20 grid gap-8 border-t border-border pt-10 sm:grid-cols-3">
-              {facts.map((f) => (
-                <div key={f.label}>
+              {facts.map((f, i) => (
+                <Reveal key={f.label} delay={i * 60}>
                   <dt className="label text-muted-foreground">{f.label}</dt>
                   <dd className="mt-2 font-display text-xl">{f.value}</dd>
-                </div>
+                </Reveal>
               ))}
             </dl>
           )}
@@ -182,22 +186,24 @@ function ProjectPage() {
 
       <section className="border-t border-border py-16">
         <Container>
-          <p className="label text-muted-foreground">More Projects</p>
-          <ul className="mt-6 flex flex-wrap gap-x-10 gap-y-4">
-            {projects
-              .filter((p) => p.slug !== project.slug)
-              .map((p) => (
-                <li key={p.slug}>
-                  <Link
-                    to="/portfolio/$slug"
-                    params={{ slug: p.slug }}
-                    className="font-display text-2xl link-underline"
-                  >
-                    {p.title}
-                  </Link>
-                </li>
-              ))}
-          </ul>
+          <Reveal>
+            <p className="label text-muted-foreground">More Projects</p>
+            <ul className="mt-6 flex flex-wrap gap-x-10 gap-y-4">
+              {projects
+                .filter((p) => p.slug !== project.slug)
+                .map((p) => (
+                  <li key={p.slug}>
+                    <Link
+                      to="/portfolio/$slug"
+                      params={{ slug: p.slug }}
+                      className="font-display text-2xl link-underline"
+                    >
+                      {p.title}
+                    </Link>
+                  </li>
+                ))}
+            </ul>
+          </Reveal>
         </Container>
       </section>
     </>

@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Reveal } from "@/components/site/Reveal";
 
 export function Container({
   children,
@@ -33,10 +34,16 @@ export function PageHeader({
   return (
     <header className="desktop-page-header bg-ink pb-20 pt-36 text-ivory lg:pb-20 lg:pt-36 2xl:pb-28 2xl:pt-48">
       <Container>
-        <Eyebrow>{eyebrow}</Eyebrow>
-        <h1 className="display mt-7 max-w-4xl text-[clamp(2.75rem,7vw,5rem)] 2xl:text-[clamp(3rem,7vw,6.5rem)]">{title}</h1>
+        <Reveal>
+          <Eyebrow>{eyebrow}</Eyebrow>
+        </Reveal>
+        <Reveal delay={60}>
+          <h1 className="display mt-7 max-w-4xl text-[clamp(2.75rem,7vw,5rem)] 2xl:text-[clamp(3rem,7vw,6.5rem)]">{title}</h1>
+        </Reveal>
         {intro && (
-          <p className="mt-8 max-w-xl text-base leading-relaxed opacity-65 sm:text-lg">{intro}</p>
+          <Reveal delay={110}>
+            <p className="mt-8 max-w-xl text-base leading-relaxed opacity-65 sm:text-lg">{intro}</p>
+          </Reveal>
         )}
       </Container>
     </header>

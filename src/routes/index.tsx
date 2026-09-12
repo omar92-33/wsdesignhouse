@@ -416,13 +416,13 @@ function Proof() {
 
         {testimonials.length > 0 && (
           <ul className="mt-16 grid gap-12 border-t border-ivory/20 pt-12 md:grid-cols-2">
-            {testimonials.map((t) => (
-              <li key={t.author}>
+            {testimonials.map((t, i) => (
+              <Reveal as="li" key={t.author} delay={i * 60}>
                 <blockquote className="font-display text-2xl italic leading-snug">
                   “{t.quote}”
                 </blockquote>
                 <p className="label mt-5 text-champagne">{t.author}</p>
-              </li>
+              </Reveal>
             ))}
           </ul>
         )}
