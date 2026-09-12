@@ -27,10 +27,7 @@ export function TextMotion() {
   useEffect(() => {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let observer: IntersectionObserver | undefined;
-    let innerFrame = 0;
-
-    const outerFrame = requestAnimationFrame(() => {
-      innerFrame = requestAnimationFrame(() => {
+    const startTimer = window.setTimeout(() => {
         const elements = Array.from(
           document.querySelectorAll<HTMLElement>(TEXT_SELECTOR),
         ).filter((element) => !element.closest("[data-text-motion='off']"));
@@ -55,12 +52,10 @@ export function TextMotion() {
           element.classList.add("text-reveal-ready");
           observer?.observe(element);
         });
-      });
-    });
+    }, 120);
 
     return () => {
-      cancelAnimationFrame(outerFrame);
-      cancelAnimationFrame(innerFrame);
+      window.clearTimeout(startTimer);
       observer?.disconnect();
     };
   }, [pathname]);
