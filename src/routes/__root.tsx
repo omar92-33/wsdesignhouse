@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { SmoothScroll } from "@/components/site/SmoothScroll";
+import { TextMotion } from "@/components/site/TextMotion";
 import { site } from "@/lib/site";
 
 function NotFoundComponent() {
@@ -161,6 +162,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <SmoothScroll />
+      <TextMotion />
       <div className="desktop-type-boost">
         <Nav />
         <main id="main">
