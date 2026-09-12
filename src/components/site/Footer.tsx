@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin, Facebook } from "lucide-react";
 import { TikTokIcon } from "./TikTokIcon";
+import { Reveal } from "./Reveal";
 import { navItems, site, telUrl } from "@/lib/site";
 
 export function Footer() {
@@ -10,48 +11,54 @@ export function Footer() {
         <div className="grid gap-14 border-b border-ivory/12 pb-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div className="max-w-sm">
             <img src="/media/ws-logo-light.png" alt="WS DESIGN HOUSE" width={745} height={541} className="h-24 w-auto sm:h-28" />
-            <p className="mt-4 font-display text-xl italic opacity-80">
-              Interior architecture, considered in every detail.
-            </p>
-
-            <p className="label mt-6 opacity-60">{site.positioning}</p>
-            <p className="mt-4 text-base leading-relaxed opacity-60">{site.serviceLine}</p>
+            <Reveal>
+              <p className="mt-4 font-display text-xl italic opacity-80">
+                Interior architecture, considered in every detail.
+              </p>
+              <p className="label mt-6 opacity-60">{site.positioning}</p>
+              <p className="mt-4 text-base leading-relaxed opacity-60">{site.serviceLine}</p>
+            </Reveal>
           </div>
 
           <nav aria-label="Footer">
-            <p className="label mb-6 text-champagne">Navigate</p>
-            <ul className="space-y-3">
-              {navItems.map((item) => (
-                <li key={item.to}>
-                  <Link to={item.to} className="text-base opacity-70 hover:opacity-100">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <Reveal delay={40}>
+              <p className="label mb-6 text-champagne">Navigate</p>
+              <ul className="space-y-3">
+                {navItems.map((item) => (
+                  <li key={item.to}>
+                    <Link to={item.to} className="text-base opacity-70 hover:opacity-100">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
           </nav>
 
           <div>
-            <p className="label mb-6 text-champagne">Studio</p>
-            <ul className="space-y-3 text-base opacity-70">
-              <li>
-                <a href={`mailto:${site.email}`} className="hover:opacity-100">
-                  {site.email}
-                </a>
-              </li>
-              {site.phones.map((p) => (
-                <li key={p}>
-                  <a href={telUrl(p)} className="hover:opacity-100">
-                    {p}
+            <Reveal delay={80}>
+              <p className="label mb-6 text-champagne">Studio</p>
+              <ul className="space-y-3 text-base opacity-70">
+                <li>
+                  <a href={`mailto:${site.email}`} className="hover:opacity-100">
+                    {site.email}
                   </a>
                 </li>
-              ))}
-            </ul>
+                {site.phones.map((p) => (
+                  <li key={p}>
+                    <a href={telUrl(p)} className="hover:opacity-100">
+                      {p}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
           </div>
 
           <div>
-            <p className="label mb-6 text-champagne">Follow</p>
-            <ul className="space-y-3 text-base opacity-70">
+            <Reveal delay={120}>
+              <p className="label mb-6 text-champagne">Follow</p>
+              <ul className="space-y-3 text-base opacity-70">
               <li>
                 <a
                   href={site.social.instagram}
@@ -92,21 +99,24 @@ export function Footer() {
                   <Facebook className="h-4 w-4" strokeWidth={1.2} aria-hidden /> Facebook
                 </a>
               </li>
-            </ul>
-            <Link
-              to="/contact"
-              className="label mt-8 inline-block border border-champagne px-5 py-3 text-champagne transition-colors duration-200 hover:bg-champagne hover:text-accent-foreground"
-            >
-              Book a Private Consultation
-            </Link>
+              </ul>
+              <Link
+                to="/contact"
+                className="label mt-8 inline-block border border-champagne px-5 py-3 text-champagne transition-colors duration-200 hover:bg-champagne hover:text-accent-foreground"
+              >
+                Book a Private Consultation
+              </Link>
+            </Reveal>
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 pt-8 tracking-[0.12em] uppercase opacity-45 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 WS DESIGNHOUSE. Crafting Luxury Interiors.</p>
-          <p>Tax ID Number: {site.taxId}</p>
-          <p>{site.established}</p>
-        </div>
+        <Reveal>
+          <div className="flex flex-col gap-3 pt-8 tracking-[0.12em] uppercase opacity-45 sm:flex-row sm:items-center sm:justify-between">
+            <p>© 2026 WS DESIGNHOUSE. Crafting Luxury Interiors.</p>
+            <p>Tax ID Number: {site.taxId}</p>
+            <p>{site.established}</p>
+          </div>
+        </Reveal>
       </div>
     </footer>
   );
