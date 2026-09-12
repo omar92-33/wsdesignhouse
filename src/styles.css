@@ -332,7 +332,25 @@
   }
 
   .desktop-type-boost .desktop-hero-heading {
-    font-size: clamp(3.5rem, 4.5vw, 5.3rem) !important;
+    font-size: clamp(4rem, 5.5vw, 6.5rem) !important;
+    line-height: 1.04;
+    max-width: 16ch;
+  }
+
+  .desktop-type-boost .desktop-hero-label {
+    font-size: 1rem;
+    letter-spacing: 0.18em;
+  }
+
+  .desktop-type-boost .desktop-hero-lead {
+    font-size: 1.35rem;
+    max-width: 42ch;
+  }
+
+  .desktop-type-boost .desktop-hero-button {
+    padding: 1rem 2.25rem !important;
+    min-height: 3.25rem;
+    font-size: 1rem;
   }
 
   .desktop-type-boost main h2 {
@@ -356,7 +374,7 @@
   }
 
   .desktop-type-boost .desktop-studio-film {
-    max-width: 340px !important;
+    max-width: 280px !important;
   }
 }
 
