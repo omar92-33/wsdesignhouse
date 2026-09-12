@@ -36,7 +36,7 @@ function ServicesPage() {
         intro="Consultation • 3D Visualisation • Turnkey Execution"
       />
 
-      <section className="py-20 lg:py-20 2xl:py-28">
+      <section className="desktop-section py-20 lg:py-20 2xl:py-28">
         <Container>
           <ul className="grid gap-14 md:grid-cols-2 lg:gap-16 2xl:gap-24">
             {services.map((s, i) => (
@@ -75,7 +75,7 @@ function ServicesPage() {
         </Container>
       </section>
 
-      <section className="border-y border-border bg-muted/50 py-20 lg:py-20 2xl:py-32">
+      <section className="desktop-section border-y border-border bg-muted/50 py-20 lg:py-20 2xl:py-32">
         <Container>
           <Reveal>
             <h2 className="display text-center text-[clamp(1.9rem,5vw,3.75rem)] uppercase">

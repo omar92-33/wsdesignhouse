@@ -34,7 +34,7 @@ function ProcessPage() {
         intro="Three stages, one studio, from the first conversation to the final finish."
       />
 
-      <section className="py-20 lg:py-24 2xl:py-32">
+      <section className="desktop-section py-20 lg:py-24 2xl:py-32">
         <Container>
           <ol className="border-t border-border">
             {method.map((m, i) => (
@@ -54,11 +54,11 @@ function ProcessPage() {
         </Container>
       </section>
 
-      <section className="py-16 text-center lg:py-20 2xl:py-28">
+      <section className="desktop-section py-16 text-center lg:py-20 2xl:py-28">
         <Container>
           <Link
             to="/contact"
-            className="label inline-block border border-ink px-10 py-5 transition-colors duration-200 hover:bg-ink hover:text-ivory"
+            className="label desktop-button inline-block border border-ink px-10 py-5 transition-colors duration-200 hover:bg-ink hover:text-ivory"
           >
             Begin Your Journey
           </Link>
