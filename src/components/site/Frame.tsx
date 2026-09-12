@@ -32,7 +32,7 @@ export function Frame({
   const alt = image.alt ?? caption ?? "";
 
   return (
-    <div className={`relative overflow-hidden ${ratio} ${className}`}>
+    <div className={`desktop-project-image relative overflow-hidden ${ratio} ${className}`}>
       <img
         src={image.src}
         alt={alt}

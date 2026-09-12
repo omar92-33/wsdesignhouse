@@ -1,6 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import entryAsset from "@/assets/entry.png.asset.json";
-
 import { Container, Eyebrow } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { Frame } from "@/components/site/Frame";
@@ -76,7 +74,7 @@ function Hero() {
   return (
     <section className="relative flex min-h-[100svh] items-end overflow-hidden bg-ink text-ivory">
       <img
-        src={entryAsset.url}
+        src="/media/entry.jpg"
         alt=""
         aria-hidden
         fetchPriority="high"
@@ -94,13 +92,13 @@ function Hero() {
 
 
 
-      <Container className="laptop-hero-density relative pb-14 pt-32 2xl:pb-24 2xl:pt-40">
+      <Container className="laptop-hero-density desktop-hero-content relative pb-14 pt-32 2xl:pb-24 2xl:pt-40">
         <Reveal>
           <p className="label opacity-55">{site.positioning}</p>
         </Reveal>
 
         <Reveal delay={120}>
-          <h1 className="display mt-7 max-w-[16ch] text-[clamp(2.7rem,6vw,4.25rem)] leading-[1.06] 2xl:text-[clamp(3rem,7vw,7rem)]">
+          <h1 className="display desktop-hero-heading mt-7 max-w-[16ch] text-[clamp(2.7rem,6vw,4.25rem)] leading-[1.06] 2xl:text-[clamp(3rem,7vw,7rem)]">
             Interiors Designed for the Way You Live.
           </h1>
         </Reveal>
@@ -116,13 +114,13 @@ function Hero() {
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center 2xl:mt-12 2xl:gap-4">
             <Link
               to={secondaryCta.to}
-              className="label inline-flex items-center justify-center border border-champagne bg-champagne px-8 py-4 text-accent-foreground transition-opacity duration-200 hover:opacity-85 2xl:px-9 2xl:py-5"
+              className="label desktop-button inline-flex items-center justify-center border border-champagne bg-champagne px-8 py-4 text-accent-foreground transition-opacity duration-200 hover:opacity-85 2xl:px-9 2xl:py-5"
             >
               {secondaryCta.label}
             </Link>
             <Link
               to={primaryCta.to}
-              className="label inline-flex items-center justify-center border border-ivory/40 px-8 py-4 transition-colors duration-200 hover:border-ivory 2xl:px-9 2xl:py-5"
+              className="label desktop-button inline-flex items-center justify-center border border-ivory/40 px-8 py-4 transition-colors duration-200 hover:border-ivory 2xl:px-9 2xl:py-5"
             >
               {primaryCta.label}
             </Link>
@@ -141,7 +139,7 @@ function Hero() {
 
 function SelectedProjects() {
   return (
-    <section className="pb-12 pt-20 lg:pb-14 lg:pt-24 2xl:pb-20 2xl:pt-36" aria-labelledby="projects-heading">
+    <section className="desktop-section pb-12 pt-20 lg:pb-14 lg:pt-24 2xl:pb-20 2xl:pt-36" aria-labelledby="projects-heading">
       <Container>
         <Reveal>
           <Eyebrow>Selected Projects</Eyebrow>
@@ -185,7 +183,7 @@ function SelectedProjects() {
         <Reveal className="mt-10 flex justify-center">
           <Link
             to={secondaryCta.to}
-            className="label inline-flex items-center justify-center border border-ink px-9 py-4 transition-colors duration-200 hover:bg-ink hover:text-ivory"
+            className="label desktop-button inline-flex items-center justify-center border border-ink px-9 py-4 transition-colors duration-200 hover:bg-ink hover:text-ivory"
           >
             {secondaryCta.label} →
           </Link>
@@ -199,7 +197,7 @@ function SelectedProjects() {
 
 function WhyStudio() {
   return (
-    <section className="bg-ink py-20 text-ivory lg:py-24 2xl:py-36" aria-labelledby="why-heading">
+    <section className="desktop-section bg-ink py-20 text-ivory lg:py-24 2xl:py-36" aria-labelledby="why-heading">
       <Container>
         <Reveal>
           <Eyebrow>Why WS DESIGNHOUSE</Eyebrow>
@@ -230,7 +228,7 @@ function WhyStudio() {
 
 function Process() {
   return (
-    <section className="py-20 lg:py-24 2xl:py-36" aria-labelledby="process-heading">
+    <section className="desktop-section py-20 lg:py-24 2xl:py-36" aria-labelledby="process-heading">
       <Container>
         <Reveal>
           <Eyebrow>Process</Eyebrow>
@@ -261,7 +259,7 @@ function Process() {
 
 function Studio() {
   return (
-    <section className="border-y border-border bg-muted py-20 lg:py-24 2xl:py-36" aria-labelledby="studio-heading">
+    <section className="desktop-section border-y border-border bg-muted py-20 lg:py-24 2xl:py-36" aria-labelledby="studio-heading">
       <Container>
         <div className="grid gap-14 lg:grid-cols-[1fr_1fr] lg:gap-16 2xl:gap-24">
           <Reveal>
@@ -296,7 +294,7 @@ function Studio() {
 
 function Services() {
   return (
-    <section className="pb-20 pt-12 lg:pb-24 lg:pt-14 2xl:pb-36 2xl:pt-20" aria-labelledby="services-heading">
+    <section className="desktop-section pb-20 pt-12 lg:pb-24 lg:pt-14 2xl:pb-36 2xl:pt-20" aria-labelledby="services-heading">
       <Container>
         <Reveal>
           <Eyebrow>Services</Eyebrow>
@@ -311,7 +309,7 @@ function Services() {
               <Link
                 to="/services/$slug"
                 params={{ slug: s.slug }}
-                className="block h-full px-8 py-10 transition-colors duration-200 hover:bg-muted/70 lg:px-9 lg:py-10 2xl:px-12 2xl:py-16"
+                className="desktop-card block h-full px-8 py-10 transition-colors duration-200 hover:bg-muted/70 lg:px-9 lg:py-10 2xl:px-12 2xl:py-16"
               >
                 <h3 className="font-display text-3xl sm:text-4xl">{s.title}</h3>
                 <p className="mt-4 max-w-sm text-base leading-relaxed text-muted-foreground">
@@ -336,7 +334,7 @@ function Services() {
 
 function Proof() {
   return (
-    <section className="border-y border-border py-20 lg:py-24 2xl:py-32" aria-labelledby="proof-heading">
+    <section className="desktop-section border-y border-border py-20 lg:py-24 2xl:py-32" aria-labelledby="proof-heading">
       <Container>
         <Reveal>
           <Eyebrow>Recognition & Credentials</Eyebrow>

@@ -2,22 +2,17 @@ import { Container, Eyebrow } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { Slideshow } from "@/components/site/Slideshow";
 import { ConceptTag } from "@/components/site/ConceptTag";
-import s1 from "@/assets/milan-5400.jpg.asset.json";
-import s2 from "@/assets/milan-5401.jpg.asset.json";
-import s3 from "@/assets/milan-5402.jpg.asset.json";
-import s4 from "@/assets/milan-5403.jpg.asset.json";
-
 const slides = [
-  { src: s1.url, alt: "Project feedback · Milan Design Loft, Living Studio proposal overview" },
-  { src: s2.url, alt: "Jury feedback quote on the Living Studio loft proposal" },
-  { src: s3.url, alt: "Key strengths of the Living Studio proposal: spatial organization, storage, materiality, visual presentation" },
-  { src: s4.url, alt: "Closing evidence board for the Milan Design Loft, Living Studio proposal" },
+  { src: "/media/milan-5400.jpg", alt: "Project feedback · Milan Design Loft, Living Studio proposal overview" },
+  { src: "/media/milan-5401.jpg", alt: "Jury feedback quote on the Living Studio loft proposal" },
+  { src: "/media/milan-5402.jpg", alt: "Key strengths of the Living Studio proposal: spatial organization, storage, materiality, visual presentation" },
+  { src: "/media/milan-5403.jpg", alt: "Closing evidence board for the Milan Design Loft, Living Studio proposal" },
 ];
 
 export function Recognition() {
   return (
     <section
-      className="border-t border-border py-24 lg:py-24 2xl:py-36"
+      className="desktop-section border-t border-border py-24 lg:py-24 2xl:py-36"
       aria-labelledby="recognition-heading"
     >
       <Container>

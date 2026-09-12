@@ -2,26 +2,21 @@ import { Container, Eyebrow } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { Slideshow } from "@/components/site/Slideshow";
 import { ConceptTag } from "@/components/site/ConceptTag";
-import o1 from "@/assets/oasis-5408.jpg.asset.json";
-import o2 from "@/assets/oasis-5405.jpg.asset.json";
-import o3 from "@/assets/oasis-5406.jpg.asset.json";
-import o4 from "@/assets/oasis-5407.jpg.asset.json";
-
 const slides = [
   {
-    src: o1.url,
+    src: "/media/oasis-5408.jpg",
     alt: "Shaded communal courtyard with perforated canopy · Designed for the Saudi Climate",
   },
   {
-    src: o2.url,
+    src: "/media/oasis-5405.jpg",
     alt: "Aerial masterplan showing climate-aware zoning, green zones and shaded circulation",
   },
   {
-    src: o3.url,
+    src: "/media/oasis-5406.jpg",
     alt: "Courtyard-facing bedroom with cross-ventilation and private outdoor connection",
   },
   {
-    src: o4.url,
+    src: "/media/oasis-5407.jpg",
     alt: "Six climate-responsive design principles guiding The Living Oasis",
   },
 ];
@@ -29,7 +24,7 @@ const slides = [
 export function LivingOasis() {
   return (
     <section
-      className="border-t border-border bg-muted/50 py-24 lg:py-24 2xl:py-36"
+      className="desktop-section border-t border-border bg-muted/50 py-24 lg:py-24 2xl:py-36"
       aria-labelledby="living-oasis-heading"
     >
       <Container>

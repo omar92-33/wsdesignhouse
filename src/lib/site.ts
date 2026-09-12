@@ -4,12 +4,6 @@
  * Only verified, supplied information is stored here, never invent details.
  */
 
-import kitchenAsset from "@/assets/kitchen.png.asset.json";
-import bedroomAsset from "@/assets/bedroom.png.asset.json";
-import entryAsset from "@/assets/entry.png.asset.json";
-import founderPortraitAsset from "@/assets/founder-portrait.jpg.asset.json";
-
-
 export const site = {
   name: "WS DESIGNHOUSE",
   tagline: "Design Spaces… Creating Dreams",
@@ -169,7 +163,7 @@ export const projects: Project[] = [
     category: "Kitchen Design",
     description:
       "A kitchen conceived as the architectural centre of the home, where stone, joinery and light are resolved as a single composition.",
-    hero: { src: kitchenAsset.url, alt: "The Marble Kitchen, hero photograph", aspect: "landscape" },
+    hero: { src: "/media/kitchen.jpg", alt: "The Marble Kitchen, hero photograph", aspect: "landscape" },
     concept:
       "The kitchen is treated as a room in its own right rather than a service space. The composition is built around a single continuous surface, with storage and equipment resolved quietly into the joinery so the material can speak without interruption.",
     details:
@@ -179,7 +173,7 @@ export const projects: Project[] = [
     craft:
       "Stone and joinery are coordinated so that the two meet precisely, with edges and junctions drawn and made rather than left to site.",
     gallery: [
-      { src: kitchenAsset.url, alt: "The Marble Kitchen, island and stone surface", aspect: "landscape" },
+      { src: "/media/kitchen.jpg", alt: "The Marble Kitchen, island and stone surface", aspect: "landscape" },
       { alt: "The Marble Kitchen, joinery detail", aspect: "portrait" },
       { alt: "The Marble Kitchen, material junction detail", aspect: "portrait" },
       { alt: "The Marble Kitchen, wider view of the space", aspect: "wide" },
@@ -193,7 +187,7 @@ export const projects: Project[] = [
     category: "Bedroom Architecture",
     description:
       "A master suite designed as a low-lit, enveloping retreat, with soft materials set against precise architectural lines.",
-    hero: { src: bedroomAsset.url, alt: "Velvet Master Suite, hero photograph", aspect: "landscape" },
+    hero: { src: "/media/bedroom.jpg", alt: "Velvet Master Suite, hero photograph", aspect: "landscape" },
     concept:
       "The suite is conceived as a single enveloping volume. Rather than a bed placed in a room, the sleeping area, dressing and circulation are drawn together so the space reads as one continuous architectural gesture.",
     details:
@@ -203,7 +197,7 @@ export const projects: Project[] = [
     craft:
       "Upholstery, panelling and metalwork are detailed to meet cleanly, with alignment carried through from the headboard across the wall.",
     gallery: [
-      { src: bedroomAsset.url, alt: "Velvet Master Suite, bed and panelled wall", aspect: "landscape" },
+      { src: "/media/bedroom.jpg", alt: "Velvet Master Suite, bed and panelled wall", aspect: "landscape" },
       { alt: "Velvet Master Suite, upholstery detail", aspect: "portrait" },
       { alt: "Velvet Master Suite, lighting detail", aspect: "portrait" },
       { alt: "Velvet Master Suite, full room view", aspect: "wide" },
@@ -217,7 +211,7 @@ export const projects: Project[] = [
     category: "Living Area",
     description:
       "An arrival sequence and living area planned around height, light and a restrained material palette.",
-    hero: { src: entryAsset.url, alt: "Modern Villa Entry, hero photograph", aspect: "landscape" },
+    hero: { src: "/media/entry.jpg", alt: "Modern Villa Entry, hero photograph", aspect: "landscape" },
     concept:
       "The entry is designed as a threshold: a compression at the door opening into height and light beyond, so arrival is experienced rather than simply passed through.",
     details:
@@ -227,7 +221,7 @@ export const projects: Project[] = [
     craft:
       "Floor, wall and joinery lines are set out from a shared grid so that junctions align across the whole sequence.",
     gallery: [
-      { src: entryAsset.url, alt: "Modern Villa Entry, entrance and stair", aspect: "landscape" },
+      { src: "/media/entry.jpg", alt: "Modern Villa Entry, entrance and stair", aspect: "landscape" },
       { alt: "Modern Villa Entry, architectural detail", aspect: "portrait" },
       { alt: "Modern Villa Entry, living area", aspect: "portrait" },
       { alt: "Modern Villa Entry, wide interior view", aspect: "wide" },
@@ -302,7 +296,7 @@ export const studioSummary = {
 export const founder = {
   name: "Dr. Wessam Abdellatif",
   heading: "About Me",
-  portrait: founderPortraitAsset.url,
+  portrait: "/media/founder-portrait.jpg",
   bio: [
     "I began my professional journey in the late 1990s, working in real estate design, an experience that laid the foundation for my understanding of space, function, and the built environment. In 2000, I pursued an MBA at The American University in Cairo, but soon realized that my true passion lay elsewhere: design.",
     "Following that realization, I transitioned fully into the creative field. My career took me to Canada, where I founded and managed a furniture business while also overseeing operations within a construction company. This hands-on experience gave me a deep, practical understanding of both design execution and project management.",

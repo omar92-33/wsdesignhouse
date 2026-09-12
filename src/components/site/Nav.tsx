@@ -1,5 +1,4 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import wsMark from "@/assets/ws-mark-light.png.asset.json";
 import { useEffect, useRef, useState } from "react";
 import { X, MessageCircle } from "lucide-react";
 import { navItems, site, whatsappUrl } from "@/lib/site";
@@ -61,11 +60,11 @@ export function Nav() {
             : "bg-transparent text-ivory"
         }`}
       >
-        <div className="mx-auto grid max-w-[1180px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 sm:px-8 lg:grid-cols-[1fr_auto_1fr] lg:py-4 2xl:max-w-[1600px] 2xl:py-5">
+        <div className="desktop-container desktop-nav mx-auto grid max-w-[1180px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 sm:px-8 lg:grid-cols-[1fr_auto_1fr] lg:py-4 2xl:max-w-[1600px] 2xl:py-5">
           <Link to="/" className="min-w-0 leading-none" aria-label="WS DESIGNHOUSE, home">
             <span className="flex items-center gap-3 sm:gap-4">
               <img
-                src={wsMark.url}
+                src="/media/ws-mark-light.png"
                 alt=""
                 aria-hidden
                 className="h-9 w-auto shrink-0 sm:h-11"
@@ -101,7 +100,7 @@ export function Nav() {
           <div className="flex items-center justify-end gap-4">
             <Link
               to="/contact"
-              className="label lux-press hidden border border-ivory/40 px-6 py-3 hover:border-champagne hover:bg-champagne hover:text-accent-foreground lg:inline-block"
+              className="label desktop-button lux-press hidden border border-ivory/40 px-6 py-3 hover:border-champagne hover:bg-champagne hover:text-accent-foreground lg:inline-block"
             >
               Book a Consultation
             </Link>
@@ -146,7 +145,7 @@ export function Nav() {
       >
         <div className="flex h-full flex-col overflow-y-auto px-6 py-5">
           <div className="flex items-center justify-between">
-            <span className="flex items-center gap-3"><img src={wsMark.url} alt="" aria-hidden className="h-9 w-auto" /><span className="font-display text-lg tracking-[0.14em]">WS DESIGN HOUSE</span></span>
+            <span className="flex items-center gap-3"><img src="/media/ws-mark-light.png" alt="" aria-hidden className="h-9 w-auto" /><span className="font-display text-lg tracking-[0.14em]">WS DESIGN HOUSE</span></span>
             <button
               type="button"
               onClick={closeMenu}
