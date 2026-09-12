@@ -29,11 +29,7 @@ export function LivingOasis() {
     >
       <Container>
         <div className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-16 2xl:gap-24">
-          <Reveal className="lg:mx-auto lg:w-full lg:max-w-[620px]">
-            <Slideshow slides={slides} />
-          </Reveal>
-
-          <div className="lg:order-first">
+          <div>
             <Reveal>
               <ConceptTag>Design Research · Concept Entry, Not a Client Project</ConceptTag>
               <Eyebrow className="mt-6">Competition Entry</Eyebrow>
@@ -58,6 +54,10 @@ export function LivingOasis() {
               </div>
             </Reveal>
           </div>
+
+          <Reveal className="lg:mx-auto lg:w-full lg:max-w-[620px]">
+            <Slideshow slides={slides} />
+          </Reveal>
         </div>
       </Container>
     </section>
