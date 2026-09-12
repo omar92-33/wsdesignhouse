@@ -152,7 +152,7 @@ function SelectedProjects() {
 
         </Reveal>
 
-        <div className="mx-auto mt-12 max-w-5xl space-y-16 sm:mt-14 sm:space-y-20 lg:space-y-20 2xl:mt-16 2xl:space-y-28">
+        <div className="desktop-project-list mx-auto mt-12 max-w-5xl space-y-16 sm:mt-14 sm:space-y-20 lg:space-y-20 2xl:mt-16 2xl:space-y-28">
           {projects.map((p, i) => (
             <Reveal as="article" key={p.slug} delay={i * 60}>
               <Link to="/portfolio/$slug" params={{ slug: p.slug }} className="group block">
