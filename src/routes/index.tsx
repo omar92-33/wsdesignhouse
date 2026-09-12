@@ -228,28 +228,43 @@ function WhyStudio() {
 
 function Process() {
   return (
-    <section className="desktop-section py-20 lg:py-24 2xl:py-36" aria-labelledby="process-heading">
+    <section
+      className="desktop-section border-y border-border bg-muted py-20 lg:py-24 2xl:py-36"
+      aria-labelledby="process-heading"
+    >
       <Container>
-        <Reveal>
-          <Eyebrow>Process</Eyebrow>
-          <h2 id="process-heading" className="display mt-7 max-w-[22ch] text-[clamp(2.1rem,5.5vw,4.25rem)]">
-            From First Conversation to Final Detail.
-          </h2>
-        </Reveal>
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] lg:gap-16 2xl:gap-24">
+          <Reveal>
+            <div className="lg:sticky lg:top-28">
+              <Eyebrow>Process</Eyebrow>
+              <h2
+                id="process-heading"
+                className="display mt-7 max-w-[15ch] text-[clamp(2.4rem,6vw,4.75rem)]"
+              >
+                From First Conversation to Final Detail.
+              </h2>
+              <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
+                A considered path from understanding how you live to delivering every final detail.
+              </p>
+            </div>
+          </Reveal>
 
-        <ol className="mt-12 grid gap-10 sm:grid-cols-2 sm:gap-12 lg:grid-cols-4 lg:gap-8 2xl:mt-16 2xl:gap-10">
-          {method.map((m, i) => (
-            <Reveal as="li" key={m.number} delay={i * 80}>
-              <div className="border-t border-ink pt-7">
-                <span className="label text-muted-foreground">{m.number}</span>
-                <h3 className="mt-4 font-display text-2xl uppercase tracking-[0.08em] sm:text-3xl">
-                  {m.title}
-                </h3>
-                <p className="mt-4 text-base leading-relaxed text-muted-foreground">{m.body}</p>
-              </div>
-            </Reveal>
-          ))}
-        </ol>
+          <ol className="border-t border-ink">
+            {method.map((m, i) => (
+              <Reveal as="li" key={m.number} delay={i * 60}>
+                <div className="grid grid-cols-[3.25rem_minmax(0,1fr)] gap-x-4 gap-y-3 border-b border-border py-7 sm:grid-cols-[4rem_minmax(0,0.65fr)_minmax(0,1fr)] sm:items-start sm:gap-6 lg:py-8">
+                  <span className="font-display text-3xl leading-none text-champagne" aria-hidden>
+                    {m.number}
+                  </span>
+                  <h3 className="font-display text-3xl leading-none sm:text-4xl">{m.title}</h3>
+                  <p className="col-start-2 max-w-xl text-base leading-relaxed text-muted-foreground sm:col-start-auto">
+                    {m.body}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </ol>
+        </div>
       </Container>
     </section>
   );
@@ -334,57 +349,79 @@ function Services() {
 
 function Proof() {
   return (
-    <section className="desktop-section border-y border-border py-20 lg:py-24 2xl:py-32" aria-labelledby="proof-heading">
+    <section
+      className="desktop-section bg-ink py-20 text-ivory lg:py-24 2xl:py-32"
+      aria-labelledby="proof-heading"
+    >
       <Container>
-        <Reveal>
-          <Eyebrow>Recognition & Credentials</Eyebrow>
-          <h2 id="proof-heading" className="display mt-7 text-[clamp(2rem,5vw,3.75rem)]">
-            Verified Experience.
-          </h2>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-            Awarded placements, degrees and diplomas, documented credentials, separate from
-            the concept and competition work shown further below.
-          </p>
-        </Reveal>
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16 2xl:gap-24">
+          <Reveal>
+            <Eyebrow>Recognition &amp; Credentials</Eyebrow>
+            <h2
+              id="proof-heading"
+              className="display mt-7 max-w-[10ch] text-[clamp(2.6rem,6vw,5rem)]"
+            >
+              Verified Experience.
+            </h2>
+            <p className="mt-6 max-w-md text-base leading-relaxed opacity-70">
+              Awarded placements, degrees and diplomas, documented credentials, separate from
+              the concept and competition work shown further below.
+            </p>
+            <Link
+              to="/about"
+              className="label desktop-button lux-press mt-9 inline-flex min-h-12 items-center justify-center border border-champagne bg-champagne px-7 py-3 text-accent-foreground"
+            >
+              View Certificates <span className="ml-3" aria-hidden>→</span>
+            </Link>
+          </Reveal>
 
-        <div className="mt-12 grid gap-10 sm:gap-12 md:grid-cols-3 2xl:mt-14">
-          {[
-            {
-              title: "Third Prize · LX Club and Offices Competition",
-              meta: "Arcbazar · 2026",
-            },
-            {
-              title: "Professional Doctorate in Interior Design, Honours Class II",
-              meta: "Leeds International College, United Kingdom",
-            },
-            {
-              title: "Diploma with Distinction in Interior Decorating",
-              meta: "Eastern College, Halifax, Canada",
-            },
-          ].map((item, i) => (
-            <Reveal key={item.title} delay={i * 70}>
-              <div className="border-t border-ink pt-6">
-                <p className="font-display text-2xl leading-snug">{item.title}</p>
-                <p className="label mt-4 text-muted-foreground">{item.meta}</p>
-              </div>
-            </Reveal>
-          ))}
+          <div className="border-t border-ivory/25">
+            {[
+              {
+                title: "Third Prize · LX Club and Offices Competition",
+                institution: "Arcbazar",
+                detail: "2026",
+              },
+              {
+                title: "Professional Doctorate in Interior Design, Honours Class II",
+                institution: "Leeds International College",
+                detail: "United Kingdom",
+              },
+              {
+                title: "Diploma with Distinction in Interior Decorating",
+                institution: "Eastern College",
+                detail: "Halifax, Canada",
+              },
+            ].map((item, i) => (
+              <Reveal key={item.title} delay={i * 60}>
+                <article className="grid grid-cols-[2.75rem_minmax(0,1fr)] gap-x-4 gap-y-4 border-b border-ivory/20 py-7 sm:grid-cols-[3.5rem_minmax(0,1fr)_auto] sm:items-center sm:gap-6 lg:py-8">
+                  <span className="font-display text-2xl text-champagne" aria-hidden>
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div className="min-w-0">
+                    <h3 className="font-display text-2xl leading-snug sm:text-3xl">{item.title}</h3>
+                    <p className="mt-2 text-sm uppercase text-champagne sm:hidden">
+                      {item.institution} · {item.detail}
+                    </p>
+                  </div>
+                  <div className="col-start-2 hidden min-w-[10rem] text-right sm:block">
+                    <p className="text-sm font-medium uppercase text-champagne">{item.institution}</p>
+                    <p className="mt-1 text-sm opacity-60">{item.detail}</p>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
         </div>
 
-        <Reveal>
-          <Link to="/about" className="label link-underline mt-12 inline-block">
-            View Certificates →
-          </Link>
-        </Reveal>
-
         {testimonials.length > 0 && (
-          <ul className="mt-16 grid gap-12 md:grid-cols-2">
+          <ul className="mt-16 grid gap-12 border-t border-ivory/20 pt-12 md:grid-cols-2">
             {testimonials.map((t) => (
               <li key={t.author}>
                 <blockquote className="font-display text-2xl italic leading-snug">
                   “{t.quote}”
                 </blockquote>
-                <p className="label mt-5 text-muted-foreground">{t.author}</p>
+                <p className="label mt-5 text-champagne">{t.author}</p>
               </li>
             ))}
           </ul>
