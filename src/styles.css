@@ -331,6 +331,10 @@
     font-size: clamp(3.1rem, 5.5vw, 5.4rem);
   }
 
+  .desktop-type-boost .desktop-hero-heading {
+    font-size: clamp(3.5rem, 4.5vw, 5.3rem) !important;
+  }
+
   .desktop-type-boost main h2 {
     font-size: clamp(2.6rem, 3.65vw, 4rem);
   }
