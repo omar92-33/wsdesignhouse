@@ -116,6 +116,16 @@ export function Footer() {
             <p>Tax ID Number: {site.taxId}</p>
             <p>{site.established}</p>
           </div>
+          <div className="mt-4 text-center">
+            <a
+              href="https://www.instagram.com/mox_web_designs?stkn=MW16Y3o3NTMxa3B2eg%3D%3D&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[11px] uppercase tracking-[0.14em] opacity-35 transition-opacity duration-200 hover:opacity-70"
+            >
+              powered by mox web designs
+            </a>
+          </div>
         </Reveal>
       </div>
     </footer>
