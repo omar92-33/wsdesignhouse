@@ -6,7 +6,7 @@ Build a completely new, premium, world-class website for WS DESIGNHOUSE, a luxur
 
 This is NOT a simple redesign or clone.
 
-Create a 10/10 international luxury architecture and interior design experience focused on:
+architecture and interior design experience focused on:
 
 Luxury • Architecture • Interior Design • Craftsmanship • Visualization • Planning • Engineering • FF&E • Trust • Conversion
 
