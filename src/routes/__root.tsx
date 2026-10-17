@@ -1,3 +1,4 @@
+import { MotionExperience } from "@/components/site/MotionExperience";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -161,6 +162,7 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
+      <MotionExperience>
       <SmoothScroll />
       <div className="desktop-type-boost">
         <Nav />
@@ -170,6 +172,7 @@ function RootComponent() {
         </main>
         <Footer />
       </div>
+    </MotionExperience>
     </QueryClientProvider>
   );
 }

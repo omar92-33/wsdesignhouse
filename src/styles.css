@@ -543,7 +543,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .fixed[href*="wa.me"] {
+  html:not([data-motion="full"]) .fixed[href*="wa.me"] {
     animation: none !important;
   }
 }
@@ -555,10 +555,21 @@
   html {
     scroll-behavior: auto;
   }
-  *,
-  *::before,
-  *::after {
+  html:not([data-motion="full"]) *,
+  html:not([data-motion="full"]) *::before,
+  html:not([data-motion="full"]) *::after {
     animation-duration: 0.001ms !important;
     transition-duration: 0.001ms !important;
   }
 }
+
+html[data-motion="full"] .ws-hero-image { animation: ws-hero-drift 24s ease-in-out infinite alternate; }
+@keyframes ws-hero-drift { from { transform: scale(1.02); } to { transform: scale(1.12) translateY(-1%); } }
+html[data-motion="full"] .reveal-shown { transition-duration: .85s, 1.1s, .7s; }
+html[data-motion="full"] .desktop-button { transition: transform .35s ease, background-color .35s ease, color .35s ease; }
+html[data-motion="full"] .desktop-button:hover { transform: translateY(-4px); }
+html[data-motion="full"] .pf-project-title svg, html[data-motion="full"] .pf-detail-link svg { transition: transform .3s ease; }
+html[data-motion="full"] .pf-project-title:hover svg, html[data-motion="full"] .pf-detail-link:hover svg { transform: translate(4px,-3px); }
+html[data-motion="full"] .pf-project .pf-photo > svg { transition: transform 1.2s cubic-bezier(.22,1,.36,1); }
+html[data-motion="full"] .pf-project:hover .pf-photo > svg { transform: scale(1.035); }
+html[data-motion="reduced"] *, html[data-motion="reduced"] *::before, html[data-motion="reduced"] *::after { animation: none !important; transition-duration: .001ms !important; }

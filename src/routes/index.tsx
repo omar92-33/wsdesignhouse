@@ -1,12 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Container, Eyebrow } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
-import { Frame } from "@/components/site/Frame";
+import { FeaturedPilates } from "@/components/site/FeaturedPilates";
 import { VirtualTour } from "@/components/site/VirtualTour";
 import { FinalCta } from "@/components/site/FinalCta";
 import { StudioMap } from "@/components/site/StudioMap";
-import { Recognition } from "@/components/site/Recognition";
-import { LivingOasis } from "@/components/site/LivingOasis";
+
 import { StudioFilm } from "@/components/site/StudioFilm";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import {
@@ -52,14 +51,14 @@ function Home() {
   return (
     <>
       <Hero />
-      <SelectedProjects />
+      <FeaturedPilates />
       <Services />
       <WhyStudio />
       <StudioFilm />
       <Studio />
       <Proof />
       <Process />
-      <BeyondTheFinishedSpace />
+
       <VirtualTour />
       <StudioMap />
       <FinalCta />
@@ -79,7 +78,7 @@ function Hero() {
         aria-hidden
         fetchPriority="high"
         decoding="async"
-        className="absolute inset-0 h-full w-full object-cover opacity-60"
+        className="ws-hero-image absolute inset-0 h-full w-full object-cover opacity-60"
       />
       <div
         aria-hidden
@@ -89,8 +88,6 @@ function Hero() {
             "linear-gradient(180deg, rgba(45,33,25,0.78) 0%, rgba(45,33,25,0.62) 45%, rgba(45,33,25,0.95) 100%)",
         }}
       />
-
-
 
       <Container className="laptop-hero-density desktop-hero-content relative pb-14 pt-32 2xl:pb-24 2xl:pt-40">
         <Reveal>
@@ -128,7 +125,9 @@ function Hero() {
         </Reveal>
 
         <Reveal delay={420}>
-          <p className="label mt-6 opacity-45 2xl:mt-14">New Cairo · Egypt · International Projects</p>
+          <p className="label mt-6 opacity-45 2xl:mt-14">
+            New Cairo · Egypt · International Projects
+          </p>
         </Reveal>
       </Container>
     </section>
@@ -137,71 +136,21 @@ function Hero() {
 
 /* -------------------------------------------------- 02, selected projects */
 
-function SelectedProjects() {
-  return (
-    <section className="desktop-section pb-12 pt-20 lg:pb-14 lg:pt-24 2xl:pb-20 2xl:pt-36" aria-labelledby="projects-heading">
-      <Container>
-        <Reveal>
-          <Eyebrow>Selected Projects</Eyebrow>
-          <h2 id="projects-heading" className="display mt-7 text-[clamp(2.1rem,5.5vw,4.25rem)]">
-            The Work.
-          </h2>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-            A selection of spaces shaped through architecture, material, light, and detail.
-          </p>
-
-        </Reveal>
-
-        <div className="desktop-project-list mx-auto mt-12 max-w-5xl space-y-16 sm:mt-14 sm:space-y-20 lg:space-y-20 2xl:mt-16 2xl:space-y-28">
-          {projects.map((p, i) => (
-            <Reveal as="article" key={p.slug} delay={i * 60}>
-              <Link to="/portfolio/$slug" params={{ slug: p.slug }} className="group block">
-                <Frame image={p.hero} aspect="wide" caption={`${p.title}, photograph`} />
-                <div className="mt-7 grid gap-5 md:grid-cols-[1.1fr_1fr] md:items-end md:gap-16">
-                  <div>
-                    {p.propertyType && (
-                      <p className="label text-muted-foreground">{p.propertyType}</p>
-                    )}
-                    <h3 className="display mt-3 text-[clamp(1.7rem,4.5vw,3.1rem)]">{p.title}</h3>
-                    {(p.projectLocation || p.scope) && (
-                      <p className="mt-3 text-base text-muted-foreground">
-                        {[p.projectLocation, p.scope].filter(Boolean).join(" · ")}
-                      </p>
-                    )}
-                  </div>
-                  <div>
-                    <p className="max-w-md text-base leading-relaxed text-muted-foreground">
-                      {p.description}
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            </Reveal>
-          ))}
-        </div>
-
-        <Reveal className="mt-10 flex justify-center">
-          <Link
-            to={secondaryCta.to}
-            className="label desktop-button inline-flex items-center justify-center border border-ink px-9 py-4 transition-colors duration-200 hover:bg-ink hover:text-ivory"
-          >
-            {secondaryCta.label} →
-          </Link>
-        </Reveal>
-      </Container>
-    </section>
-  );
-}
-
 /* ------------------------------------------------------------- 03, why us */
 
 function WhyStudio() {
   return (
-    <section className="desktop-section bg-ink py-20 text-ivory lg:py-24 2xl:py-36" aria-labelledby="why-heading">
+    <section
+      className="desktop-section bg-ink py-20 text-ivory lg:py-24 2xl:py-36"
+      aria-labelledby="why-heading"
+    >
       <Container>
         <Reveal>
           <Eyebrow>Why WS DESIGNHOUSE</Eyebrow>
-          <h2 id="why-heading" className="display mt-7 max-w-full whitespace-nowrap text-[clamp(0.95rem,4.2vw,4.25rem)]">
+          <h2
+            id="why-heading"
+            className="display mt-7 max-w-full whitespace-nowrap text-[clamp(0.95rem,4.2vw,4.25rem)]"
+          >
             Designed with Vision. Delivered with Precision.
           </h2>
         </Reveal>
@@ -274,7 +223,10 @@ function Process() {
 
 function Studio() {
   return (
-    <section className="desktop-section border-y border-border bg-muted py-20 lg:py-24 2xl:py-36" aria-labelledby="studio-heading">
+    <section
+      className="desktop-section border-y border-border bg-muted py-20 lg:py-24 2xl:py-36"
+      aria-labelledby="studio-heading"
+    >
       <Container>
         <div className="grid gap-14 lg:grid-cols-[1fr_1fr] lg:gap-16 2xl:gap-24">
           <Reveal>
@@ -309,7 +261,10 @@ function Studio() {
 
 function Services() {
   return (
-    <section className="desktop-section pb-20 pt-12 lg:pb-24 lg:pt-14 2xl:pb-36 2xl:pt-20" aria-labelledby="services-heading">
+    <section
+      className="desktop-section pb-20 pt-12 lg:pb-24 lg:pt-14 2xl:pb-36 2xl:pt-20"
+      aria-labelledby="services-heading"
+    >
       <Container>
         <Reveal>
           <Eyebrow>Services</Eyebrow>
@@ -364,14 +319,16 @@ function Proof() {
               Verified Experience.
             </h2>
             <p className="mt-6 max-w-md text-base leading-relaxed opacity-70">
-              Awarded placements, degrees and diplomas, documented credentials, separate from
-              the concept and competition work shown further below.
+              Awarded placements, degrees and diplomas documenting our professional experience.
             </p>
             <Link
               to="/about"
               className="label desktop-button lux-press mt-9 inline-flex min-h-12 items-center justify-center border border-champagne bg-champagne px-7 py-3 text-accent-foreground"
             >
-              View Certificates <span className="ml-3" aria-hidden>→</span>
+              View Certificates{" "}
+              <span className="ml-3" aria-hidden>
+                →
+              </span>
             </Link>
           </Reveal>
 
@@ -405,7 +362,9 @@ function Proof() {
                     </p>
                   </div>
                   <div className="col-start-2 hidden min-w-[10rem] text-right sm:block">
-                    <p className="text-sm font-medium uppercase text-champagne">{item.institution}</p>
+                    <p className="text-sm font-medium uppercase text-champagne">
+                      {item.institution}
+                    </p>
                     <p className="mt-1 text-sm opacity-60">{item.detail}</p>
                   </div>
                 </article>
@@ -427,31 +386,6 @@ function Proof() {
           </ul>
         )}
       </Container>
-    </section>
-  );
-}
-
-/* ----------------------------------------------- 08, concepts / recognition */
-
-function BeyondTheFinishedSpace() {
-  return (
-    <section aria-labelledby="beyond-heading">
-      <Container className="pt-20 lg:pt-24 2xl:pt-36">
-        <Reveal>
-          <Eyebrow>Concepts · Recognition · Studio Work</Eyebrow>
-          <h2 id="beyond-heading" className="display mt-7 text-[clamp(2rem,5vw,3.75rem)]">
-            Beyond the Finished Space.
-          </h2>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-            Competition entries, design research and studio work. Everything in this section is
-            concept work, not completed client projects, and any feedback shown belongs to the
-            competition submissions themselves.
-          </p>
-        </Reveal>
-      </Container>
-
-      <Recognition />
-      <LivingOasis />
     </section>
   );
 }
