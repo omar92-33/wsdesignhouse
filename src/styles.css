@@ -4,6 +4,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+#lovable-badge {
+  display: none !important;
+}
+
 /*
  * WS DESIGNHOUSE, luxury editorial design system.
  * Serif display: Cormorant Garamond. Sans body: Jost.
