@@ -15,6 +15,7 @@ export function Slideshow({
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const [drag, setDrag] = useState(0);
+  const [dragging, setDragging] = useState(false);
   const trackRef = useRef<HTMLDivElement>(null);
   const pointer = useRef<{ x: number; y: number; active: boolean } | null>(null);
   const total = slides.length;
@@ -50,6 +51,7 @@ export function Slideshow({
   const onPointerDown = (e: React.PointerEvent) => {
     if (e.pointerType === "mouse" && e.button !== 0) return;
     pointer.current = { x: e.clientX, y: e.clientY, active: true };
+    setDragging(true);
     setPaused(true);
   };
 
@@ -61,6 +63,7 @@ export function Slideshow({
     if (Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 12) {
       pointer.current = null;
       setDrag(0);
+      setDragging(false);
       return;
     }
     setDrag(dx);
@@ -76,6 +79,7 @@ export function Slideshow({
       else if (drag >= threshold) go(-1);
     }
     setDrag(0);
+    setDragging(false);
     setPaused(false);
   };
 
@@ -106,15 +110,26 @@ export function Slideshow({
         onPointerLeave={endDrag}
       >
         <div
-          className={`flex ${drag ? "" : "transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"}`}
-          style={{ transform: `translate3d(${-index * 100 + offsetPct}%,0,0)` }}
+          className={`flex will-change-transform ${dragging ? "" : "transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"}`}
+          style={{
+            transform: `translate3d(${-index * 100 + offsetPct}%,0,0)`,
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+          }}
         >
           {slides.map((s, i) => (
-            <figure key={s.src} className="desktop-slide w-full shrink-0" aria-hidden={i !== index}>
+            <figure
+              key={s.src}
+              className="desktop-slide w-full shrink-0"
+              style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }} aria-hidden={i !== index}>
               <img
                 src={s.src}
                 alt={s.alt}
-                loading={i === 0 ? "eager" : "lazy"}
+                loading={
+                  Math.min(Math.abs(i - index), total - Math.abs(i - index)) <= 1
+                    ? "eager"
+                    : "lazy"
+                }
                 decoding="async"
                 draggable={false}
                 className="desktop-slide-image block h-auto w-full"
