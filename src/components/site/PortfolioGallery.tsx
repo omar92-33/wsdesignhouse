@@ -59,6 +59,14 @@ export function Gallery({
   const photos = projectImages(project);
   const [ref, api] = useEmblaCarousel({ loop: false });
   const [index, setIndex] = useState(0);
+  const [reach, setReach] = useState(2);
+  useEffect(() => {
+    setReach((r) => Math.max(r, index + 2));
+    // Warm the browser cache for upcoming photos so slides appear instantly.
+    photos.slice(index + 1, index + 4).forEach((p) => {
+      if (p.kind !== "video" && !p.youtubeUrl) new Image().src = p.src;
+    });
+  }, [index]);
   useEffect(() => {
     if (!api) return;
     const update = () => setIndex(api.selectedScrollSnap());
