@@ -269,16 +269,25 @@
   display: flex;
   touch-action: pan-y pinch-zoom;
   will-change: transform;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
-/* Each slide on its own GPU layer so mobile browsers don't repaint the SVG photos mid-swipe (flicker). */
 .pf-slide {
   flex: 0 0 100%;
   min-width: 0;
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+}
+/* Mobile gallery photo: <img> crop instead of SVG (see MobilePhoto). */
+.pf-photo-mobile {
+  container-type: size;
+}
+.pf-photo-crop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+}
+.pf-photo-crop img {
+  position: absolute;
+  max-width: none;
 }
 .pf-photo {
   position: relative;

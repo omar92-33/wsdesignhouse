@@ -45,6 +45,49 @@ export function Photo({ photo, expanded }: { photo: GalleryImage; expanded: bool
     </div>
   );
 }
+// Touch phones: SVG <image> slides repaint stale frames while Embla moves them (photos flash
+// back and forth), so on coarse pointers the same crop is drawn with a plain <img> instead.
+function useTouchDevice() {
+  const [touch, setTouch] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(pointer: coarse)");
+    const update = () => setTouch(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+  return touch;
+}
+function MobilePhoto({ photo, expanded }: { photo: GalleryImage; expanded: boolean }) {
+  const [x, y, r, b] = photo.crop;
+  const w = r - x;
+  const h = b - y;
+  const fit = photo.contain || expanded ? "min" : "max";
+  return (
+    <div className="pf-photo pf-photo-mobile">
+      <div
+        className="pf-photo-crop"
+        style={{
+          aspectRatio: `${w} / ${h}`,
+          width: `${fit}(100cqw, calc(100cqh * ${w / h}))`,
+        }}
+      >
+        <img
+          src={photo.src}
+          alt={photo.label}
+          draggable={false}
+          decoding="async"
+          style={{
+            left: `${(-x / w) * 100}%`,
+            top: `${(-y / h) * 100}%`,
+            width: `${(photo.width / w) * 100}%`,
+            height: `${(photo.height / h) * 100}%`,
+          }}
+        />
+      </div>
+    </div>
+  );
+}
 export function Gallery({
   project,
   expanded = false,
@@ -57,6 +100,8 @@ export function Gallery({
   enabled?: boolean;
 }) {
   const photos = projectImages(project);
+  const touch = useTouchDevice();
+  const SlidePhoto = touch ? MobilePhoto : Photo;
   const [ref, api] = useEmblaCarousel({ loop: false });
   const [index, setIndex] = useState(0);
   const [reach, setReach] = useState(3);
@@ -113,7 +158,7 @@ export function Gallery({
                   />
                 </div>
               ) : i <= reach ? (
-                <Photo photo={photo} expanded={expanded} />
+                <SlidePhoto photo={photo} expanded={expanded} />
               ) : (
                 <div className="pf-photo" />
               )}
