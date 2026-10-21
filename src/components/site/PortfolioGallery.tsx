@@ -5,7 +5,7 @@ import { ProjectFilm } from "./ProjectFilm";
 import type { PortfolioProject as Sample, GalleryImage } from "@/lib/egypt-projects";
 export function projectImages(project: Sample): GalleryImage[] {
   if (project.gallery) return project.gallery;
-  const src = "/media/portfolio-preview/" + project.image + ".jpg";
+  const src = "/media/portfolio-preview/" + project.image + ".webp";
   return [
     { src, label: "The space", width: 1024, height: 1280, crop: project.crop! },
     {

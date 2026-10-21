@@ -72,7 +72,7 @@ export function Nav() {
           >
             <span className="flex items-center gap-3 sm:gap-4">
               <img
-                src="/media/ws-mark-light.png"
+                src="/media/ws-mark-light.webp"
                 alt=""
                 aria-hidden
                 className="h-9 w-auto shrink-0 sm:h-11"
@@ -153,7 +153,7 @@ export function Nav() {
       >
         <div className="flex h-full flex-col overflow-y-auto px-6 py-5">
           <div className="flex items-center justify-between">
-            <span className="flex items-center gap-3"><img src="/media/ws-mark-light.png" alt="" aria-hidden className="h-9 w-auto" /><span className="font-display text-lg tracking-[0.14em]">WS DESIGN HOUSE</span></span>
+            <span className="flex items-center gap-3"><img src="/media/ws-mark-light.webp" alt="" aria-hidden className="h-9 w-auto" /><span className="font-display text-lg tracking-[0.14em]">WS DESIGN HOUSE</span></span>
             <button
               type="button"
               onClick={closeMenu}

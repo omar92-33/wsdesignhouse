@@ -3,10 +3,10 @@ import { Reveal } from "@/components/site/Reveal";
 import { Slideshow } from "@/components/site/Slideshow";
 import { ConceptTag } from "@/components/site/ConceptTag";
 const slides = [
-  { src: "/media/milan-5400.jpg", alt: "Project feedback · Milan Design Loft, Living Studio proposal overview" },
-  { src: "/media/milan-5401.jpg", alt: "Jury feedback quote on the Living Studio loft proposal" },
-  { src: "/media/milan-5402.jpg", alt: "Key strengths of the Living Studio proposal: spatial organization, storage, materiality, visual presentation" },
-  { src: "/media/milan-5403.jpg", alt: "Closing evidence board for the Milan Design Loft, Living Studio proposal" },
+  { src: "/media/milan-5400.webp", alt: "Project feedback · Milan Design Loft, Living Studio proposal overview" },
+  { src: "/media/milan-5401.webp", alt: "Jury feedback quote on the Living Studio loft proposal" },
+  { src: "/media/milan-5402.webp", alt: "Key strengths of the Living Studio proposal: spatial organization, storage, materiality, visual presentation" },
+  { src: "/media/milan-5403.webp", alt: "Closing evidence board for the Milan Design Loft, Living Studio proposal" },
 ];
 
 export function Recognition() {

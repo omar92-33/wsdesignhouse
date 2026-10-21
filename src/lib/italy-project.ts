@@ -11,14 +11,14 @@ export const italyProject: PortfolioProject = {
     {
       kind: "video",
       src: "/media/italy/milan-interior-web.mp4",
-      poster: "/media/italy/milan-interior-poster.jpg",
+      poster: "/media/italy/milan-interior-poster.webp",
       label: "Milan interior film",
       width: 720,
       height: 898,
       crop: [0, 0, 720, 898],
     },
     {
-      src: "/media/portfolio-preview/italy.jpg",
+      src: "/media/portfolio-preview/italy.webp",
       label: "Kitchen and double-height living space",
       width: 1024,
       height: 1280,

@@ -12,7 +12,7 @@ export const norwayProject: PortfolioProject = {
     "Coastal house and outdoor living",
     "Illuminated dock — evening overview",
   ].map((label, index) => ({
-    src: `/media/norway/render-${String(index + 1).padStart(2, "0")}.jpg`,
+    src: `/media/norway/render-${String(index + 1).padStart(2, "0")}.webp`,
     label,
     width: 443,
     height: 306,

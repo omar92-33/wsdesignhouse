@@ -4,19 +4,19 @@ import { Slideshow } from "@/components/site/Slideshow";
 import { ConceptTag } from "@/components/site/ConceptTag";
 const slides = [
   {
-    src: "/media/oasis-5408.jpg",
+    src: "/media/oasis-5408.webp",
     alt: "Shaded communal courtyard with perforated canopy · Designed for the Saudi Climate",
   },
   {
-    src: "/media/oasis-5405.jpg",
+    src: "/media/oasis-5405.webp",
     alt: "Aerial masterplan showing climate-aware zoning, green zones and shaded circulation",
   },
   {
-    src: "/media/oasis-5406.jpg",
+    src: "/media/oasis-5406.webp",
     alt: "Courtyard-facing bedroom with cross-ventilation and private outdoor connection",
   },
   {
-    src: "/media/oasis-5407.jpg",
+    src: "/media/oasis-5407.webp",
     alt: "Six climate-responsive design principles guiding The Living Oasis",
   },
 ];

@@ -73,7 +73,7 @@ function Hero() {
   return (
     <section className="relative flex min-h-[100svh] items-end overflow-hidden bg-ink text-ivory">
       <img
-        src="/media/entry.jpg"
+        src="/media/entry.webp"
         alt=""
         aria-hidden
         fetchPriority="high"

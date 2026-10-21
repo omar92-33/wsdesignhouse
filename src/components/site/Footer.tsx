@@ -10,7 +10,7 @@ export function Footer() {
       <div className="desktop-container mx-auto max-w-[1180px] px-5 sm:px-8 2xl:max-w-[1600px]">
         <div className="grid gap-14 border-b border-ivory/12 pb-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div className="max-w-sm">
-            <img src="/media/ws-logo-light.png" alt="WS DESIGN HOUSE" width={745} height={541} className="h-24 w-auto sm:h-28" />
+            <img src="/media/ws-logo-light.webp" alt="WS DESIGN HOUSE" width={745} height={541} className="h-24 w-auto sm:h-28" />
             <Reveal>
               <p className="mt-4 font-display text-xl italic opacity-80">
                 Interior architecture, considered in every detail.

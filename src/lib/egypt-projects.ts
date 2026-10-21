@@ -26,7 +26,7 @@ const shot = (
   crop: GalleryImage["crop"] = [0, 275, 739, 1198],
   contain = true,
 ): GalleryImage => ({
-  src: `/media/egypt/${String(id).padStart(2, "0")}.jpg`,
+  src: `/media/egypt/${String(id).padStart(2, "0")}.webp`,
   label,
   width: 739,
   height: 1600,

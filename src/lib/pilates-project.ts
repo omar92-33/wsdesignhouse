@@ -5,7 +5,7 @@ const photo = (
   crop: GalleryImage["crop"],
   contain = false,
 ): GalleryImage => ({
-  src: `/media/pilates/0${id}.jpg`,
+  src: `/media/pilates/0${id}.webp`,
   label,
   width: 591,
   height: 1280,
