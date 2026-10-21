@@ -59,9 +59,9 @@ export function Gallery({
   const photos = projectImages(project);
   const [ref, api] = useEmblaCarousel({ loop: false });
   const [index, setIndex] = useState(0);
-  const [reach, setReach] = useState(2);
+  const [reach, setReach] = useState(3);
   useEffect(() => {
-    setReach((r) => Math.max(r, index + 2));
+    setReach((r) => Math.max(r, index + 3));
     // Warm the browser cache for upcoming photos so slides appear instantly.
     photos.slice(index + 1, index + 4).forEach((p) => {
       if (p.kind !== "video" && !p.youtubeUrl) new Image().src = p.src;

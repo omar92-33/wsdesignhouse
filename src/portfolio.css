@@ -268,10 +268,17 @@
 .pf-track {
   display: flex;
   touch-action: pan-y pinch-zoom;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
+/* Each slide on its own GPU layer so mobile browsers don't repaint the SVG photos mid-swipe (flicker). */
 .pf-slide {
   flex: 0 0 100%;
   min-width: 0;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .pf-photo {
   position: relative;
