@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import useEmblaCarousel from "embla-carousel-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, Expand, Play } from "lucide-react";
 import { ProjectFilm } from "./ProjectFilm";
 import type { PortfolioProject as Sample, GalleryImage } from "@/lib/egypt-projects";
@@ -45,20 +44,17 @@ export function Photo({ photo, expanded }: { photo: GalleryImage; expanded: bool
     </div>
   );
 }
-// Touch phones: SVG <image> slides repaint stale frames while Embla moves them (photos flash
-// back and forth), so on coarse pointers the same crop is drawn with a plain <img> instead.
-function useTouchDevice() {
-  const [touch, setTouch] = useState(false);
-  useEffect(() => {
-    const mq = window.matchMedia("(pointer: coarse)");
-    const update = () => setTouch(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, []);
-  return touch;
-}
-function MobilePhoto({ photo, expanded }: { photo: GalleryImage; expanded: boolean }) {
+// Slide photo: the crop is drawn with a plain <img> (no SVG) so the browser can composite it
+// while the strip scrolls; SVG <image> repaints mid-swipe and flickered on phones.
+function SlidePhoto({
+  photo,
+  expanded,
+  eager,
+}: {
+  photo: GalleryImage;
+  expanded: boolean;
+  eager: boolean;
+}) {
   const [x, y, r, b] = photo.crop;
   const w = r - x;
   const h = b - y;
@@ -76,6 +72,7 @@ function MobilePhoto({ photo, expanded }: { photo: GalleryImage; expanded: boole
           src={photo.src}
           alt={photo.label}
           draggable={false}
+          loading={eager ? "eager" : "lazy"}
           decoding="async"
           style={{
             left: `${(-x / w) * 100}%`,
@@ -88,6 +85,8 @@ function MobilePhoto({ photo, expanded }: { photo: GalleryImage; expanded: boole
     </div>
   );
 }
+// Gallery: custom slideshow built on native CSS scroll-snap. The browser itself moves the
+// strip (no JS transforms, no DOM swaps mid-swipe), which is what keeps it flicker-free.
 export function Gallery({
   project,
   expanded = false,
@@ -100,27 +99,40 @@ export function Gallery({
   enabled?: boolean;
 }) {
   const photos = projectImages(project);
-  const touch = useTouchDevice();
-  const SlidePhoto = touch ? MobilePhoto : Photo;
-  const [ref, api] = useEmblaCarousel({ loop: false });
+  const viewport = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
-  const [reach, setReach] = useState(3);
+  const last = photos.length - 1;
+
+  // Track the visible slide from the scroll position.
   useEffect(() => {
-    setReach((r) => Math.max(r, index + 3));
-    // Warm the browser cache for upcoming photos so slides appear instantly.
-    photos.slice(index + 1, index + 4).forEach((p) => {
+    const el = viewport.current;
+    if (!el) return;
+    const onScroll = () => {
+      const width = el.clientWidth || 1;
+      setIndex(Math.max(0, Math.min(last, Math.round(el.scrollLeft / width))));
+    };
+    el.addEventListener("scroll", onScroll, { passive: true });
+    return () => el.removeEventListener("scroll", onScroll);
+  }, [last]);
+
+  // Warm the cache for the next photos so they are decoded before they slide in.
+  useEffect(() => {
+    photos.slice(index + 1, index + 3).forEach((p) => {
       if (p.kind !== "video" && !p.youtubeUrl) new Image().src = p.src;
     });
   }, [index]);
-  useEffect(() => {
-    if (!api) return;
-    const update = () => setIndex(api.selectedScrollSnap());
-    update();
-    api.on("select", update);
-    return () => {
-      api.off("select", update);
-    };
-  }, [api]);
+
+  // Button / keyboard navigation
+  const goTo = useCallback(
+    (i: number) => {
+      const el = viewport.current;
+      if (!el) return;
+      const target = Math.max(0, Math.min(last, i));
+      el.scrollTo({ left: target * el.clientWidth, behavior: "smooth" });
+    },
+    [last],
+  );
+
   return (
     <div
       className={`pf-gallery ${expanded ? "pf-expanded" : ""}`}
@@ -128,43 +140,39 @@ export function Gallery({
       aria-label={`${project.name} gallery`}
       aria-roledescription="carousel"
       onKeyDown={(event) => {
-        if (event.key === "ArrowRight") api?.scrollNext();
-        if (event.key === "ArrowLeft") api?.scrollPrev();
+        if (event.key === "ArrowRight") goTo(index + 1);
+        if (event.key === "ArrowLeft") goTo(index - 1);
       }}
     >
-      <div className="pf-viewport" ref={ref}>
-        <div className="pf-track">
-          {photos.map((photo, i) => (
-            <div
-              className="pf-slide"
-              key={i}
-              role="group"
-              aria-roledescription="slide"
-              aria-label={`${i + 1} of ${photos.length}`}
-            >
-              {photo.youtubeUrl ? (
-                <a href={photo.youtubeUrl} target="_blank" rel="noopener noreferrer" className="pf-youtube-slide" aria-label={`Watch ${project.name} on YouTube (opens in a new tab)`}>
-                  <Photo photo={photo} expanded={expanded} />
-                  <span className="pf-medina-play" aria-hidden="true"><Play size={23} fill="currentColor" /></span>
-                  <span className="pf-medina-youtube">Watch on YouTube</span>
-                </a>
-              ) : photo.kind === "video" ? (
-                <div className="pf-photo pf-film-slide">
-                  <ProjectFilm
-                    src={photo.src}
-                    poster={photo.poster}
-                    label={photo.label}
-                    active={enabled && index === i}
-                  />
-                </div>
-              ) : i <= reach ? (
-                <SlidePhoto photo={photo} expanded={expanded} />
-              ) : (
-                <div className="pf-photo" />
-              )}
-            </div>
-          ))}
-        </div>
+      <div className="pf-viewport pf-snap" ref={viewport}>
+        {photos.map((photo, i) => (
+          <div
+            className="pf-slide"
+            key={i}
+            role="group"
+            aria-roledescription="slide"
+            aria-label={`${i + 1} of ${photos.length}`}
+          >
+            {photo.youtubeUrl ? (
+              <a href={photo.youtubeUrl} target="_blank" rel="noopener noreferrer" className="pf-youtube-slide" aria-label={`Watch ${project.name} on YouTube (opens in a new tab)`}>
+                <SlidePhoto photo={photo} expanded={expanded} eager={i <= 1} />
+                <span className="pf-medina-play" aria-hidden="true"><Play size={23} fill="currentColor" /></span>
+                <span className="pf-medina-youtube">Watch on YouTube</span>
+              </a>
+            ) : photo.kind === "video" ? (
+              <div className="pf-photo pf-film-slide">
+                <ProjectFilm
+                  src={photo.src}
+                  poster={photo.poster}
+                  label={photo.label}
+                  active={enabled && index === i}
+                />
+              </div>
+            ) : (
+              <SlidePhoto photo={photo} expanded={expanded} eager={i <= 1} />
+            )}
+          </div>
+        ))}
       </div>
       {onExpand && (
         <button
@@ -186,14 +194,14 @@ export function Gallery({
           <button
             aria-label={`Previous image of ${project.name}`}
             disabled={index === 0}
-            onClick={() => api?.scrollPrev()}
+            onClick={() => goTo(index - 1)}
           >
             <ArrowLeft size={18} />
           </button>
           <button
             aria-label={`Next image of ${project.name}`}
-            disabled={index === photos.length - 1}
-            onClick={() => api?.scrollNext()}
+            disabled={index === last}
+            onClick={() => goTo(index + 1)}
           >
             <ArrowRight size={18} />
           </button>

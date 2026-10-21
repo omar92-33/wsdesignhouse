@@ -274,6 +274,23 @@
   flex: 0 0 100%;
   min-width: 0;
 }
+/* Custom gallery: native horizontal scroll-snap strip (see Gallery). */
+.pf-viewport.pf-snap {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.pf-viewport.pf-snap::-webkit-scrollbar {
+  display: none;
+}
+.pf-snap > .pf-slide {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
 /* Mobile gallery photo: <img> crop instead of SVG (see MobilePhoto). */
 .pf-photo-mobile {
   container-type: size;
