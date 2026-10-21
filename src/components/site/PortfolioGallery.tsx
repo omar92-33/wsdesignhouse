@@ -112,7 +112,7 @@ export function Gallery({
                     active={enabled && index === i}
                   />
                 </div>
-              ) : Math.abs(i - index) <= 1 ? (
+              ) : i <= reach ? (
                 <Photo photo={photo} expanded={expanded} />
               ) : (
                 <div className="pf-photo" />
