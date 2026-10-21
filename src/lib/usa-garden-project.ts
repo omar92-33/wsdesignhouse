@@ -14,7 +14,7 @@ export const usaGardenProject: PortfolioProject = {
     "Gable and facade details",
     "Flowering border and stone edging",
   ].map((label, index) => ({
-    src: `/media/usa-garden/render-${String(index + 1).padStart(2, "0")}.svg`,
+    src: `/media/usa-garden/render-${String(index + 1).padStart(2, "0")}.jpg`,
     label,
     width: 440,
     height: 307,
